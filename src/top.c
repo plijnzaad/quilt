@@ -679,7 +679,7 @@ static int set_conlists(shell_p shell) {
   return 0;
 } /* set_conlists */
 
-static int shared_unwanted(shell_p shell)  {
+static int shared2unwanted(shell_p shell)  {
   /* makes all SHARED points UNWANTED */
   int i, n;
   SHORT *pointflags;			/*  */
@@ -699,7 +699,7 @@ static int shared_unwanted(shell_p shell)  {
       pointflags[i] |= UNWANTED;
     }
   return n;
-} /* shared_unwanted */
+} /* shared2unwanted */
 
 static int do_find_patches(shell_p shell, int recover, int *nbndriesp, 
 			   int firsttime) {
@@ -785,16 +785,30 @@ static int do_find_patches(shell_p shell, int recover, int *nbndriesp,
   return shared;
 } /* do_find_patches */
 
+
 int find_patches(shell_p shell, int recover, int *nbndriesp, 
 		    int firsttime) {
+/* for each atom (==shell), finds all the atomic patches. If SHARED
+   points are found, these points are first marked UNWANTED, then the
+   process is repeated. In rare cases, this has to be done several times. */
   int shared, deleted;
   
   shared=do_find_patches(shell, recover, nbndriesp, firsttime);
   if (shared) { 
-    deleted = shared_unwanted(shell);
+    deleted = shared2unwanted(shell);
     clear_top_flags(shell);
-    shared=find_patches(shell, recover, nbndriesp, 1);
-    assert(shared==0);
+    shared=do_find_patches(shell, recover, nbndriesp, 1);
+    if (shared) { 
+      warn("RARE: can't get rid of SHARED points, now iterating until gone\n");
+      do {
+        deleted = shared2unwanted(shell);
+        warn("got get rid of %d additional SHARED points\n", deleted);
+        clear_top_flags(shell);
+        shared=do_find_patches(shell, recover, nbndriesp, 1);
+        if (shared)
+          warn("but found %d additional SHARED points\n", shared);
+      } while (shared > 0);
+    }
     return deleted;
   } else 
     return 0;
