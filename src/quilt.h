@@ -264,7 +264,9 @@ typedef struct patch_ {			/* only on one atom */
   float area;				/* area as if R where 1.0 ! */
 } patch_t, *patch_p;
 
-typedef struct shell_ {		/* partial triangulation of atom */
+typedef struct shell_ {                 /* partial triangulation of atom;
+                                           holds all the additional
+                                           information per atom */ 
   union {
     struct shell_ * next;		/* next atom in grid cell */
     list_p *** conlists;
