@@ -304,9 +304,7 @@ int main(int argc, char**argv) {
     die("%s\n", usage_message);
   patchmode= (opt_recover || (opt_patches[0]!='\0'));
 
-  box=get_atoms(opt_infile, opt_protein[0] ? opt_protein : argv[1], 
-		opt_bin,
-		PDB_DEFAULT_FLAGS );
+  box=get_atoms(opt_infile, opt_protein, opt_bin, PDB_DEFAULT_FLAGS );
 
   if (opt_randomize || opt_ranval >= 0)
     ran_atoms(box, opt_ranval);		/* redistribute N,O over surface */

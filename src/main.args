@@ -120,7 +120,7 @@ static int check_pts_per_atom(void*ip){
 
 #define USAGE2 "(obsolete) -[a,P,ct] -[c,m,+d,ps,C,dmw,+w]\n\
              [-f <file> | -p <protein>] [-o file] [-areas file\n\
-             [-n <pts>] [-D <dens>] -[e,r,ep,er <angstroms>] [ protein ]"
+             [-n <pts>] [-D <dens>] -[e,r,ep,er <angstroms>]"
 
 #define OVERVIEW "overview yet to be written ...\n"
 static int pr_overview(void) {warn("\n%s\n%s\n",OVERVIEW,USAGE);exit(1);}
@@ -201,15 +201,15 @@ arg_t argtab[] = {
 static int check_arguments(int argc) {
   int recover;
 
-  if(  !! opt_infile + !! opt_protein[0] + (argc-1) + 
+  if(  !! opt_infile + !! opt_protein[0]  +
 	!! (opt_bin &&opt_bin[0]) != 1 )
-    return warn("specify exactly one of -p FILE, -f FILE  -b FILE or FILE\n"); 
+    return warn("specify exactly one of -p FILE, -f FILE  -b FILE\n"); 
 
   if(opt_patches && opt_patches[0] && opt_recover)
     return  warn("-P xxx and -R bite each other\n"); 
 
   if (opt_recover && opt_totalrecover)
-    return warn("cannot partially recover and fully recover at same time\n");
+    return warn("invalid args: cannot partially recover and fully recover at same time\n");
 
   recover= (opt_recover || opt_totalrecover);
 
@@ -218,6 +218,6 @@ static int check_arguments(int argc) {
 
   if (recover && (opt_pts_per_atom == 0) )
     return 
-      warn("recover requires fixed nr of points per sphere; use -n NR\n");
+      warn("invalid args: recover requires fixed nr of points per sphere; use -n NR\n");
   return 0;
 } /* check_arguments */
