@@ -542,8 +542,10 @@ box_p get_atoms(FILE * pointsfile, char* protein, char*bin, uint pdbflags) {
     if (n < 0) {			/* too long: truncate at front */
       n= -n;
       box->name[0]='*';
-    } else 
       strcpy(box->name+1, cp+n);
+    } else { 
+      strcpy(box->name, cp);
+    }
   }
 
   if (pointsfile) {			/* we're given a pointsfile */
