@@ -1,0 +1,5 @@
+Fri May  5 01:35:29 2000    <lijnzaad@ebi.ac.uk>
+
+	* polished documentation; put everything under CVS control; added
+	   stuff for more easily building tar files. 
+

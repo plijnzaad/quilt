@@ -9,7 +9,7 @@ quilt/examples/CVS
 quilt/examples/CVS/Root
 quilt/examples/CVS/Repository
 quilt/examples/CVS/Entries
-quilt/examples/.quilt-spheres.OSF1
+quilt/examples/.quilt-spheres.OSF1  # doesn't really belong here?
 quilt/examples/8lyz-2.rml
 quilt/examples/8lyz.area
 quilt/examples/8lyz.histo
