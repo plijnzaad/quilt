@@ -469,6 +469,13 @@ static patch_p match_patch(shell_p shell, shell_p orgshell, patch_p patch) {
   if ( (shell->flags | orgshell->flags) & MPATCHES)
     ;					/* deal with that in a moment */
   else {				/* just one face */
+    if (! orgshell->patches) {
+      /*this really shouldn't happen at all; should have been caught
+        earlier ... just warn about it  */
+      warn("*** very suspicious: orgshell of %s has no patches; must be an isolated atom\n", 
+           full_atom_name(orgshell->atom));
+      return NULL;
+    }
     assert_not( orgshell->patches->next);
     if (orgshell->patches->flags & P_DONT_RECOVER) { /* bad luck: used before */
       local.shared++;
