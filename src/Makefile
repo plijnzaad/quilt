@@ -4,11 +4,10 @@
 
 ### This Makefile require GNU Make.
 
-SYS = $(shell uname)
+include $(BUILD_HOME)/make.include
 
-prefix = /usr/local
-bindir = $(prefix)/bin
-
+# force error, since not ready yet:
+$(shell asdfa	;lkjq13lrj;@ `)
 
 ### following should be set in environment, but can also do it here
 # HOME					# obvious

@@ -11,7 +11,14 @@ SHELL = /bin/sh
 CC = gcc
 #  maybe put CFLAGS here too ? 
 
+# prefix of the install:
+prefix = /usr/local
+# where binaries go:
+bindir = $(prefix)/bin
+
+
 RM = rm
 INSTALL = install
 
 CC = gcc
+
