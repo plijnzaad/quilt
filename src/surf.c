@@ -321,8 +321,15 @@ static void reset_patch_flags(surf_p surfaces) {
   surf_p surf;
 
   for (surf=surfaces; surf; surf=surf->next)
-    for (j=0; j<surf->npatches; j++) 
-      surf->patches[j]->flags &= ~P_COLLECTED;	/* leave other flags intact */
+    for (j=0; j<surf->npatches; j++) { 
+      if (surf->patches)
+        surf->patches[j]->flags &= ~P_COLLECTED;	/* leave other flags
+                                                           intact */
+      else { 
+        warn("*** suspect: surface without patches, must be isolated atom, right? Removing surface altogether.");
+        Lexcise((list_p*)&surfaces, (list_p)surf);
+      }
+    }
   return;
 } /* reset_patch_flags */
 
@@ -431,7 +438,6 @@ surf_p get_surfaces(box_p box, const char * nature) {
       Lprepend(surf, Surfaces);		/* put into list */
     } /* for patch */
   } /* for ii */
-/*  reset_patch_flags(local.maxnpatches, Surfaces); */
   reset_patch_flags(Surfaces);
   AFREEA(localarray);
   return sort_surfaces(Surfaces); 
