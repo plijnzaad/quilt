@@ -1,14 +1,12 @@
 # $Id$
+# probably wrong, this file. Make sure there's no binaries or directories
+# listed here!
 quilt/ATOMS
 quilt/FILES
 quilt/README
 quilt/RESIDUES
 quilt/MANIFEST
 quilt/examples
-quilt/examples/CVS
-quilt/examples/CVS/Root
-quilt/examples/CVS/Repository
-quilt/examples/CVS/Entries
 quilt/examples/.quilt-spheres.OSF1  # doesn't really belong here?
 quilt/examples/8lyz-2.rml
 quilt/examples/8lyz.area
@@ -29,20 +27,12 @@ quilt/examples/8lyz.ran9
 quilt/examples/8lyz.ranhisto
 quilt/examples/8lyz.rml
 quilt/examples/8lyz.txt
-quilt/scripts
-quilt/scripts/CVS
-quilt/scripts/CVS/Root
-quilt/scripts/CVS/Repository
-quilt/scripts/CVS/Entries
+# quilt/scripts
 quilt/scripts/histo
 quilt/scripts/Rpatsel
 quilt/scripts/job
 quilt/scripts/patresidues
-quilt/src
-quilt/src/CVS
-quilt/src/CVS/Root
-quilt/src/CVS/Repository
-quilt/src/CVS/Entries
+# quilt/src
 quilt/src/Makefile
 quilt/src/acc.c
 quilt/src/alloc.c
@@ -67,7 +57,6 @@ quilt/src/misc.c
 quilt/src/pdb.c
 quilt/src/pdb.h
 quilt/src/quilt.h
-quilt/src/quilt
 quilt/src/randomize.c
 quilt/src/seam.c
 quilt/src/stitch.c
