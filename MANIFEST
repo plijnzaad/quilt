@@ -1,20 +1,18 @@
 # $Id$
-# probably wrong, this file. Make sure there's no binaries or directories
-# listed here!
 quilt/BUILDDATE
 quilt/ATOMS
 quilt/FILES
 quilt/README
 quilt/RESIDUES
 quilt/MANIFEST
-quilt/examples
-quilt/examples/.quilt-spheres.OSF1  # doesn't really belong here?
-quilt/examples/8lyz-2.rml
+# quilt/examples
+quilt/examples/job
+quilt/examples/8lyz.pdb
+# following must have been built before packing:
 quilt/examples/8lyz.area
 quilt/examples/8lyz.histo
 quilt/examples/8lyz.log
 quilt/examples/8lyz.pat
-quilt/examples/8lyz.pdb
 quilt/examples/8lyz.ran0
 quilt/examples/8lyz.ran1
 quilt/examples/8lyz.ran2
@@ -26,12 +24,12 @@ quilt/examples/8lyz.ran7
 quilt/examples/8lyz.ran8
 quilt/examples/8lyz.ran9
 quilt/examples/8lyz.ranhisto
-quilt/examples/8lyz.rml
+quilt/examples/8lyz.rasmol
 quilt/examples/8lyz.txt
 # quilt/scripts
+quilt/scripts/one-structure.sh
 quilt/scripts/histo
 quilt/scripts/Rpatsel
-quilt/scripts/job
 quilt/scripts/patresidues
 # quilt/src
 quilt/src/Makefile
