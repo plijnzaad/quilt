@@ -4,10 +4,7 @@
 
 ### This Makefile require GNU Make.
 
-include $(BUILD_HOME)/make.include
-
-# force error, since not ready yet:
-$(shell asdfa	;lkjq13lrj;@ `)
+include $(BUILD_HOME)/makefile.include
 
 ### following should be set in environment, but can also do it here
 # HOME					# obvious
@@ -16,31 +13,31 @@ $(shell asdfa	;lkjq13lrj;@ `)
 # obj					# where object files reside
 # bin					# where exectables reside
 
-# variables pointing to various utilities:
-MAKE = /usr/local/bin/make		# gnu make
-SHELL = /bin/sh
-CC = gcc
-RM = rm
-INSTALL = install
-
-
 ### compiler flags:
 ### all flags given are gcc flags; have to twiddle things yourself if you're
 ### not using  gcc
 
 DEFINES = -D$(SYS)			# announce system by a '#define'
 
-### where to find .h files:
-INCDIRS = 
-CFLAGS = -g -Wall $(INCDIRS) $(DEFINES)    # -Wall: gcc's maximal nr. of warnings
+### location of auxiliarly .h files and libraries:
+utilsdir = ../utils			# may have to be created as symlink
+utilincdir = $(utilsdir)		
+utillibdir = $(utilsdir)
+utillibs = -lutils
+
+incdirs = -I$(utilincdir)
+libdirs = -L$(utillibdir)
+libs = $(utillibs)			#libraries to be linked against
+
+CFLAGS = -g -Wall $(incdirs) $(DEFINES)    # -Wall: gcc's maximal nr. of warnings
 
 ### highest optimization flags (only for most number-crunchy modules)
-OPTIM = $(INCDIRS) -g -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG -Wall
+optim = $(incdirs) -g -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG -Wall
 
-support_h = pdb.h utils.h list.h alloc.h hash.h vecmat.h
-support_c = getargs.c utils.c alloc.c list.c pdb.c extra-math.c jacobi.c \
-	hash.c compat.c
-support_o =  $(support_c:.c=.o)
+utils_h = pdb.h utils.h list.h alloc.h hash.h vecmat.h
+# utils_c = getargs.c utils.c alloc.c list.c pdb.c extra-math.c jacobi.c \
+# 	hash.c compat.c
+# utils_o =  $(utils_c:.c=.o)
 
 quilt_h = quilt.h
 quilt_c = main.c acc.c templates.c io.c misc.c top.c conn.c stitch.c \
@@ -51,40 +48,40 @@ quilt_o = $(quilt_c:.c=.o)		# all quilt objects files
 ### The name for the template file of spherical point distributions:
 SPHERES_FILE = .quilt-spheres.$(SYS)
 
-targets = all install help clean support_o quilt_o debug
+targets = all install help clean utils quilt_o makedebug
 
-.PHONY: all install help clean support_o quilt_o debug
+.PHONY: all install help clean utils quilt_o makedebug
 
 all: quilt
 
 help:
-	@echo Usage: make $(targets)
-
-makedebug:
-	echo $(support_o)
+	@echo "Usage: make [ one of: $(targets)  ]"
 
 install: quilt
 	$(INSTALL) quilt $(bindir)
 
-debug:
+# may have to be created as a symlink
+utils:
+	(cd $(utilsdir); $(MAKE) )
+
+$(quilt_o): $(quilt_h)			# forget about utils_h dependcy
+quilt_o: $(quilt_h) $(quilt_o)
+
+quilt: $(quilt_o) utils
+	$(CC) -o $@ $(quilt_o) $(libdirs) $(libs) -lm
+
+# rule for helping debug this Makefile
+makedebug:
 	echo $(SYS)
-
-$(support_o): $(support_h)
-support_o: $(support_o)
-
-$(quilt_o): $(support_h) $(quilt_h)
-quilt_o: $(support_h) $(quilt_h) $(quilt_o)
-quilt: $(support_o) $(quilt_o) 
-	$(CC) -o $@ $(LDFLAGS) $(support_o) $(quilt_o)  -lm
 
 
 ### 
 ### following entries deviate from make's rules, and are included separately
 ### 
-main.o: main.args getargs.h		#additional dependencies
+main.o: main.args			#additional dependency
 
 acc.o: acc.c
-	$(CC) $(OPTIM) -c $< -o $@	#different command
+	$(CC) $(optim) -c $< -o $@	#different command
 ### accessability routines. Must be compiled with highest optimization
 
 io.o: io.c

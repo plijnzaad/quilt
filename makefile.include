@@ -1,8 +1,6 @@
 # -*- mode: Makefile; -*-
 # $Id$
 
-# $Id$
-
 # some common definitions
 
 SYS = $(shell uname)
@@ -12,7 +10,10 @@ CC = gcc
 #  maybe put CFLAGS here too ? 
 
 # prefix of the install:
-prefix = /usr/local
+
+# prefix = /usr/local
+prefix = $(HOME)/$(SYS)
+
 # where binaries go:
 bindir = $(prefix)/bin
 

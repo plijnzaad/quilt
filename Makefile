@@ -1,7 +1,7 @@
 # -*- mode: Makefile; -*-
 # $Id$
 
-include $(BUILD_HOME)/make.include
+include $(BUILD_HOME)/makefile.include
 
 .PHONY:  all quilt utils install clean
 
