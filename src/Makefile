@@ -1,5 +1,5 @@
 ### Makefile for quilt
-###
+### $Id$
 ### Philip lijnzaad@ebi.ac.uk, 22-7-96
 
 MAKE = /usr/local/bin/make		# gnu make
@@ -38,7 +38,6 @@ quilt_o = $(quilt_c:.c=.o)		# all quilt objects files
 
 ### The name for the template file of spherical point distributions:
 SPHERES_FILE = .quilt-spheres.$(SYS)
-ALL_SPHERES_FILES = .quilt-spheres.*
 
 targets = all help clean
 
@@ -73,12 +72,12 @@ acc.o: acc.c
 
 io.o: io.c
 ### i/o routines
-	$(RM) -f $(ALL_SPHERES_FILES)
+	$(RM) -f $(SPHERES_FILE)
 	$(CC) $(CFLAGS) -DTEMPLATES_FILE=\"$(SPHERES_FILE)\" -c $< -o $@
 
 templates.o: templates.c
 ### templates of spherical point distributions
-	$(RM) -f $(ALL_SPHERES_FILES)
+	$(RM) -f $(SPHERES_FILE)
 	$(CC) $(CFLAGS) -c $< -o $@
 ### (delete spheres.bin, since format may have changed)
 
