@@ -104,9 +104,22 @@
 					/* for shell: completely exposed ! */
 					/* set in top.c:find_bndry() */
 #define TWOWAY		BIT(4)		/* bndry passes twice (or more) */
-					/* through through this pt */ 
+					/* through through this
+                                         * pt. Happens if the boundary is
+                                         * around a small exposed 'strip' of
+                                         * surface, that happens to be
+                                         * sampled by just one point 
+                                         */
 #define UTURN		BIT(5)
-#define SHARED		BIT(6)		/* point shared by 2 bndries */
+#define SHARED		BIT(6)		/* point shared by 2
+                                         * bndries. Sort of opposite of
+                                         * TWOWAY: happens where there is
+                                         * a patch with two (or more)
+                                         * bndries, where there is small
+                                         * strip sampled by one point
+                                         * which is used by both bndries
+                                         * (in opposite directions) 
+                                         */
 #define UNWANTED 	BIT(7)		/* to be neglected */
 
 /* flags for bndries, patches, and/or shells */
