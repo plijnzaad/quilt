@@ -1,0 +1,223 @@
+/* ------------------------------------------------------------------ *
+ * Permission to copy and/or modify all or part of this work is       *
+ *   granted, provided that this NO WARRANTY and this copyright	      *
+ *   notice are retained verbatim and are displayed conspicuously. If *
+ *   anyone needs other permissions that aren't covered by the above, *
+ *   please contact the author					      *
+ *      							      *
+ * NO WARRANTY: THIS WORK IS PROVIDED ON AN "AS IS" BASIS.  THE       *
+ *   AUTHOR PROVIDES NO WARRANTY WHATSOEVER, EITHER EXPRESS OR        *
+ *   IMPLIED, REGARDING THE WORK, INCLUDING WARRANTIES WITH THE WORK, *
+ *   INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR      *
+ *   FITNESS FOR ANY PARTICULAR PURPOSE.			      *
+ *								      *
+ * Philip Lijnzaad, lijnzaad@embl-heidelberg.de			      *
+ * ------------------------------------------------------------------ */
+
+
+/* Command line argument parsing module. Is #include'd in tr_patches.c */
+
+#include <stdio.h>			/* for typedef of FILE* etc. */
+#include <stdlib.h> 
+
+#include "getargs.h"
+#include "quilt.h"
+
+/*** global options: ***/
+int opt_careful=0,
+    opt_warn=1,
+    debug=1,
+    opt_general;
+
+radius_param_t radius_param = {
+/*  0.0, opt_radius   OBSOLETE       */ 
+  DEF_PROBE_RADIUS,			/* opt_extension       */ 
+  0.0,					/* opt_reduction       */ 
+  0.0,					/* opt_polar_extension */ 
+  0.0					/* opt_polar_reduction */ 
+};
+
+/* FILE * connections_file; obsolete */
+static FILE * templates_file;
+
+/*** local options (ie local to main.c): ***/
+static int opt_pts_per_atom=0,
+           opt_pr_single=0,
+	   opt_triangulate=0, 
+	   opt_donothing=0,
+	   opt_recover=0, 
+	   opt_totalrecover=0, 
+           opt_randomize=0,
+	   opt_ranval= -1,		/* meaning: keep old percentage */
+	   opt_patdots=0;
+
+static FILE * opt_infile;
+static char * opt_protein="", 
+	    * opt_patches="",
+	    * opt_bin;
+
+static double opt_pt_density=0.5,
+	      opt_threshold=0.0;
+
+static FILE * opt_outfile, *opt_dotsfile, *opt_areasfile, *opt_facesfile;
+static char opt_outformat= 'i';
+
+static char *opt_fulloutputtype=NULL;
+
+
+/* those funnie parens are to fool emacs */
+static DEF_NUM_LIM(check_gt0le5, double, >0.0, <=5.0, "0.0 < value <= 5.0"
+)
+static DEF_NUM_LIM(check_ge0le10, double, >=0.0, <=10.0, "0.0 =< value <= 10.0"
+)
+/* static 
+ *  DEF_NUM_LIM(check_gt0le10, double, >0.0, <=10.0, "0.0 < value <= 10.0")
+ */
+
+static DEF_CHCK_FUN(check_r_le_e, d, 
+		    *(double*)d <= opt_extension && *(double*)d >= 0.0,
+	     "reduction cannot be greater than extension, or < 0"
+)
+static DEF_CHCK_FUN(check_rp_le_ep, d,
+		    *(double*)d <= opt_polar_extension && *(double*)d >= 0.0,
+	     "polar reduction cannot be greater than polar extension, or < 0"
+)
+static DEF_CHCK_FUN(check_imp, c, strchr("im", *(char*)c),
+	     "unknown output format"
+)
+
+static int check_pts_per_atom(void*ip){
+  int i = *(int*)ip;
+  int j;
+  /* check 1sphere.c:generate_template_spheres for following:  */
+
+  static int npoints[N_TMPLT_SPHERES] = TEMPLATE_NPOINTS_CONTENTS;
+
+  for (j=0; j< N_TMPLT_SPHERES; j++) {
+    if (i == npoints[ j ] )
+      return 0 ;
+  }
+  WARN("only numbers allowed are ");
+  for (j=0; j< N_TMPLT_SPHERES; j++)
+    WARN("%d ", npoints[ j ]);
+  WARN("\n");
+  return 1;
+}
+
+/* static int open_logfile(void * dummy) {
+ *   logfile = fopen(LOG_FILENAME, "w");
+ *   if (logfile) {
+ *     warn("warnings are written to %s\n", LOG_FILENAME);
+ *     return 0;
+ *   }
+ *   perror(LOG_FILENAME);
+ *   return 1;
+ * }
+ */
+
+
+#define USAGE "Usage: quilt -h (for overview of options)"
+
+#define USAGE2 "(obsolete) -[a,P,ct] -[c,m,+d,ps,C,dmw,+w]\n\
+             [-f <file> | -p <protein>] [-o file] [-areas file\n\
+             [-n <pts>] [-D <dens>] -[e,r,ep,er <angstroms>] [ protein ]"
+
+#define OVERVIEW "overview yet to be written ...\n"
+static int pr_overview(void) {warn("\n%s\n%s\n",OVERVIEW,USAGE);exit(1);}
+
+arg_t argtab[] = {
+  /* name   type  address  comment               check_function */
+
+  { "(options with '*' are not yet ready or obsolete)", COMMENT, 0,0,0 },
+
+  { "-h", HELP, NULL, "this message", NULL },
+  { "-help", HELP, NULL, "this message", NULL },
+  { "-H", PROC, pr_overview, "overview", NULL },
+
+  { "Flags:", COMMENT, 0,0,0 },
+  { "-R", BOOL, &opt_recover, 
+	"find CS patches first time, & recover buried area (1 layer)", NULL },
+  { "-T", BOOL, &opt_totalrecover, 
+	"find CS patches first time, & recover buried area (all)", NULL },
+  { "-P", STRING, &opt_patches, "find patches ('all' or atom types wanted)", 
+      NULL },
+  { "+t", BOOL, &opt_triangulate, "don't triangulate", NULL },
+  { "-0",BOOL, &opt_donothing,"quit after reading protein file (for timings)",
+      NULL },
+
+  { " Randomization options:", COMMENT, 0,0,0 },
+  { "-g", INT, &opt_general, 
+                    "use N as seed for randomization, rather than
+                    time-derived seed", NULL },
+  { "-ran", BOOL, &opt_randomize, "randomize surface atoms", NULL }, 
+  { "-ranval", INT, &opt_ranval, 
+                    "randomize and change surface atoms such that the
+                    total percentage hydrophobic surface becomes N. This
+                    needs surface accessibility in last pdb field (see -a
+                    option)", NULL},
+
+  { "Input:", COMMENT, 0,0,0 },
+  { "-f", R_FILE, &opt_infile, "use as input file", NULL },
+  { "-p", STRING, &opt_protein, "use file (or pdb-code) as pdb input", NULL },
+  { "-b", STRING, &opt_bin, "use spec for binary protein coordinates", NULL },
+  { "-templates", R_FILE, &templates_file, "use FILE for templates", NULL },
+
+  { "Parameters (point densities, radii):", COMMENT, 0,0,0 },
+  { "-n", INT, &opt_pts_per_atom, 
+      "use <n> points per atom", check_pts_per_atom },
+  { "-D", DOUBLE, &opt_pt_density, 
+    "use <float> as approximate points density [pts/(A**2)]", check_gt0le5 },
+  { "-e", DOUBLE, &opt_extension, 
+                   "extend all radii by this amount before triangulating. \n\
+                    Acts as a probe radius", 
+      check_ge0le10 },
+  { "-r", DOUBLE, &opt_reduction, 
+      "reduce all radii by after triangulating", check_r_le_e },
+  { "-ep", DOUBLE, &opt_polar_extension, 
+                   "extend radii of polar atoms with accessibility higher\n\
+                    than THRESHOLD", check_ge0le10 },
+  { "-th", DOUBLE, &opt_threshold,
+                   "threshold (percent of sphere area) below which polar\n\
+                    atoms will not have their radii extended",
+	check_ge0le10 },
+  { "-rp", DOUBLE, &opt_polar_reduction, 
+      "reduce radii of polar atoms after triangulating",
+      check_rp_le_ep },
+
+  { "Output", COMMENT, 0,0,0},
+  { "-o", W_FILE, &opt_outfile, "graphical output to file", NULL },
+  { "-of", CHAR,  &opt_outformat, "format of graphical output (i,m, *p)",
+      check_imp, }, 
+  { "-dots", W_FILE, &opt_dotsfile, "dots output to file", NULL },
+  { "-patdot", INT, &opt_patdots, 
+	"dots output of first N patches to files patN.dots", NULL },
+  { "-a", W_FILE, &opt_areasfile, "write area per atom to file", NULL },
+  { "-F", W_FILE, &opt_facesfile, "faces output to file", NULL},
+  { "* -Ot", STRING, &opt_fulloutputtype, 
+      "output type (a,b,p,e,f,s,v,V)", NULL,},
+  END_ARGTAB,
+};
+
+static int check_arguments(int argc) {
+  int recover;
+
+  if(  !! opt_infile + !! opt_protein[0] + (argc-1) + 
+	!! (opt_bin &&opt_bin[0]) != 1 )
+    return warn("specify exactly one of -p FILE, -f FILE  -b FILE or FILE\n"); 
+
+  if(opt_patches && opt_patches[0] && opt_recover)
+    return  warn("-P xxx and -R bite each other\n"); 
+
+  if (opt_recover && opt_totalrecover)
+    return warn("cannot partially recover and fully recover at same time\n");
+
+  recover= (opt_recover || opt_totalrecover);
+
+  if(recover && (opt_polar_extension == 0.0) )
+    die("no use recovering if no extension to recover from\n"); 
+
+  if (recover && (opt_pts_per_atom == 0) )
+    return 
+      warn("recover requires fixed nr of points per sphere; use -n NR\n");
+  return 0;
+} /* check_arguments */

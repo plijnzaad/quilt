@@ -1,0 +1,73 @@
+# this file contains templates of amino acids etc., in the following format:
+# comments (# to <eol>) and empty lines are ignored;  
+# Per residue: residuename (3 chars), typenumber(for amino acids this is the
+# ASCII onelettercode), category, (a_acid, n_acid, 
+# cofactor, ion, solvent), number of atoms
+
+# residuename, onelettercode (ascii), category, nr of atoms
+
+"XXX" 120 cofactor 0			# 'x'; unknown cofactor
+
+### amino acid residues. B is ASX, Z is GLX; O is HYP; J & U  still available
+"UNK" 88 a_acid 0			# 'X' unknown a_acid, not same as 'x' !
+"VAL" 86 a_acid 7			# 'V'
+"LEU" 76 a_acid 8			# 'L'
+"SER" 83 a_acid 6			# 'S'
+"PRO" 80 a_acid 7			# 'P'
+"HYP" 79 a_acid 8			# 'O' hydroxy-proline
+"ALA" 65 a_acid 5			# 'A'
+"ASP" 68 a_acid 8			# 'D'
+"ASX" 66 a_acid 8			# 'B' Asp or Asn
+"LYS" 75 a_acid 9			# 'K'
+"THR" 84 a_acid 7			# 'T'
+"ASN" 78 a_acid 8			# 'N'
+"TRP" 87 a_acid 14			# 'W'
+"GLY" 71 a_acid 4			# 'G'
+"HIS" 72 a_acid 10			# 'H'
+"GLU" 69 a_acid 9			# 'E'
+"GLX" 90 a_acid 9			# 'Z' Glu or Gln
+"TYR" 89 a_acid 12			# 'Y'
+"ARG" 82 a_acid 11			# 'R'
+"MET" 77 a_acid 8			# 'M'
+"PHE" 70 a_acid 11			# 'F'
+"GLN" 81 a_acid 9			# 'Q'
+"CYS" 67 a_acid 6			# 'C'
+"ILE" 73 a_acid 8			# 'I'
+
+### a_acid 'modifications':
+"ACE" 121 a_acid 3			# 'y' (OR cofactor or ion ??)
+"NH2" 110 a_acid 1			# 'n' amide. Can also be a cofactor ?
+
+### nucleic acids; doesn't handle leading 'O3P' (and maybe trailing stuff)
+"  G" 103 n_acid 23			# 'g'
+"  U" 117 n_acid 20			# 'u'
+"  C"  99 n_acid  20			# 'c'
+"  A" 97 n_acid 22			# 'a'
+
+### ions:
+" CA" 107 ion 1				# 'k'
+" CU" 32 ion 1				# ' ' 
+" ZN" 35 ion 1				# '#' 
+" CD" 36 ion 1				# '$' 
+" MG" 37 ion 1				# '%' 
+" MN" 38 ion 1				# '&' 
+" CL" 39 ion 1				# "'"
+"PO4" 31 ion 5				# ...
+# "PHO" 31 ion 5			# ...
+"SO4" 33 ion 5				# '!'
+"AZI" 34 ion 3				# '"' azide 
+
+### solvent:
+"HOH" 51 solvent 1			# '3' 
+# "H2O" 51 solvent 1      		# '3' water ?
+# "WAT" 51 solvent 1      		# '3' water ?
+"DOD" 52 solvent 1			# '4' heavy water
+"DMS" 53 solvent 4      		# '5' dimethylsulfoxide
+
+### other groups (cofactors)
+"HEM" 104 cofactor 43			# 'h'
+"FMN" 102 cofactor 31			# 'f'
+"FAD" 100 cofactor 53			# 'd' 
+"NDP" 101 cofactor 48			# 'e'
+"NAD" 105 cofactor 44			# 'i'
+"NAG" 106 cofactor 14			# 'j'  N-Acetyl-D-glucosamine

@@ -1,0 +1,40 @@
+# Surface parameter sets
+#
+# unit: radius in Angstrom, energy in cal/(mole/A*ngstro/m)
+#
+#
+# Eisenberg,D. & McLachlan, A.D. (1986) Nature v.319, 199-203
+# based on energies of transfer octanol->water
+# O(-)  charged oxygen
+#       in ASP and GLU assigned to the larger accessible oxygen
+# N(+)  charged nitrogen
+#       in ARG assigned to the larger accessible nitrogen
+# for use if only the name of the atom/elemnt is known (i.e. when using
+# residues-simple, i.e. when using pdb.[hc])
+
+#type	radius 	charge solvation-energy
+
+x	1.8	0	0		# unknown atom
+X	1.8	0	0
+# W	1.4	0	0		# water radius (not used)
+# generic/united atom types
+C	1.9	0	16
+N	1.7	0	-6
+O	1.4	0	-6
+N+	1.7    +1	-50
+O-	1.4    -1	-24
+A	1.55	0	0		# N or O. (mean of N & O)
+S	1.81	0	21
+
+# following taken from /usr/local/distrib/biosym/220/data/delphi/insight.size
+H	1.1	0
+# S	1.81	0
+P	1.88	0
+FE	1.95	2
+ZN	1.15	2
+CD	1.75	2
+CU	1.15	2
+CA	1.95	2
+MG	1.50	2
+MN	1.19	2
+CL	1.75	-1

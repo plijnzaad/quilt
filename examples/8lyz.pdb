@@ -1,0 +1,1196 @@
+HEADER    HYDROLASE (O-GLYCOSYL)                  16-SEP-77   8LYZ      8LYZ   3
+COMPND    LYSOZYME (E.C.3.2.1.17) IODINE-INACTIVATED                    8LYZ   4
+SOURCE    HEN (GALLUS GALLUS) EGG WHITE                                 8LYZ   5
+AUTHOR    C.R.BEDDELL,C.C.F.BLAKE,S.J.OATLEY                            8LYZ   6
+REVDAT   9   14-JUL-86 8LYZH   3       SEQRES TURN   ATOM               8LYZH  1
+REVDAT   8   22-OCT-84 8LYZG   1       SHEET                            8LYZG  1
+REVDAT   7   27-JAN-84 8LYZF   1       REMARK                           8LYZF  1
+REVDAT   6   30-SEP-83 8LYZE   1       REVDAT                           8LYZE  1
+REVDAT   5   01-MAR-82 8LYZD   1       REMARK                           8LYZE  2
+REVDAT   4   21-MAY-81 8LYZC   3       ATOM                             8LYZE  3
+REVDAT   3   25-MAY-78 8LYZB   1       SEQRES                           8LYZE  4
+REVDAT   2   01-NOV-77 8LYZA   1       SSBOND                           8LYZE  5
+REVDAT   1   24-OCT-77 8LYZ    0                                        8LYZE  6
+JRNL        AUTH   C.R.BEDDELL,C.C.F.BLAKE,S.J.OATLEY                   8LYZ   7
+JRNL        TITL   AN X-RAY STUDY OF THE STRUCTURE AND BINDING          8LYZ   8
+JRNL        TITL 2 PROPERTIES OF IODINE-INACTIVATED LYSOZYME            8LYZ   9
+JRNL        REF    J.MOL.BIOL.                   V.  97   643 1975      8LYZ  10
+JRNL        REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  8LYZ  11
+REMARK   1                                                              8LYZ  12
+REMARK   1 REFERENCE 1                                                  8LYZ  13
+REMARK   1  AUTH   R.DIAMOND                                            8LYZ  14
+REMARK   1  TITL   REAL-SPACE REFINEMENT OF THE STRUCTURE OF HEN        8LYZ  15
+REMARK   1  TITL 2 EGG-WHITE LYSOZYME                                   8LYZ  16
+REMARK   1  REF    J.MOL.BIOL.                   V.  82   371 1974      8LYZ  17
+REMARK   1  REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  8LYZ  18
+REMARK   1 REFERENCE 2                                                  8LYZ  19
+REMARK   1  AUTH   D.C.PHILLIPS                                         8LYZ  20
+REMARK   1  TITL   CRYSTALLOGRAPHIC STUDIES OF LYSOZYME AND ITS         8LYZ  21
+REMARK   1  TITL 2 INTERACTIONS WITH INHIBITORS AND SUBSTRATES          8LYZ  22
+REMARK   1  EDIT   E.F.OSSERMAN,R.F.CANFIELD,S.BEYCHOK                  8LYZ  23
+REMARK   1  REF    LYSOZYME                                 9 1974      8LYZ  24
+REMARK   1  PUBL   ACADEMIC PRESS,NEW YORK                              8LYZ  25
+REMARK   1  REFN                   ISBN 0-12-528950-2              977  8LYZD  1
+REMARK   1 REFERENCE 3                                                  8LYZ  27
+REMARK   1  AUTH   T.IMOTO,L.N.JOHNSON,A.C.T.NORTH,D.C.PHILLIPS,        8LYZ  28
+REMARK   1  AUTH 2 J.A.RUPLEY                                           8LYZ  29
+REMARK   1  TITL   VERTEBRATE LYSOZYMES                                 8LYZ  30
+REMARK   1  EDIT   P.BOYER                                              8LYZ  31
+REMARK   1  REF    THE ENZYMES,THIRD EDITION     V.   7   665 1972      8LYZ  32
+REMARK   1  PUBL   ACADEMIC PRESS,NEW YORK                              8LYZ  33
+REMARK   1  REFN                   ISBN 0-12-122707-3              436  8LYZF  2
+REMARK   1 REFERENCE 4                                                  8LYZ  35
+REMARK   1  AUTH   M.LEVITT                                             8LYZ  36
+REMARK   1  TITL   ENERGY REFINEMENT OF HEN EGG-WHITE LYSOZYME          8LYZ  37
+REMARK   1  REF    J.MOL.BIOL.                   V.  82   393 1974      8LYZ  38
+REMARK   1  REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  8LYZ  39
+REMARK   1 REFERENCE 5                                                  8LYZ  40
+REMARK   1  AUTH   L.O.FORD,L.N.JOHNSON,P.A.MACHIN,D.C.PHILLIPS,        8LYZ  41
+REMARK   1  AUTH 2 R.TJIAN                                              8LYZ  42
+REMARK   1  TITL   CRYSTAL STRUCTURE OF A LYSOZYME-TETRASACCHARIDE      8LYZ  43
+REMARK   1  TITL 2 LACTONE COMPLEX                                      8LYZ  44
+REMARK   1  REF    J.MOL.BIOL.                   V.  88   349 1974      8LYZ  45
+REMARK   1  REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  8LYZ  46
+REMARK   1 REFERENCE 6                                                  8LYZ  47
+REMARK   1  AUTH   C.C.F.BLAKE,G.A.MAIR,A.C.T.NORTH,D.C.PHILLIPS,       8LYZ  48
+REMARK   1  AUTH 2 V.R.SARMA                                            8LYZ  49
+REMARK   1  TITL   ON THE CONFORMATION OF THE HEN EGG-WHITE LYSOZYME    8LYZ  50
+REMARK   1  TITL 2 MOLECULE                                             8LYZ  51
+REMARK   1  REF    PROC.R.SOC.LONDON,SER.B       V. 167   365 1967      8LYZ  52
+REMARK   1  REFN   ASTM PRLBA4  UK ISSN 0080-4649                  338  8LYZ  53
+REMARK   1 REFERENCE 7                                                  8LYZ  54
+REMARK   1  AUTH   C.C.F.BLAKE,L.N.JOHNSON,G.A.MAIR,A.C.T.NORTH,        8LYZ  55
+REMARK   1  AUTH 2 D.C.PHILLIPS,V.R.SARMA                               8LYZ  56
+REMARK   1  TITL   CRYSTALLOGRAPHIC STUDIES OF THE ACTIVITY OF HEN      8LYZ  57
+REMARK   1  TITL 2 EGG-WHITE LYSOZYME                                   8LYZ  58
+REMARK   1  REF    PROC.R.SOC.LONDON,SER.B       V. 167   378 1967      8LYZ  59
+REMARK   1  REFN   ASTM PRLBA4  UK ISSN 0080-4649                  338  8LYZ  60
+REMARK   1 REFERENCE 8                                                  8LYZ  61
+REMARK   1  AUTH   D.C.PHILLIPS                                         8LYZ  62
+REMARK   1  TITL   THE THREE-DIMENSIONAL STRUCTURE OF AN ENZYME         8LYZ  63
+REMARK   1  TITL 2 MOLECULE                                             8LYZ  64
+REMARK   1  REF    SCI.AM.                       V. 215    78 1966      8LYZ  65
+REMARK   1  REFN   ASTM SCAMAC  US ISSN 0036-8733                  420  8LYZ  66
+REMARK   1 REFERENCE 9                                                  8LYZ  67
+REMARK   1  AUTH   C.C.F.BLAKE,D.F.KOENIG,G.A.MAIR,A.C.T.NORTH,         8LYZ  68
+REMARK   1  AUTH 2 D.C.PHILLIPS,V.R.SARMA                               8LYZ  69
+REMARK   1  TITL   STRUCTURE OF HEN EGG-WHITE LYSOZYME,                 8LYZ  70
+REMARK   1  TITL 2 A THREE-DIMENSIONAL FOURIER SYNTHESIS AT             8LYZ  71
+REMARK   1  TITL 3 2 ANGSTROMS RESOLUTION                               8LYZ  72
+REMARK   1  REF    NATURE                        V. 206   757 1965      8LYZ  73
+REMARK   1  REFN   ASTM NATUAS  UK ISSN 0028-0836                  006  8LYZ  74
+REMARK   1 REFERENCE 10                                                 8LYZ  75
+REMARK   1  AUTH   L.N.JOHNSON,D.C.PHILLIPS                             8LYZ  76
+REMARK   1  TITL   STRUCTURE OF SOME CRYSTALLINE LYSOZYME-INHIBITOR     8LYZ  77
+REMARK   1  TITL 2 COMPLEXES DETERMINED BY X-RAY ANALYSIS AT            8LYZ  78
+REMARK   1  TITL 3 6 ANGSTROMS RESOLUTION                               8LYZ  79
+REMARK   1  REF    NATURE                        V. 206   761 1965      8LYZ  80
+REMARK   1  REFN   ASTM NATUAS  UK ISSN 0028-0836                  006  8LYZ  81
+REMARK   1 REFERENCE 11                                                 8LYZ  82
+REMARK   1  EDIT   R.J.FELDMANN                                         8LYZ  83
+REMARK   1  REF    ATLAS OF MACROMOLECULAR                492 1976      8LYZ  84
+REMARK   1  REF  2 STRUCTURE ON MICROFICHE                              8LYZ  85
+REMARK   1  PUBL   TRACOR JITCO INC.,ROCKVILLE,MD.                      8LYZ  86
+REMARK   1  REFN                   ISBN 0-917934-01-6              434  8LYZ  87
+REMARK   1 REFERENCE 12                                                 8LYZ  88
+REMARK   1  EDIT   M.O.DAYHOFF                                          8LYZ  89
+REMARK   1  REF    ATLAS OF PROTEIN SEQUENCE     V.   5   138 1972      8LYZ  90
+REMARK   1  REF  2 AND STRUCTURE (DATA SECTION)                         8LYZ  91
+REMARK   1  PUBL   NATIONAL BIOMEDICAL RESEARCH FOUNDATION,             8LYZ  92
+REMARK   1  PUBL 2 SILVER SPRING,MD.                                    8LYZ  93
+REMARK   1  REFN                   ISBN 0-912466-02-2              435  8LYZ  94
+REMARK   2                                                              8LYZ  95
+REMARK   2 RESOLUTION. 2.5 ANGSTROMS.                                   8LYZ  96
+REMARK   3                                                              8LYZ  97
+REMARK   3 REFINEMENT. BY THE MODEL-BUILDING AND REAL-SPACE             8LYZ  98
+REMARK   3  REFINEMENT PROCEDURES OF R. DIAMOND. REFER TO REFERENCE 1   8LYZ  99
+REMARK   3  ABOVE AND REMARK 4 BELOW.                                   8LYZ 100
+REMARK   4                                                              8LYZ 101
+REMARK   4 THE ONLY SIGNIFICANT FEATURES ON THE DIFFERENCE MAP ARE IN   8LYZ 102
+REMARK   4 THE REGION OF GLU 35 AND TRP 108 SIDE CHAINS - THE OE2 ATOM  8LYZ 103
+REMARK   4 OF GLU 35 FORMS A COVALENT BOND WITH THE CD1 ATOM OF TRP     8LYZ 104
+REMARK   4 108.  AN INTERACTIVE COMPUTER GRAPHICS SYSTEM WAS USED TO    8LYZ 105
+REMARK   4 MANIPULATE THESE SIDE CHAINS IN THE RS5D COORDINATE SET OF   8LYZ 106
+REMARK   4 R. DIAMOND (1974), ENTRY 2LYZ IN THE PROTEIN DATA BANK, SO   8LYZ 107
+REMARK   4 THAT A FIT TO THE ELECTRON DENSITY MAP WAS OBTAINED.         8LYZ 108
+REMARK   4 THESE COORDINATES, THEREFORE, ARE IDENTICAL TO THE RS5D      8LYZ 109
+REMARK   4 ENTRY APART FROM PORTIONS OF THESE TWO SIDE CHAINS.          8LYZ 110
+REMARK   5                                                              8LYZA  1
+REMARK   5 CORRECTION.                                                  8LYZA  2
+REMARK   5  ADD SSBOND RECORDS.                                         8LYZA  3
+REMARK   5  01-NOV-77.                                                  8LYZA  4
+REMARK   6                                                              8LYZB  1
+REMARK   6 CORRECTION. FIX SEQRES RECORDS NUMBERS 4,5,6. 25-MAY-78.     8LYZB  2
+REMARK   7                                                              8LYZC  1
+REMARK   7 CORRECTION. CHANGE RESIDUE 103 FROM ASN TO ASP AND CHANGE    8LYZC  2
+REMARK   7  ATOM 788 FROM ND2 TO OD2 AS PER DEPOSITOR,S INSTRUCTIONS.   8LYZC  3
+REMARK   7  21-MAY-81.                                                  8LYZC  4
+REMARK   8                                                              8LYZD  3
+REMARK   8 CORRECTION. CHANGE CODENS FOR REFERENCES 2 AND 3.            8LYZD  4
+REMARK   8  01-MAR-82.                                                  8LYZD  5
+REMARK   9                                                              8LYZE  7
+REMARK   9 CORRECTION. INSERT REVDAT RECORDS. 30-SEP-83.                8LYZE  8
+REMARK  10                                                              8LYZF  3
+REMARK  10 CORRECTION. CORRECT CODEN FOR REFERENCE 3.  27-JAN-84.       8LYZF  4
+REMARK  11                                                              8LYZG  2
+REMARK  11 CORRECTION. CORRECT RESIDUE NUMBER ON STRAND 2 OF SHEET S1.  8LYZG  3
+REMARK  11  22-OCT-84.                                                  8LYZG  4
+REMARK  12                                                              8LYZH  2
+REMARK  12 CORRECTION. CHANGE RESIDUE 103 FROM ASP TO ASN AND CHANGE    8LYZH  3
+REMARK  12  ATOM 788 FROM OD2 TO ND2 AS PER DEPOSITOR,S INSTRUCTIONS.   8LYZH  4
+REMARK  12  ALSO CORRECT APPROPRIATE SEQRES AND TURN RECORDS.           8LYZH  5
+REMARK  12  14-JUL-86.                                                  8LYZH  6
+SEQRES   1    129  LYS VAL PHE GLY ARG CYS GLU LEU ALA ALA ALA MET LYS  8LYZ 111
+SEQRES   2    129  ARG HIS GLY LEU ASP ASN TYR ARG GLY TYR SER LEU GLY  8LYZ 112
+SEQRES   3    129  ASN TRP VAL CYS ALA ALA LYS PHE GLU SER ASN PHE ASN  8LYZ 113
+SEQRES   4    129  THR GLN ALA THR ASN ARG ASN THR ASP GLY SER THR ASP  8LYZB  3
+SEQRES   5    129  TYR GLY ILE LEU GLN ILE ASN SER ARG TRP TRP CYS ASN  8LYZB  4
+SEQRES   6    129  ASP GLY ARG THR PRO GLY SER ARG ASN LEU CYS ASN ILE  8LYZB  5
+SEQRES   7    129  PRO CYS SER ALA LEU LEU SER SER ASP ILE THR ALA SER  8LYZ 117
+SEQRES   8    129  VAL ASN CYS ALA LYS LYS ILE VAL SER ASP GLY ASN GLY  8LYZH  7
+SEQRES   9    129  MET ASN ALA TRP VAL ALA TRP ARG ASN ARG CYS LYS GLY  8LYZ 119
+SEQRES  10    129  THR ASP VAL GLN ALA TRP ILE ARG GLY CYS ARG LEU      8LYZ 120
+HELIX    1   A ARG      5  HIS     15  1                                8LYZ 121
+HELIX    2   B LEU     25  GLU     35  1                                8LYZ 122
+HELIX    3   C CYS     80  LEU     84  5                                8LYZ 123
+HELIX    4   D THR     89  LYS     96  1                                8LYZ 124
+SHEET    1  S1 2 LYS     1  PHE     3  0                                8LYZ 125
+SHEET    2  S1 2 PHE    38  THR    40 -1  N  THR    40   0  LYS     1   8LYZG  5
+SHEET    1  S2 3 ALA    42  ASN    46  0                                8LYZ 127
+SHEET    2  S2 3 SER    50  GLY    54 -1  N  ASN    46   O  SER    50   8LYZ 128
+SHEET    3  S2 3 GLN    57  SER    60 -1  N  TYR    53   O  ILE    58   8LYZ 129
+TURN     1  T1 LYS    13  GLY    16     TYPE I.                         8LYZ 130
+TURN     2  T2 LEU    17  TYR    20     NEARLY TYPE II CONFORMATION.    8LYZ 131
+TURN     3  T3 ASN    19  GLY    22     NEARLY TYPE II CONFORMATION.    8LYZ 132
+TURN     4  T4 TYR    20  TYR    23     NEARLY TYPE II CONFORMATION.    8LYZ 133
+TURN     5  T5 GLY    54  GLN    57     TYPE I,BETW STRNDS 2,3 SHT S2.  8LYZ 134
+TURN     6  T6 ASN    59  TRP    62     NEARLY TYPE I CONFORMATION.     8LYZ 135
+TURN     7  T7 THR    69  SER    72     NEARLY TYPE I CONFORMATION.     8LYZ 136
+TURN     8  T8 ASN    74  ASN    77     TYPE I.                         8LYZ 137
+TURN     9  T9 ASN   103  ASN   106     TYPE I.                         8LYZH  8
+TURN    10 T10 CYS   115  THR   118     TYPE II (IMPERFECT).            8LYZ 139
+TURN    11 T11 ILE   124  CYS   127     TYPE II (IMPERFECT).            8LYZ 140
+SSBOND   1 CYS      6    CYS    127                                     8LYZA  5
+SSBOND   2 CYS     30    CYS    115                                     8LYZA  6
+SSBOND   3 CYS     64    CYS     80                                     8LYZA  7
+SSBOND   4 CYS     76    CYS     94                                     8LYZA  8
+CRYST1   79.100   79.100   37.900  90.00  90.00  90.00 P 43 21 2     8  8LYZ 141
+ORIGX1      1.000000  0.000000  0.000000       0.000000                 8LYZ 142
+ORIGX2      0.000000  1.000000  0.000000       0.000000                 8LYZ 143
+ORIGX3      0.000000  0.000000  1.000000       0.000000                 8LYZ 144
+SCALE1       .012642  0.000000  0.000000       0.000000                 8LYZ 145
+SCALE2      0.000000   .012642  0.000000       0.000000                 8LYZ 146
+SCALE3      0.000000  0.000000   .026385       0.000000                 8LYZ 147
+ATOM      1  N   LYS     1       3.240  10.040  10.380  1.00  0.00      8LYZ 148
+ATOM      2  CA  LYS     1       2.390  10.410   9.250  1.00  0.00      8LYZ 149
+ATOM      3  C   LYS     1       2.460  11.920   9.100  1.00  0.00      8LYZ 150
+ATOM      4  O   LYS     1       2.580  12.670  10.100  1.00  0.00      8LYZ 151
+ATOM      5  CB  LYS     1        .950   9.960   9.490  1.00  0.00      8LYZ 152
+ATOM      6  CG  LYS     1       -.050  10.450   8.450  1.00  0.00      8LYZ 153
+ATOM      7  CD  LYS     1      -1.470  10.060   8.820  1.00  0.00      8LYZ 154
+ATOM      8  CE  LYS     1      -2.350   9.920   7.590  1.00  0.00      8LYZ 155
+ATOM      9  NZ  LYS     1      -3.680   9.380   7.960  1.00  0.00      8LYZ 156
+ATOM     10  N   VAL     2       2.390  12.350   7.850  1.00  0.00      8LYZ 157
+ATOM     11  CA  VAL     2       2.390  13.770   7.480  1.00  0.00      8LYZ 158
+ATOM     12  C   VAL     2       1.000  14.040   6.910  1.00  0.00      8LYZ 159
+ATOM     13  O   VAL     2        .680  13.630   5.770  1.00  0.00      8LYZ 160
+ATOM     14  CB  VAL     2       3.510  14.040   6.490  1.00  0.00      8LYZ 161
+ATOM     15  CG1 VAL     2       3.440  15.430   5.800  1.00  0.00      8LYZ 162
+ATOM     16  CG2 VAL     2       4.860  13.750   7.070  1.00  0.00      8LYZ 163
+ATOM     17  N   PHE     3        .210  14.750   7.700  1.00  0.00      8LYZ 164
+ATOM     18  CA  PHE     3      -1.160  15.140   7.350  1.00  0.00      8LYZ 165
+ATOM     19  C   PHE     3      -1.270  16.220   6.280  1.00  0.00      8LYZ 166
+ATOM     20  O   PHE     3       -.320  17.020   6.080  1.00  0.00      8LYZ 167
+ATOM     21  CB  PHE     3      -1.880  15.620   8.590  1.00  0.00      8LYZ 168
+ATOM     22  CG  PHE     3      -2.560  14.610   9.470  1.00  0.00      8LYZ 169
+ATOM     23  CD1 PHE     3      -3.860  14.310   9.240  1.00  0.00      8LYZ 170
+ATOM     24  CD2 PHE     3      -1.880  13.930  10.450  1.00  0.00      8LYZ 171
+ATOM     25  CE1 PHE     3      -4.550  13.340  10.020  1.00  0.00      8LYZ 172
+ATOM     26  CE2 PHE     3      -2.580  12.930  11.210  1.00  0.00      8LYZ 173
+ATOM     27  CZ  PHE     3      -3.890  12.690  11.010  1.00  0.00      8LYZ 174
+ATOM     28  N   GLY     4      -2.410  16.220   5.610  1.00  0.00      8LYZ 175
+ATOM     29  CA  GLY     4      -2.750  17.230   4.600  1.00  0.00      8LYZ 176
+ATOM     30  C   GLY     4      -3.520  18.270   5.420  1.00  0.00      8LYZ 177
+ATOM     31  O   GLY     4      -4.220  17.940   6.400  1.00  0.00      8LYZ 178
+ATOM     32  N   ARG     5      -3.350  19.510   4.990  1.00  0.00      8LYZ 179
+ATOM     33  CA  ARG     5      -4.130  20.650   5.500  1.00  0.00      8LYZ 180
+ATOM     34  C   ARG     5      -5.560  20.250   5.850  1.00  0.00      8LYZ 181
+ATOM     35  O   ARG     5      -5.960  20.230   7.040  1.00  0.00      8LYZ 182
+ATOM     36  CB  ARG     5      -4.200  21.790   4.470  1.00  0.00      8LYZ 183
+ATOM     37  CG  ARG     5      -4.700  23.130   5.040  1.00  0.00      8LYZ 184
+ATOM     38  CD  ARG     5      -4.510  24.240   4.020  1.00  0.00      8LYZ 185
+ATOM     39  NE  ARG     5      -5.630  24.280   3.070  1.00  0.00      8LYZ 186
+ATOM     40  CZ  ARG     5      -6.830  24.820   3.360  1.00  0.00      8LYZ 187
+ATOM     41  NH1 ARG     5      -7.520  25.420   2.400  1.00  0.00      8LYZ 188
+ATOM     42  NH2 ARG     5      -7.320  24.770   4.610  1.00  0.00      8LYZ 189
+ATOM     43  N   CYS     6      -6.310  19.940   4.800  1.00  0.00      8LYZ 190
+ATOM     44  CA  CYS     6      -7.700  19.500   4.920  1.00  0.00      8LYZ 191
+ATOM     45  C   CYS     6      -7.960  18.340   5.880  1.00  0.00      8LYZ 192
+ATOM     46  O   CYS     6      -8.770  18.460   6.830  1.00  0.00      8LYZ 193
+ATOM     47  CB  CYS     6      -8.390  19.460   3.570  1.00  0.00      8LYZ 194
+ATOM     48  SG  CYS     6      -8.800  21.070   2.830  1.00  0.00      8LYZ 195
+ATOM     49  N   GLU     7      -7.260  17.250   5.610  1.00  0.00      8LYZ 196
+ATOM     50  CA  GLU     7      -7.370  16.010   6.400  1.00  0.00      8LYZ 197
+ATOM     51  C   GLU     7      -7.210  16.070   7.920  1.00  0.00      8LYZ 198
+ATOM     52  O   GLU     7      -7.890  15.350   8.660  1.00  0.00      8LYZ 199
+ATOM     53  CB  GLU     7      -6.290  14.980   5.970  1.00  0.00      8LYZ 200
+ATOM     54  CG  GLU     7      -6.450  13.550   6.540  1.00  0.00      8LYZ 201
+ATOM     55  CD  GLU     7      -5.300  12.550   6.130  1.00  0.00      8LYZ 202
+ATOM     56  OE1 GLU     7      -4.430  13.190   5.550  1.00  0.00      8LYZ 203
+ATOM     57  OE2 GLU     7      -5.370  11.380   6.380  1.00  0.00      8LYZ 204
+ATOM     58  N   LEU     8      -6.310  16.950   8.330  1.00  0.00      8LYZ 205
+ATOM     59  CA  LEU     8      -6.040  17.230   9.750  1.00  0.00      8LYZ 206
+ATOM     60  C   LEU     8      -7.180  18.050  10.350  1.00  0.00      8LYZ 207
+ATOM     61  O   LEU     8      -7.600  17.820  11.510  1.00  0.00      8LYZ 208
+ATOM     62  CB  LEU     8      -4.720  17.990   9.900  1.00  0.00      8LYZ 209
+ATOM     63  CG  LEU     8      -4.300  18.410  11.300  1.00  0.00      8LYZ 210
+ATOM     64  CD1 LEU     8      -4.070  17.180  12.150  1.00  0.00      8LYZ 211
+ATOM     65  CD2 LEU     8      -3.040  19.240  11.250  1.00  0.00      8LYZ 212
+ATOM     66  N   ALA     9      -7.660  18.980   9.540  1.00  0.00      8LYZ 213
+ATOM     67  CA  ALA     9      -8.770  19.880   9.920  1.00  0.00      8LYZ 214
+ATOM     68  C   ALA     9      -9.920  18.940  10.280  1.00  0.00      8LYZ 215
+ATOM     69  O   ALA     9     -10.450  18.980  11.410  1.00  0.00      8LYZ 216
+ATOM     70  CB  ALA     9      -9.250  20.690   8.700  1.00  0.00      8LYZ 217
+ATOM     71  N   ALA    10     -10.280  18.120   9.300  1.00  0.00      8LYZ 218
+ATOM     72  CA  ALA    10     -11.380  17.160   9.430  1.00  0.00      8LYZ 219
+ATOM     73  C   ALA    10     -11.290  16.290  10.690  1.00  0.00      8LYZ 220
+ATOM     74  O   ALA    10     -12.320  15.960  11.320  1.00  0.00      8LYZ 221
+ATOM     75  CB  ALA    10     -11.300  16.200   8.230  1.00  0.00      8LYZ 222
+ATOM     76  N   ALA    11     -10.060  15.950  11.020  1.00  0.00      8LYZ 223
+ATOM     77  CA  ALA    11      -9.750  14.970  12.060  1.00  0.00      8LYZ 224
+ATOM     78  C   ALA    11      -9.780  15.600  13.450  1.00  0.00      8LYZ 225
+ATOM     79  O   ALA    11     -10.230  14.970  14.430  1.00  0.00      8LYZ 226
+ATOM     80  CB  ALA    11      -8.310  14.470  11.840  1.00  0.00      8LYZ 227
+ATOM     81  N   MET    12      -9.290  16.820  13.500  1.00  0.00      8LYZ 228
+ATOM     82  CA  MET    12      -9.270  17.630  14.730  1.00  0.00      8LYZ 229
+ATOM     83  C   MET    12     -10.710  17.960  15.090  1.00  0.00      8LYZ 230
+ATOM     84  O   MET    12     -11.080  18.040  16.280  1.00  0.00      8LYZ 231
+ATOM     85  CB  MET    12      -8.440  18.920  14.490  1.00  0.00      8LYZ 232
+ATOM     86  CG  MET    12      -6.950  18.620  14.540  1.00  0.00      8LYZ 233
+ATOM     87  SD  MET    12      -5.980  20.120  14.450  1.00  0.00      8LYZ 234
+ATOM     88  CE  MET    12      -6.110  20.640  16.130  1.00  0.00      8LYZ 235
+ATOM     89  N   LYS    13     -11.500  18.150  14.040  1.00  0.00      8LYZ 236
+ATOM     90  CA  LYS    13     -12.940  18.420  14.160  1.00  0.00      8LYZ 237
+ATOM     91  C   LYS    13     -13.670  17.210  14.740  1.00  0.00      8LYZ 238
+ATOM     92  O   LYS    13     -14.430  17.340  15.720  1.00  0.00      8LYZ 239
+ATOM     93  CB  LYS    13     -13.550  18.740  12.790  1.00  0.00      8LYZ 240
+ATOM     94  CG  LYS    13     -14.600  19.840  12.820  1.00  0.00      8LYZ 241
+ATOM     95  CD  LYS    13     -15.570  19.690  11.650  1.00  0.00      8LYZ 242
+ATOM     96  CE  LYS    13     -16.940  20.250  11.980  1.00  0.00      8LYZ 243
+ATOM     97  NZ  LYS    13     -17.910  19.940  10.910  1.00  0.00      8LYZ 244
+ATOM     98  N   ARG    14     -13.400  16.070  14.130  1.00  0.00      8LYZ 245
+ATOM     99  CA  ARG    14     -13.990  14.790  14.530  1.00  0.00      8LYZ 246
+ATOM    100  C   ARG    14     -13.700  14.600  16.020  1.00  0.00      8LYZ 247
+ATOM    101  O   ARG    14     -14.550  14.110  16.790  1.00  0.00      8LYZ 248
+ATOM    102  CB  ARG    14     -13.400  13.620  13.720  1.00  0.00      8LYZ 249
+ATOM    103  CG  ARG    14     -14.450  12.730  13.030  1.00  0.00      8LYZ 250
+ATOM    104  CD  ARG    14     -14.620  11.440  13.800  1.00  0.00      8LYZ 251
+ATOM    105  NE  ARG    14     -13.330  10.760  14.010  1.00  0.00      8LYZ 252
+ATOM    106  CZ  ARG    14     -13.150   9.760  14.890  1.00  0.00      8LYZ 253
+ATOM    107  NH1 ARG    14     -12.090   8.990  14.770  1.00  0.00      8LYZ 254
+ATOM    108  NH2 ARG    14     -14.040   9.540  15.870  1.00  0.00      8LYZ 255
+ATOM    109  N   HIS    15     -12.490  15.000  16.390  1.00  0.00      8LYZ 256
+ATOM    110  CA  HIS    15     -12.020  14.970  17.780  1.00  0.00      8LYZ 257
+ATOM    111  C   HIS    15     -12.280  16.050  18.830  1.00  0.00      8LYZ 258
+ATOM    112  O   HIS    15     -11.490  16.220  19.790  1.00  0.00      8LYZ 259
+ATOM    113  CB  HIS    15     -10.500  14.850  17.780  1.00  0.00      8LYZ 260
+ATOM    114  CG  HIS    15     -10.080  13.400  17.640  1.00  0.00      8LYZ 261
+ATOM    115  ND1 HIS    15      -9.910  12.810  16.390  1.00  0.00      8LYZ 262
+ATOM    116  CD2 HIS    15      -9.830  12.440  18.560  1.00  0.00      8LYZ 263
+ATOM    117  CE1 HIS    15      -9.580  11.550  16.580  1.00  0.00      8LYZ 264
+ATOM    118  NE2 HIS    15      -9.500  11.320  17.870  1.00  0.00      8LYZ 265
+ATOM    119  N   GLY    16     -13.370  16.760  18.610  1.00  0.00      8LYZ 266
+ATOM    120  CA  GLY    16     -13.830  17.820  19.520  1.00  0.00      8LYZ 267
+ATOM    121  C   GLY    16     -13.210  19.210  19.670  1.00  0.00      8LYZ 268
+ATOM    122  O   GLY    16     -13.630  20.010  20.530  1.00  0.00      8LYZ 269
+ATOM    123  N   LEU    17     -12.220  19.460  18.820  1.00  0.00      8LYZ 270
+ATOM    124  CA  LEU    17     -11.460  20.710  18.820  1.00  0.00      8LYZ 271
+ATOM    125  C   LEU    17     -11.840  22.040  18.180  1.00  0.00      8LYZ 272
+ATOM    126  O   LEU    17     -11.230  23.100  18.450  1.00  0.00      8LYZ 273
+ATOM    127  CB  LEU    17     -10.080  20.490  18.180  1.00  0.00      8LYZ 274
+ATOM    128  CG  LEU    17      -8.980  19.930  19.050  1.00  0.00      8LYZ 275
+ATOM    129  CD1 LEU    17      -7.700  19.820  18.230  1.00  0.00      8LYZ 276
+ATOM    130  CD2 LEU    17      -8.740  20.830  20.240  1.00  0.00      8LYZ 277
+ATOM    131  N   ASP    18     -12.850  21.960  17.320  1.00  0.00      8LYZ 278
+ATOM    132  CA  ASP    18     -13.420  23.130  16.630  1.00  0.00      8LYZ 279
+ATOM    133  C   ASP    18     -14.070  23.820  17.840  1.00  0.00      8LYZ 280
+ATOM    134  O   ASP    18     -14.940  23.240  18.520  1.00  0.00      8LYZ 281
+ATOM    135  CB  ASP    18     -14.380  22.660  15.520  1.00  0.00      8LYZ 282
+ATOM    136  CG  ASP    18     -14.950  23.830  14.760  1.00  0.00      8LYZ 283
+ATOM    137  OD1 ASP    18     -14.790  25.000  15.050  1.00  0.00      8LYZ 284
+ATOM    138  OD2 ASP    18     -15.570  23.550  13.760  1.00  0.00      8LYZ 285
+ATOM    139  N   ASN    19     -13.630  25.060  18.060  1.00  0.00      8LYZ 286
+ATOM    140  CA  ASN    19     -14.100  25.890  19.170  1.00  0.00      8LYZ 287
+ATOM    141  C   ASN    19     -13.970  25.460  20.630  1.00  0.00      8LYZ 288
+ATOM    142  O   ASN    19     -14.710  25.940  21.510  1.00  0.00      8LYZ 289
+ATOM    143  CB  ASN    19     -15.610  26.160  19.000  1.00  0.00      8LYZ 290
+ATOM    144  CG  ASN    19     -15.880  27.070  17.820  1.00  0.00      8LYZ 291
+ATOM    145  OD1 ASN    19     -16.400  26.730  16.780  1.00  0.00      8LYZ 292
+ATOM    146  ND2 ASN    19     -15.550  28.410  18.020  1.00  0.00      8LYZ 293
+ATOM    147  N   TYR    20     -13.020  24.570  20.850  1.00  0.00      8LYZ 294
+ATOM    148  CA  TYR    20     -12.730  24.010  22.180  1.00  0.00      8LYZ 295
+ATOM    149  C   TYR    20     -12.140  25.250  22.850  1.00  0.00      8LYZ 296
+ATOM    150  O   TYR    20     -11.240  25.920  22.300  1.00  0.00      8LYZ 297
+ATOM    151  CB  TYR    20     -11.790  22.810  22.010  1.00  0.00      8LYZ 298
+ATOM    152  CG  TYR    20     -11.590  22.250  23.430  1.00  0.00      8LYZ 299
+ATOM    153  CD1 TYR    20     -12.620  21.450  23.970  1.00  0.00      8LYZ 300
+ATOM    154  CD2 TYR    20     -10.500  22.560  24.180  1.00  0.00      8LYZ 301
+ATOM    155  CE1 TYR    20     -12.460  20.920  25.320  1.00  0.00      8LYZ 302
+ATOM    156  CE2 TYR    20     -10.330  22.050  25.510  1.00  0.00      8LYZ 303
+ATOM    157  CZ  TYR    20     -11.360  21.270  26.030  1.00  0.00      8LYZ 304
+ATOM    158  OH  TYR    20     -11.210  20.790  27.320  1.00  0.00      8LYZ 305
+ATOM    159  N   ARG    21     -12.670  25.520  24.040  1.00  0.00      8LYZ 306
+ATOM    160  CA  ARG    21     -12.230  26.650  24.870  1.00  0.00      8LYZ 307
+ATOM    161  C   ARG    21     -12.240  27.970  24.100  1.00  0.00      8LYZ 308
+ATOM    162  O   ARG    21     -11.590  28.960  24.500  1.00  0.00      8LYZ 309
+ATOM    163  CB  ARG    21     -10.810  26.430  25.410  1.00  0.00      8LYZ 310
+ATOM    164  CG  ARG    21     -10.740  25.690  26.770  1.00  0.00      8LYZ 311
+ATOM    165  CD  ARG    21     -11.530  26.450  27.810  1.00  0.00      8LYZ 312
+ATOM    166  NE  ARG    21     -11.430  25.790  29.130  1.00  0.00      8LYZ 313
+ATOM    167  CZ  ARG    21     -10.890  26.370  30.220  1.00  0.00      8LYZ 314
+ATOM    168  NH1 ARG    21     -10.960  25.750  31.380  1.00  0.00      8LYZ 315
+ATOM    169  NH2 ARG    21     -10.290  27.570  30.130  1.00  0.00      8LYZ 316
+ATOM    170  N   GLY    22     -12.990  27.950  23.000  1.00  0.00      8LYZ 317
+ATOM    171  CA  GLY    22     -13.190  29.130  22.160  1.00  0.00      8LYZ 318
+ATOM    172  C   GLY    22     -12.230  29.470  21.010  1.00  0.00      8LYZ 319
+ATOM    173  O   GLY    22     -12.240  30.600  20.470  1.00  0.00      8LYZ 320
+ATOM    174  N   TYR    23     -11.430  28.480  20.670  1.00  0.00      8LYZ 321
+ATOM    175  CA  TYR    23     -10.460  28.570  19.570  1.00  0.00      8LYZ 322
+ATOM    176  C   TYR    23     -11.020  27.860  18.340  1.00  0.00      8LYZ 323
+ATOM    177  O   TYR    23     -11.290  26.640  18.380  1.00  0.00      8LYZ 324
+ATOM    178  CB  TYR    23      -9.130  27.960  20.030  1.00  0.00      8LYZ 325
+ATOM    179  CG  TYR    23      -8.470  28.830  21.120  1.00  0.00      8LYZ 326
+ATOM    180  CD1 TYR    23      -7.770  29.980  20.710  1.00  0.00      8LYZ 327
+ATOM    181  CD2 TYR    23      -8.490  28.470  22.440  1.00  0.00      8LYZ 328
+ATOM    182  CE1 TYR    23      -7.130  30.800  21.730  1.00  0.00      8LYZ 329
+ATOM    183  CE2 TYR    23      -7.880  29.270  23.450  1.00  0.00      8LYZ 330
+ATOM    184  CZ  TYR    23      -7.180  30.410  23.020  1.00  0.00      8LYZ 331
+ATOM    185  OH  TYR    23      -6.550  31.170  23.980  1.00  0.00      8LYZ 332
+ATOM    186  N   SER    24     -11.170  28.630  17.290  1.00  0.00      8LYZ 333
+ATOM    187  CA  SER    24     -11.570  28.130  15.960  1.00  0.00      8LYZ 334
+ATOM    188  C   SER    24     -10.670  26.970  15.530  1.00  0.00      8LYZ 335
+ATOM    189  O   SER    24      -9.480  26.910  15.910  1.00  0.00      8LYZ 336
+ATOM    190  CB  SER    24     -11.500  29.230  14.930  1.00  0.00      8LYZ 337
+ATOM    191  OG  SER    24     -10.970  28.770  13.690  1.00  0.00      8LYZ 338
+ATOM    192  N   LEU    25     -11.260  26.100  14.740  1.00  0.00      8LYZ 339
+ATOM    193  CA  LEU    25     -10.560  24.960  14.130  1.00  0.00      8LYZ 340
+ATOM    194  C   LEU    25      -9.250  25.400  13.470  1.00  0.00      8LYZ 341
+ATOM    195  O   LEU    25      -8.210  24.710  13.570  1.00  0.00      8LYZ 342
+ATOM    196  CB  LEU    25     -11.450  24.290  13.070  1.00  0.00      8LYZ 343
+ATOM    197  CG  LEU    25     -11.220  22.820  12.780  1.00  0.00      8LYZ 344
+ATOM    198  CD1 LEU    25     -12.030  22.420  11.570  1.00  0.00      8LYZ 345
+ATOM    199  CD2 LEU    25      -9.760  22.550  12.530  1.00  0.00      8LYZ 346
+ATOM    200  N   GLY    26      -9.330  26.540  12.800  1.00  0.00      8LYZ 347
+ATOM    201  CA  GLY    26      -8.200  27.140  12.080  1.00  0.00      8LYZ 348
+ATOM    202  C   GLY    26      -7.010  27.490  12.960  1.00  0.00      8LYZ 349
+ATOM    203  O   GLY    26      -5.840  27.400  12.530  1.00  0.00      8LYZ 350
+ATOM    204  N   ASN    27      -7.330  27.870  14.190  1.00  0.00      8LYZ 351
+ATOM    205  CA  ASN    27      -6.330  28.270  15.190  1.00  0.00      8LYZ 352
+ATOM    206  C   ASN    27      -5.440  27.050  15.430  1.00  0.00      8LYZ 353
+ATOM    207  O   ASN    27      -4.220  27.180  15.640  1.00  0.00      8LYZ 354
+ATOM    208  CB  ASN    27      -7.060  28.730  16.480  1.00  0.00      8LYZ 355
+ATOM    209  CG  ASN    27      -7.310  30.220  16.460  1.00  0.00      8LYZ 356
+ATOM    210  OD1 ASN    27      -8.400  30.740  16.380  1.00  0.00      8LYZ 357
+ATOM    211  ND2 ASN    27      -6.180  31.010  16.610  1.00  0.00      8LYZ 358
+ATOM    212  N   TRP    28      -6.080  25.900  15.400  1.00  0.00      8LYZ 359
+ATOM    213  CA  TRP    28      -5.420  24.600  15.560  1.00  0.00      8LYZ 360
+ATOM    214  C   TRP    28      -4.610  23.950  14.430  1.00  0.00      8LYZ 361
+ATOM    215  O   TRP    28      -3.580  23.280  14.680  1.00  0.00      8LYZ 362
+ATOM    216  CB  TRP    28      -6.460  23.560  15.950  1.00  0.00      8LYZ 363
+ATOM    217  CG  TRP    28      -7.220  23.840  17.300  1.00  0.00      8LYZ 364
+ATOM    218  CD1 TRP    28      -8.490  24.240  17.480  1.00  0.00      8LYZ 365
+ATOM    219  CD2 TRP    28      -6.700  23.660  18.580  1.00  0.00      8LYZ 366
+ATOM    220  NE1 TRP    28      -8.750  24.390  18.900  1.00  0.00      8LYZ 367
+ATOM    221  CE2 TRP    28      -7.710  24.000  19.530  1.00  0.00      8LYZ 368
+ATOM    222  CE3 TRP    28      -5.480  23.240  19.020  1.00  0.00      8LYZ 369
+ATOM    223  CZ2 TRP    28      -7.560  23.940  20.920  1.00  0.00      8LYZ 370
+ATOM    224  CZ3 TRP    28      -5.330  23.200  20.430  1.00  0.00      8LYZ 371
+ATOM    225  CH2 TRP    28      -6.350  23.490  21.330  1.00  0.00      8LYZ 372
+ATOM    226  N   VAL    29      -5.090  24.180  13.230  1.00  0.00      8LYZ 373
+ATOM    227  CA  VAL    29      -4.460  23.670  12.000  1.00  0.00      8LYZ 374
+ATOM    228  C   VAL    29      -3.220  24.550  11.820  1.00  0.00      8LYZ 375
+ATOM    229  O   VAL    29      -2.140  24.070  11.440  1.00  0.00      8LYZ 376
+ATOM    230  CB  VAL    29      -5.440  23.760  10.840  1.00  0.00      8LYZ 377
+ATOM    231  CG1 VAL    29      -4.820  23.510   9.440  1.00  0.00      8LYZ 378
+ATOM    232  CG2 VAL    29      -6.680  22.930  11.080  1.00  0.00      8LYZ 379
+ATOM    233  N   CYS    30      -3.420  25.830  12.120  1.00  0.00      8LYZ 380
+ATOM    234  CA  CYS    30      -2.380  26.850  12.000  1.00  0.00      8LYZ 381
+ATOM    235  C   CYS    30      -1.170  26.540  12.890  1.00  0.00      8LYZ 382
+ATOM    236  O   CYS    30       -.020  26.500  12.410  1.00  0.00      8LYZ 383
+ATOM    237  CB  CYS    30      -2.820  28.280  12.210  1.00  0.00      8LYZ 384
+ATOM    238  SG  CYS    30      -1.530  29.550  12.050  1.00  0.00      8LYZ 385
+ATOM    239  N   ALA    31      -1.480  26.330  14.160  1.00  0.00      8LYZ 386
+ATOM    240  CA  ALA    31       -.470  26.080  15.190  1.00  0.00      8LYZ 387
+ATOM    241  C   ALA    31        .360  24.840  14.840  1.00  0.00      8LYZ 388
+ATOM    242  O   ALA    31       1.590  24.840  14.980  1.00  0.00      8LYZ 389
+ATOM    243  CB  ALA    31      -1.190  25.760  16.510  1.00  0.00      8LYZ 390
+ATOM    244  N   ALA    32       -.360  23.840  14.380  1.00  0.00      8LYZ 391
+ATOM    245  CA  ALA    32        .220  22.540  14.000  1.00  0.00      8LYZ 392
+ATOM    246  C   ALA    32       1.120  22.560  12.760  1.00  0.00      8LYZ 393
+ATOM    247  O   ALA    32       2.120  21.800  12.670  1.00  0.00      8LYZ 394
+ATOM    248  CB  ALA    32       -.950  21.620  13.660  1.00  0.00      8LYZ 395
+ATOM    249  N   LYS    33        .750  23.420  11.830  1.00  0.00      8LYZ 396
+ATOM    250  CA  LYS    33       1.500  23.640  10.590  1.00  0.00      8LYZ 397
+ATOM    251  C   LYS    33       2.880  24.200  10.930  1.00  0.00      8LYZ 398
+ATOM    252  O   LYS    33       3.920  23.590  10.620  1.00  0.00      8LYZ 399
+ATOM    253  CB  LYS    33        .770  24.610   9.660  1.00  0.00      8LYZ 400
+ATOM    254  CG  LYS    33       1.650  25.290   8.630  1.00  0.00      8LYZ 401
+ATOM    255  CD  LYS    33       2.090  24.300   7.550  1.00  0.00      8LYZ 402
+ATOM    256  CE  LYS    33       3.000  24.960   6.530  1.00  0.00      8LYZ 403
+ATOM    257  NZ  LYS    33       3.280  24.050   5.400  1.00  0.00      8LYZ 404
+ATOM    258  N   PHE    34       2.850  25.350  11.580  1.00  0.00      8LYZ 405
+ATOM    259  CA  PHE    34       4.060  26.040  12.050  1.00  0.00      8LYZ 406
+ATOM    260  C   PHE    34       4.850  25.460  13.220  1.00  0.00      8LYZ 407
+ATOM    261  O   PHE    34       5.970  25.920  13.520  1.00  0.00      8LYZ 408
+ATOM    262  CB  PHE    34       3.690  27.460  12.460  1.00  0.00      8LYZ 409
+ATOM    263  CG  PHE    34       3.360  28.150  11.170  1.00  0.00      8LYZ 410
+ATOM    264  CD1 PHE    34       2.200  28.840  11.070  1.00  0.00      8LYZ 411
+ATOM    265  CD2 PHE    34       4.240  28.170  10.110  1.00  0.00      8LYZ 412
+ATOM    266  CE1 PHE    34       1.840  29.530   9.880  1.00  0.00      8LYZ 413
+ATOM    267  CE2 PHE    34       3.880  28.900   8.930  1.00  0.00      8LYZ 414
+ATOM    268  CZ  PHE    34       2.700  29.530   8.830  1.00  0.00      8LYZ 415
+ATOM    269  N   GLU    35       4.250  24.460  13.830  1.00  0.00      8LYZ 416
+ATOM    270  CA  GLU    35       4.850  23.730  14.960  1.00  0.00      8LYZ 417
+ATOM    271  C   GLU    35       5.560  22.450  14.510  1.00  0.00      8LYZ 418
+ATOM    272  O   GLU    35       6.710  22.180  14.920  1.00  0.00      8LYZ 419
+ATOM    273  CB  GLU    35       3.780  23.320  16.000  1.00  0.00      8LYZ 420
+ATOM    274  CG  GLU    35       4.070  23.660  17.480  1.00  0.00      8LYZ 421
+ATOM    275  CD  GLU    35       2.870  23.420  18.460  1.00  0.00      8LYZ 422
+ATOM    276  OE1 GLU    35       2.190  22.440  18.400  1.00  0.00      8LYZ 423
+ATOM    277  OE2 GLU    35       2.800  24.380  19.240  1.00  0.00      8LYZ 424
+ATOM    278  N   SER    36       4.860  21.710  13.680  1.00  0.00      8LYZ 425
+ATOM    279  CA  SER    36       5.360  20.460  13.100  1.00  0.00      8LYZ 426
+ATOM    280  C   SER    36       5.290  20.080  11.620  1.00  0.00      8LYZ 427
+ATOM    281  O   SER    36       5.700  18.970  11.210  1.00  0.00      8LYZ 428
+ATOM    282  CB  SER    36       4.670  19.280  13.730  1.00  0.00      8LYZ 429
+ATOM    283  OG  SER    36       3.260  19.300  13.520  1.00  0.00      8LYZ 430
+ATOM    284  N   ASN    37       4.770  21.020  10.850  1.00  0.00      8LYZ 431
+ATOM    285  CA  ASN    37       4.470  20.820   9.420  1.00  0.00      8LYZ 432
+ATOM    286  C   ASN    37       3.610  19.590   9.120  1.00  0.00      8LYZ 433
+ATOM    287  O   ASN    37       3.860  18.850   8.140  1.00  0.00      8LYZ 434
+ATOM    288  CB  ASN    37       5.790  20.690   8.630  1.00  0.00      8LYZ 435
+ATOM    289  CG  ASN    37       5.790  21.560   7.400  1.00  0.00      8LYZ 436
+ATOM    290  OD1 ASN    37       6.100  21.180   6.290  1.00  0.00      8LYZ 437
+ATOM    291  ND2 ASN    37       5.320  22.850   7.580  1.00  0.00      8LYZ 438
+ATOM    292  N   PHE    38       2.620  19.400   9.980  1.00  0.00      8LYZ 439
+ATOM    293  CA  PHE    38       1.610  18.360   9.810  1.00  0.00      8LYZ 440
+ATOM    294  C   PHE    38       2.210  16.970  10.000  1.00  0.00      8LYZ 441
+ATOM    295  O   PHE    38       1.560  15.940   9.740  1.00  0.00      8LYZ 442
+ATOM    296  CB  PHE    38        .990  18.490   8.430  1.00  0.00      8LYZ 443
+ATOM    297  CG  PHE    38        .180  19.750   8.360  1.00  0.00      8LYZ 444
+ATOM    298  CD1 PHE    38       -.290  20.300   9.500  1.00  0.00      8LYZ 445
+ATOM    299  CD2 PHE    38       -.030  20.410   7.170  1.00  0.00      8LYZ 446
+ATOM    300  CE1 PHE    38      -1.050  21.500   9.510  1.00  0.00      8LYZ 447
+ATOM    301  CE2 PHE    38       -.760  21.650   7.190  1.00  0.00      8LYZ 448
+ATOM    302  CZ  PHE    38      -1.280  22.140   8.330  1.00  0.00      8LYZ 449
+ATOM    303  N   ASN    39       3.450  16.980  10.450  1.00  0.00      8LYZ 450
+ATOM    304  CA  ASN    39       4.230  15.760  10.710  1.00  0.00      8LYZ 451
+ATOM    305  C   ASN    39       4.220  15.330  12.170  1.00  0.00      8LYZ 452
+ATOM    306  O   ASN    39       4.870  15.950  13.030  1.00  0.00      8LYZ 453
+ATOM    307  CB  ASN    39       5.690  15.980  10.260  1.00  0.00      8LYZ 454
+ATOM    308  CG  ASN    39       6.490  14.720  10.370  1.00  0.00      8LYZ 455
+ATOM    309  OD1 ASN    39       7.700  14.640  10.230  1.00  0.00      8LYZ 456
+ATOM    310  ND2 ASN    39       5.770  13.580  10.730  1.00  0.00      8LYZ 457
+ATOM    311  N   THR    40       3.470  14.270  12.410  1.00  0.00      8LYZ 458
+ATOM    312  CA  THR    40       3.340  13.660  13.750  1.00  0.00      8LYZ 459
+ATOM    313  C   THR    40       4.570  13.040  14.410  1.00  0.00      8LYZ 460
+ATOM    314  O   THR    40       4.600  12.840  15.640  1.00  0.00      8LYZ 461
+ATOM    315  CB  THR    40       2.260  12.570  13.640  1.00  0.00      8LYZ 462
+ATOM    316  OG1 THR    40       2.930  11.490  12.990  1.00  0.00      8LYZ 463
+ATOM    317  CG2 THR    40       1.070  13.010  12.840  1.00  0.00      8LYZ 464
+ATOM    318  N   GLN    41       5.550  12.750  13.570  1.00  0.00      8LYZ 465
+ATOM    319  CA  GLN    41       6.810  12.150  13.990  1.00  0.00      8LYZ 466
+ATOM    320  C   GLN    41       7.910  13.110  14.400  1.00  0.00      8LYZ 467
+ATOM    321  O   GLN    41       8.990  12.710  14.900  1.00  0.00      8LYZ 468
+ATOM    322  CB  GLN    41       7.320  11.290  12.860  1.00  0.00      8LYZ 469
+ATOM    323  CG  GLN    41       6.660   9.980  12.780  1.00  0.00      8LYZ 470
+ATOM    324  CD  GLN    41       7.460   8.900  12.030  1.00  0.00      8LYZ 471
+ATOM    325  OE1 GLN    41       8.130   8.070  12.710  1.00  0.00      8LYZ 472
+ATOM    326  NE2 GLN    41       7.450   8.920  10.750  1.00  0.00      8LYZ 473
+ATOM    327  N   ALA    42       7.620  14.390  14.200  1.00  0.00      8LYZ 474
+ATOM    328  CA  ALA    42       8.470  15.490  14.660  1.00  0.00      8LYZ 475
+ATOM    329  C   ALA    42       8.820  15.510  16.140  1.00  0.00      8LYZ 476
+ATOM    330  O   ALA    42       7.970  15.240  17.010  1.00  0.00      8LYZ 477
+ATOM    331  CB  ALA    42       7.670  16.780  14.390  1.00  0.00      8LYZ 478
+ATOM    332  N   THR    43      10.090  15.830  16.390  1.00  0.00      8LYZ 479
+ATOM    333  CA  THR    43      10.620  16.010  17.750  1.00  0.00      8LYZ 480
+ATOM    334  C   THR    43      11.610  17.160  17.660  1.00  0.00      8LYZ 481
+ATOM    335  O   THR    43      12.210  17.420  16.600  1.00  0.00      8LYZ 482
+ATOM    336  CB  THR    43      11.240  14.660  18.180  1.00  0.00      8LYZ 483
+ATOM    337  OG1 THR    43      12.280  14.450  17.230  1.00  0.00      8LYZ 484
+ATOM    338  CG2 THR    43      10.240  13.540  18.140  1.00  0.00      8LYZ 485
+ATOM    339  N   ASN    44      11.780  17.820  18.810  1.00  0.00      8LYZ 486
+ATOM    340  CA  ASN    44      12.740  18.910  18.970  1.00  0.00      8LYZ 487
+ATOM    341  C   ASN    44      13.170  19.130  20.420  1.00  0.00      8LYZ 488
+ATOM    342  O   ASN    44      12.330  19.280  21.330  1.00  0.00      8LYZ 489
+ATOM    343  CB  ASN    44      12.130  20.220  18.440  1.00  0.00      8LYZ 490
+ATOM    344  CG  ASN    44      11.980  20.190  16.940  1.00  0.00      8LYZ 491
+ATOM    345  OD1 ASN    44      10.910  20.200  16.340  1.00  0.00      8LYZ 492
+ATOM    346  ND2 ASN    44      13.170  20.210  16.220  1.00  0.00      8LYZ 493
+ATOM    347  N   ARG    45      14.480  19.140  20.600  1.00  0.00      8LYZ 494
+ATOM    348  CA  ARG    45      15.120  19.320  21.910  1.00  0.00      8LYZ 495
+ATOM    349  C   ARG    45      15.320  20.800  22.190  1.00  0.00      8LYZ 496
+ATOM    350  O   ARG    45      15.770  21.570  21.320  1.00  0.00      8LYZ 497
+ATOM    351  CB  ARG    45      16.490  18.610  21.970  1.00  0.00      8LYZ 498
+ATOM    352  CG  ARG    45      17.000  18.330  23.390  1.00  0.00      8LYZ 499
+ATOM    353  CD  ARG    45      17.490  16.900  23.500  1.00  0.00      8LYZ 500
+ATOM    354  NE  ARG    45      17.190  16.330  24.820  1.00  0.00      8LYZ 501
+ATOM    355  CZ  ARG    45      17.890  15.320  25.370  1.00  0.00      8LYZ 502
+ATOM    356  NH1 ARG    45      17.670  14.940  26.650  1.00  0.00      8LYZ 503
+ATOM    357  NH2 ARG    45      18.780  14.690  24.640  1.00  0.00      8LYZ 504
+ATOM    358  N   ASN    46      14.970  21.170  23.420  1.00  0.00      8LYZ 505
+ATOM    359  CA  ASN    46      15.010  22.560  23.880  1.00  0.00      8LYZ 506
+ATOM    360  C   ASN    46      16.320  22.390  24.630  1.00  0.00      8LYZ 507
+ATOM    361  O   ASN    46      16.830  21.260  24.770  1.00  0.00      8LYZ 508
+ATOM    362  CB  ASN    46      13.730  22.870  24.690  1.00  0.00      8LYZ 509
+ATOM    363  CG  ASN    46      12.480  22.610  23.880  1.00  0.00      8LYZ 510
+ATOM    364  OD1 ASN    46      11.920  21.350  24.030  1.00  0.00      8LYZ 511
+ATOM    365  ND2 ASN    46      11.990  23.390  23.090  1.00  0.00      8LYZ 512
+ATOM    366  N   THR    47      16.840  23.520  25.100  1.00  0.00      8LYZ 513
+ATOM    367  CA  THR    47      18.060  23.570  25.900  1.00  0.00      8LYZ 514
+ATOM    368  C   THR    47      18.100  23.030  27.330  1.00  0.00      8LYZ 515
+ATOM    369  O   THR    47      19.180  22.720  27.870  1.00  0.00      8LYZ 516
+ATOM    370  CB  THR    47      18.480  25.050  25.990  1.00  0.00      8LYZ 517
+ATOM    371  OG1 THR    47      17.260  25.750  26.210  1.00  0.00      8LYZ 518
+ATOM    372  CG2 THR    47      19.140  25.540  24.730  1.00  0.00      8LYZ 519
+ATOM    373  N   ASP    48      16.910  22.900  27.890  1.00  0.00      8LYZ 520
+ATOM    374  CA  ASP    48      16.730  22.610  29.320  1.00  0.00      8LYZ 521
+ATOM    375  C   ASP    48      16.570  21.100  29.540  1.00  0.00      8LYZ 522
+ATOM    376  O   ASP    48      16.280  20.640  30.660  1.00  0.00      8LYZ 523
+ATOM    377  CB  ASP    48      15.480  23.350  29.840  1.00  0.00      8LYZ 524
+ATOM    378  CG  ASP    48      14.210  22.770  29.290  1.00  0.00      8LYZ 525
+ATOM    379  OD1 ASP    48      14.270  22.350  27.970  1.00  0.00      8LYZ 526
+ATOM    380  OD2 ASP    48      13.150  22.700  29.890  1.00  0.00      8LYZ 527
+ATOM    381  N   GLY    49      16.780  20.380  28.450  1.00  0.00      8LYZ 528
+ATOM    382  CA  GLY    49      16.860  18.910  28.470  1.00  0.00      8LYZ 529
+ATOM    383  C   GLY    49      15.550  18.310  27.970  1.00  0.00      8LYZ 530
+ATOM    384  O   GLY    49      15.510  17.150  27.500  1.00  0.00      8LYZ 531
+ATOM    385  N   SER    50      14.500  19.100  28.090  1.00  0.00      8LYZ 532
+ATOM    386  CA  SER    50      13.160  18.750  27.620  1.00  0.00      8LYZ 533
+ATOM    387  C   SER    50      13.170  18.590  26.100  1.00  0.00      8LYZ 534
+ATOM    388  O   SER    50      14.070  19.100  25.400  1.00  0.00      8LYZ 535
+ATOM    389  CB  SER    50      12.160  19.820  28.020  1.00  0.00      8LYZ 536
+ATOM    390  OG  SER    50      11.780  20.630  26.910  1.00  0.00      8LYZ 537
+ATOM    391  N   THR    51      12.150  17.890  25.630  1.00  0.00      8LYZ 538
+ATOM    392  CA  THR    51      11.970  17.600  24.200  1.00  0.00      8LYZ 539
+ATOM    393  C   THR    51      10.480  17.790  23.910  1.00  0.00      8LYZ 540
+ATOM    394  O   THR    51       9.620  17.580  24.790  1.00  0.00      8LYZ 541
+ATOM    395  CB  THR    51      12.480  16.160  23.970  1.00  0.00      8LYZ 542
+ATOM    396  OG1 THR    51      13.890  16.260  24.090  1.00  0.00      8LYZ 543
+ATOM    397  CG2 THR    51      12.110  15.620  22.610  1.00  0.00      8LYZ 544
+ATOM    398  N   ASP    52      10.220  18.190  22.680  1.00  0.00      8LYZ 545
+ATOM    399  CA  ASP    52       8.870  18.480  22.200  1.00  0.00      8LYZ 546
+ATOM    400  C   ASP    52       8.470  17.340  21.270  1.00  0.00      8LYZ 547
+ATOM    401  O   ASP    52       9.280  16.880  20.430  1.00  0.00      8LYZ 548
+ATOM    402  CB  ASP    52       8.860  19.860  21.480  1.00  0.00      8LYZ 549
+ATOM    403  CG  ASP    52       8.900  20.990  22.460  1.00  0.00      8LYZ 550
+ATOM    404  OD1 ASP    52       9.010  20.860  23.670  1.00  0.00      8LYZ 551
+ATOM    405  OD2 ASP    52       8.870  22.090  21.980  1.00  0.00      8LYZ 552
+ATOM    406  N   TYR    53       7.230  16.920  21.430  1.00  0.00      8LYZ 553
+ATOM    407  CA  TYR    53       6.660  15.800  20.670  1.00  0.00      8LYZ 554
+ATOM    408  C   TYR    53       5.310  15.810  19.950  1.00  0.00      8LYZ 555
+ATOM    409  O   TYR    53       4.290  16.290  20.480  1.00  0.00      8LYZ 556
+ATOM    410  CB  TYR    53       6.520  14.590  21.610  1.00  0.00      8LYZ 557
+ATOM    411  CG  TYR    53       7.820  14.200  22.330  1.00  0.00      8LYZ 558
+ATOM    412  CD1 TYR    53       8.520  13.070  21.870  1.00  0.00      8LYZ 559
+ATOM    413  CD2 TYR    53       8.260  14.870  23.430  1.00  0.00      8LYZ 560
+ATOM    414  CE1 TYR    53       9.750  12.690  22.550  1.00  0.00      8LYZ 561
+ATOM    415  CE2 TYR    53       9.470  14.500  24.110  1.00  0.00      8LYZ 562
+ATOM    416  CZ  TYR    53      10.150  13.380  23.640  1.00  0.00      8LYZ 563
+ATOM    417  OH  TYR    53      11.300  13.000  24.290  1.00  0.00      8LYZ 564
+ATOM    418  N   GLY    54       5.340  15.270  18.740  1.00  0.00      8LYZ 565
+ATOM    419  CA  GLY    54       4.180  15.220  17.850  1.00  0.00      8LYZ 566
+ATOM    420  C   GLY    54       3.760  16.400  16.990  1.00  0.00      8LYZ 567
+ATOM    421  O   GLY    54       4.480  17.410  16.880  1.00  0.00      8LYZ 568
+ATOM    422  N   ILE    55       2.580  16.260  16.410  1.00  0.00      8LYZ 569
+ATOM    423  CA  ILE    55       1.930  17.310  15.620  1.00  0.00      8LYZ 570
+ATOM    424  C   ILE    55       1.800  18.680  16.270  1.00  0.00      8LYZ 571
+ATOM    425  O   ILE    55       1.940  19.740  15.610  1.00  0.00      8LYZ 572
+ATOM    426  CB  ILE    55        .480  16.940  15.220  1.00  0.00      8LYZ 573
+ATOM    427  CG1 ILE    55        .010  17.640  13.920  1.00  0.00      8LYZ 574
+ATOM    428  CG2 ILE    55       -.280  17.270  16.500  1.00  0.00      8LYZ 575
+ATOM    429  CD1 ILE    55        .420  16.910  12.630  1.00  0.00      8LYZ 576
+ATOM    430  N   LEU    56       1.520  18.640  17.570  1.00  0.00      8LYZ 577
+ATOM    431  CA  LEU    56       1.300  19.840  18.380  1.00  0.00      8LYZ 578
+ATOM    432  C   LEU    56       2.450  20.190  19.330  1.00  0.00      8LYZ 579
+ATOM    433  O   LEU    56       2.330  21.090  20.190  1.00  0.00      8LYZ 580
+ATOM    434  CB  LEU    56        .030  19.660  19.240  1.00  0.00      8LYZ 581
+ATOM    435  CG  LEU    56      -1.170  20.530  18.920  1.00  0.00      8LYZ 582
+ATOM    436  CD1 LEU    56       -.970  21.170  17.570  1.00  0.00      8LYZ 583
+ATOM    437  CD2 LEU    56      -2.430  19.700  18.910  1.00  0.00      8LYZ 584
+ATOM    438  N   GLN    57       3.540  19.450  19.150  1.00  0.00      8LYZ 585
+ATOM    439  CA  GLN    57       4.750  19.610  19.960  1.00  0.00      8LYZ 586
+ATOM    440  C   GLN    57       4.620  19.820  21.480  1.00  0.00      8LYZ 587
+ATOM    441  O   GLN    57       5.120  20.820  22.030  1.00  0.00      8LYZ 588
+ATOM    442  CB  GLN    57       5.540  20.770  19.430  1.00  0.00      8LYZ 589
+ATOM    443  CG  GLN    57       6.110  20.520  18.100  1.00  0.00      8LYZ 590
+ATOM    444  CD  GLN    57       7.260  19.510  18.070  1.00  0.00      8LYZ 591
+ATOM    445  OE1 GLN    57       8.440  19.920  18.360  1.00  0.00      8LYZ 592
+ATOM    446  NE2 GLN    57       6.990  18.300  17.810  1.00  0.00      8LYZ 593
+ATOM    447  N   ILE    58       3.950  18.870  22.100  1.00  0.00      8LYZ 594
+ATOM    448  CA  ILE    58       3.790  18.820  23.560  1.00  0.00      8LYZ 595
+ATOM    449  C   ILE    58       5.110  18.510  24.270  1.00  0.00      8LYZ 596
+ATOM    450  O   ILE    58       5.850  17.580  23.870  1.00  0.00      8LYZ 597
+ATOM    451  CB  ILE    58       2.770  17.740  24.000  1.00  0.00      8LYZ 598
+ATOM    452  CG1 ILE    58       1.400  17.870  23.280  1.00  0.00      8LYZ 599
+ATOM    453  CG2 ILE    58       2.770  17.910  25.510  1.00  0.00      8LYZ 600
+ATOM    454  CD1 ILE    58        .450  16.690  23.530  1.00  0.00      8LYZ 601
+ATOM    455  N   ASN    59       5.360  19.300  25.310  1.00  0.00      8LYZ 602
+ATOM    456  CA  ASN    59       6.590  19.190  26.110  1.00  0.00      8LYZ 603
+ATOM    457  C   ASN    59       6.610  18.070  27.150  1.00  0.00      8LYZ 604
+ATOM    458  O   ASN    59       5.570  17.710  27.740  1.00  0.00      8LYZ 605
+ATOM    459  CB  ASN    59       6.830  20.520  26.850  1.00  0.00      8LYZ 606
+ATOM    460  CG  ASN    59       8.290  20.690  27.200  1.00  0.00      8LYZ 607
+ATOM    461  OD1 ASN    59       8.590  20.630  28.560  1.00  0.00      8LYZ 608
+ATOM    462  ND2 ASN    59       9.170  20.940  26.400  1.00  0.00      8LYZ 609
+ATOM    463  N   SER    60       7.810  17.550  27.360  1.00  0.00      8LYZ 610
+ATOM    464  CA  SER    60       8.070  16.520  28.370  1.00  0.00      8LYZ 611
+ATOM    465  C   SER    60       8.430  16.840  29.820  1.00  0.00      8LYZ 612
+ATOM    466  O   SER    60       8.570  15.930  30.670  1.00  0.00      8LYZ 613
+ATOM    467  CB  SER    60       9.240  15.650  27.940  1.00  0.00      8LYZ 614
+ATOM    468  OG  SER    60      10.470  16.350  27.970  1.00  0.00      8LYZ 615
+ATOM    469  N   ARG    61       8.570  18.130  30.080  1.00  0.00      8LYZ 616
+ATOM    470  CA  ARG    61       8.910  18.660  31.400  1.00  0.00      8LYZ 617
+ATOM    471  C   ARG    61       7.630  18.700  32.240  1.00  0.00      8LYZ 618
+ATOM    472  O   ARG    61       7.680  18.730  33.490  1.00  0.00      8LYZ 619
+ATOM    473  CB  ARG    61       9.520  20.070  31.300  1.00  0.00      8LYZ 620
+ATOM    474  CG  ARG    61       9.500  20.860  32.620  1.00  0.00      8LYZ 621
+ATOM    475  CD  ARG    61      10.870  21.480  32.880  1.00  0.00      8LYZ 622
+ATOM    476  NE  ARG    61      11.070  21.720  34.320  1.00  0.00      8LYZ 623
+ATOM    477  CZ  ARG    61      12.210  22.230  34.830  1.00  0.00      8LYZ 624
+ATOM    478  NH1 ARG    61      12.260  22.680  36.090  1.00  0.00      8LYZ 625
+ATOM    479  NH2 ARG    61      13.290  22.280  34.060  1.00  0.00      8LYZ 626
+ATOM    480  N   TRP    62       6.520  18.710  31.520  1.00  0.00      8LYZ 627
+ATOM    481  CA  TRP    62       5.180  18.720  32.130  1.00  0.00      8LYZ 628
+ATOM    482  C   TRP    62       3.990  17.840  31.750  1.00  0.00      8LYZ 629
+ATOM    483  O   TRP    62       3.260  17.320  32.620  1.00  0.00      8LYZ 630
+ATOM    484  CB  TRP    62       4.590  20.120  32.000  1.00  0.00      8LYZ 631
+ATOM    485  CG  TRP    62       5.540  21.380  32.090  1.00  0.00      8LYZ 632
+ATOM    486  CD1 TRP    62       6.190  22.010  31.100  1.00  0.00      8LYZ 633
+ATOM    487  CD2 TRP    62       5.810  22.120  33.240  1.00  0.00      8LYZ 634
+ATOM    488  NE1 TRP    62       6.960  23.110  31.660  1.00  0.00      8LYZ 635
+ATOM    489  CE2 TRP    62       6.680  23.190  32.900  1.00  0.00      8LYZ 636
+ATOM    490  CE3 TRP    62       5.390  21.980  34.550  1.00  0.00      8LYZ 637
+ATOM    491  CZ2 TRP    62       7.170  24.150  33.800  1.00  0.00      8LYZ 638
+ATOM    492  CZ3 TRP    62       5.900  22.930  35.440  1.00  0.00      8LYZ 639
+ATOM    493  CH2 TRP    62       6.720  23.990  35.080  1.00  0.00      8LYZ 640
+ATOM    494  N   TRP    63       3.830  17.680  30.440  1.00  0.00      8LYZ 641
+ATOM    495  CA  TRP    63       2.770  16.860  29.850  1.00  0.00      8LYZ 642
+ATOM    496  C   TRP    63       2.850  15.350  29.640  1.00  0.00      8LYZ 643
+ATOM    497  O   TRP    63       1.840  14.620  29.810  1.00  0.00      8LYZ 644
+ATOM    498  CB  TRP    63       2.440  17.400  28.460  1.00  0.00      8LYZ 645
+ATOM    499  CG  TRP    63       2.310  18.930  28.790  1.00  0.00      8LYZ 646
+ATOM    500  CD1 TRP    63       3.040  19.960  28.360  1.00  0.00      8LYZ 647
+ATOM    501  CD2 TRP    63       1.300  19.500  29.590  1.00  0.00      8LYZ 648
+ATOM    502  NE1 TRP    63       2.550  21.190  28.960  1.00  0.00      8LYZ 649
+ATOM    503  CE2 TRP    63       1.510  20.910  29.640  1.00  0.00      8LYZ 650
+ATOM    504  CE3 TRP    63        .250  18.950  30.280  1.00  0.00      8LYZ 651
+ATOM    505  CZ2 TRP    63        .710  21.820  30.340  1.00  0.00      8LYZ 652
+ATOM    506  CZ3 TRP    63       -.550  19.880  30.990  1.00  0.00      8LYZ 653
+ATOM    507  CH2 TRP    63       -.350  21.250  30.980  1.00  0.00      8LYZ 654
+ATOM    508  N   CYS    64       4.040  14.920  29.270  1.00  0.00      8LYZ 655
+ATOM    509  CA  CYS    64       4.330  13.510  28.980  1.00  0.00      8LYZ 656
+ATOM    510  C   CYS    64       5.730  13.090  29.440  1.00  0.00      8LYZ 657
+ATOM    511  O   CYS    64       6.660  13.930  29.500  1.00  0.00      8LYZ 658
+ATOM    512  CB  CYS    64       4.290  13.130  27.520  1.00  0.00      8LYZ 659
+ATOM    513  SG  CYS    64       5.510  13.960  26.440  1.00  0.00      8LYZ 660
+ATOM    514  N   ASN    65       5.840  11.820  29.750  1.00  0.00      8LYZ 661
+ATOM    515  CA  ASN    65       7.120  11.180  30.100  1.00  0.00      8LYZ 662
+ATOM    516  C   ASN    65       7.800  10.510  28.910  1.00  0.00      8LYZ 663
+ATOM    517  O   ASN    65       7.190   9.710  28.180  1.00  0.00      8LYZ 664
+ATOM    518  CB  ASN    65       6.880  10.130  31.210  1.00  0.00      8LYZ 665
+ATOM    519  CG  ASN    65       8.170   9.460  31.610  1.00  0.00      8LYZ 666
+ATOM    520  OD1 ASN    65       8.140   8.260  31.630  1.00  0.00      8LYZ 667
+ATOM    521  ND2 ASN    65       9.170  10.040  31.970  1.00  0.00      8LYZ 668
+ATOM    522  N   ASP    66       9.070  10.870  28.760  1.00  0.00      8LYZ 669
+ATOM    523  CA  ASP    66       9.980  10.200  27.810  1.00  0.00      8LYZ 670
+ATOM    524  C   ASP    66      11.230   9.610  28.470  1.00  0.00      8LYZ 671
+ATOM    525  O   ASP    66      12.220   9.290  27.780  1.00  0.00      8LYZ 672
+ATOM    526  CB  ASP    66      10.420  11.200  26.720  1.00  0.00      8LYZ 673
+ATOM    527  CG  ASP    66      11.250  12.320  27.300  1.00  0.00      8LYZ 674
+ATOM    528  OD1 ASP    66      11.320  12.350  28.690  1.00  0.00      8LYZ 675
+ATOM    529  OD2 ASP    66      11.790  13.190  26.650  1.00  0.00      8LYZ 676
+ATOM    530  N   GLY    67      11.140   9.500  29.790  1.00  0.00      8LYZ 677
+ATOM    531  CA  GLY    67      12.200   8.900  30.610  1.00  0.00      8LYZ 678
+ATOM    532  C   GLY    67      13.610   9.470  30.700  1.00  0.00      8LYZ 679
+ATOM    533  O   GLY    67      14.520   8.870  31.320  1.00  0.00      8LYZ 680
+ATOM    534  N   ARG    68      13.770  10.630  30.080  1.00  0.00      8LYZ 681
+ATOM    535  CA  ARG    68      14.990  11.450  30.190  1.00  0.00      8LYZ 682
+ATOM    536  C   ARG    68      14.930  12.960  30.400  1.00  0.00      8LYZ 683
+ATOM    537  O   ARG    68      15.900  13.690  30.090  1.00  0.00      8LYZ 684
+ATOM    538  CB  ARG    68      15.860  11.320  28.920  1.00  0.00      8LYZ 685
+ATOM    539  CG  ARG    68      15.290  12.050  27.690  1.00  0.00      8LYZ 686
+ATOM    540  CD  ARG    68      16.380  12.280  26.660  1.00  0.00      8LYZ 687
+ATOM    541  NE  ARG    68      15.830  12.730  25.380  1.00  0.00      8LYZ 688
+ATOM    542  CZ  ARG    68      16.580  13.260  24.390  1.00  0.00      8LYZ 689
+ATOM    543  NH1 ARG    68      15.970  13.800  23.350  1.00  0.00      8LYZ 690
+ATOM    544  NH2 ARG    68      17.920  13.240  24.460  1.00  0.00      8LYZ 691
+ATOM    545  N   THR    69      13.800  13.400  30.940  1.00  0.00      8LYZ 692
+ATOM    546  CA  THR    69      13.640  14.750  31.470  1.00  0.00      8LYZ 693
+ATOM    547  C   THR    69      13.280  14.730  32.960  1.00  0.00      8LYZ 694
+ATOM    548  O   THR    69      12.110  14.480  33.340  1.00  0.00      8LYZ 695
+ATOM    549  CB  THR    69      12.550  15.440  30.630  1.00  0.00      8LYZ 696
+ATOM    550  OG1 THR    69      12.810  15.020  29.300  1.00  0.00      8LYZ 697
+ATOM    551  CG2 THR    69      12.610  16.940  30.730  1.00  0.00      8LYZ 698
+ATOM    552  N   PRO    70      14.290  15.000  33.760  1.00  0.00      8LYZ 699
+ATOM    553  CA  PRO    70      14.180  15.030  35.230  1.00  0.00      8LYZ 700
+ATOM    554  C   PRO    70      13.150  15.790  36.070  1.00  0.00      8LYZ 701
+ATOM    555  O   PRO    70      12.560  15.250  37.020  1.00  0.00      8LYZ 702
+ATOM    556  CB  PRO    70      15.570  15.320  35.700  1.00  0.00      8LYZ 703
+ATOM    557  CG  PRO    70      16.460  15.050  34.500  1.00  0.00      8LYZ 704
+ATOM    558  CD  PRO    70      15.610  15.430  33.300  1.00  0.00      8LYZ 705
+ATOM    559  N   GLY    71      12.980  17.040  35.680  1.00  0.00      8LYZ 706
+ATOM    560  CA  GLY    71      12.090  17.980  36.390  1.00  0.00      8LYZ 707
+ATOM    561  C   GLY    71      10.770  17.220  36.410  1.00  0.00      8LYZ 708
+ATOM    562  O   GLY    71       9.980  17.330  37.380  1.00  0.00      8LYZ 709
+ATOM    563  N   SER    72      10.560  16.470  35.340  1.00  0.00      8LYZ 710
+ATOM    564  CA  SER    72       9.250  15.900  35.010  1.00  0.00      8LYZ 711
+ATOM    565  C   SER    72       7.930  15.390  35.580  1.00  0.00      8LYZ 712
+ATOM    566  O   SER    72       7.890  14.430  36.370  1.00  0.00      8LYZ 713
+ATOM    567  CB  SER    72       9.430  14.580  34.280  1.00  0.00      8LYZ 714
+ATOM    568  OG  SER    72       9.360  14.750  32.860  1.00  0.00      8LYZ 715
+ATOM    569  N   ARG    73       6.870  16.050  35.150  1.00  0.00      8LYZ 716
+ATOM    570  CA  ARG    73       5.560  15.980  35.810  1.00  0.00      8LYZ 717
+ATOM    571  C   ARG    73       5.130  15.370  34.480  1.00  0.00      8LYZ 718
+ATOM    572  O   ARG    73       5.610  15.790  33.390  1.00  0.00      8LYZ 719
+ATOM    573  CB  ARG    73       5.080  17.380  36.250  1.00  0.00      8LYZ 720
+ATOM    574  CG  ARG    73       5.620  17.830  37.620  1.00  0.00      8LYZ 721
+ATOM    575  CD  ARG    73       5.300  19.300  37.840  1.00  0.00      8LYZ 722
+ATOM    576  NE  ARG    73       5.590  19.700  39.230  1.00  0.00      8LYZ 723
+ATOM    577  CZ  ARG    73       5.460  20.970  39.670  1.00  0.00      8LYZ 724
+ATOM    578  NH1 ARG    73       5.580  21.200  40.970  1.00  0.00      8LYZ 725
+ATOM    579  NH2 ARG    73       5.200  21.970  38.820  1.00  0.00      8LYZ 726
+ATOM    580  N   ASN    74       4.230  14.410  34.580  1.00  0.00      8LYZ 727
+ATOM    581  CA  ASN    74       3.610  13.760  33.430  1.00  0.00      8LYZ 728
+ATOM    582  C   ASN    74       2.100  13.950  33.570  1.00  0.00      8LYZ 729
+ATOM    583  O   ASN    74       1.340  12.980  33.740  1.00  0.00      8LYZ 730
+ATOM    584  CB  ASN    74       4.010  12.270  33.390  1.00  0.00      8LYZ 731
+ATOM    585  CG  ASN    74       3.250  11.520  32.330  1.00  0.00      8LYZ 732
+ATOM    586  OD1 ASN    74       2.680  12.300  31.330  1.00  0.00      8LYZ 733
+ATOM    587  ND2 ASN    74       3.060  10.320  32.340  1.00  0.00      8LYZ 734
+ATOM    588  N   LEU    75       1.710  15.220  33.480  1.00  0.00      8LYZ 735
+ATOM    589  CA  LEU    75        .320  15.630  33.670  1.00  0.00      8LYZ 736
+ATOM    590  C   LEU    75       -.720  15.040  32.720  1.00  0.00      8LYZ 737
+ATOM    591  O   LEU    75      -1.930  15.000  33.030  1.00  0.00      8LYZ 738
+ATOM    592  CB  LEU    75        .200  17.160  33.530  1.00  0.00      8LYZ 739
+ATOM    593  CG  LEU    75        .470  18.000  34.760  1.00  0.00      8LYZ 740
+ATOM    594  CD1 LEU    75       -.400  17.540  35.900  1.00  0.00      8LYZ 741
+ATOM    595  CD2 LEU    75       1.930  17.910  35.150  1.00  0.00      8LYZ 742
+ATOM    596  N   CYS    76       -.220  14.590  31.580  1.00  0.00      8LYZ 743
+ATOM    597  CA  CYS    76      -1.040  13.990  30.530  1.00  0.00      8LYZ 744
+ATOM    598  C   CYS    76      -1.160  12.490  30.770  1.00  0.00      8LYZ 745
+ATOM    599  O   CYS    76      -2.030  11.810  30.190  1.00  0.00      8LYZ 746
+ATOM    600  CB  CYS    76      -1.440  14.370  29.120  1.00  0.00      8LYZ 747
+ATOM    601  SG  CYS    76      -1.450  16.140  28.720  1.00  0.00      8LYZ 748
+ATOM    602  N   ASN    77       -.280  12.010  31.640  1.00  0.00      8LYZ 749
+ATOM    603  CA  ASN    77       -.090  10.580  31.880  1.00  0.00      8LYZ 750
+ATOM    604  C   ASN    77       -.040   9.710  30.630  1.00  0.00      8LYZ 751
+ATOM    605  O   ASN    77       -.860   8.800  30.440  1.00  0.00      8LYZ 752
+ATOM    606  CB  ASN    77      -1.240  10.060  32.780  1.00  0.00      8LYZ 753
+ATOM    607  CG  ASN    77       -.710   9.400  34.030  1.00  0.00      8LYZ 754
+ATOM    608  OD1 ASN    77       -.840   9.850  35.150  1.00  0.00      8LYZ 755
+ATOM    609  ND2 ASN    77       -.100   8.170  33.850  1.00  0.00      8LYZ 756
+ATOM    610  N   ILE    78        .940  10.040  29.800  1.00  0.00      8LYZ 757
+ATOM    611  CA  ILE    78       1.210   9.310  28.550  1.00  0.00      8LYZ 758
+ATOM    612  C   ILE    78       2.720   9.410  28.380  1.00  0.00      8LYZ 759
+ATOM    613  O   ILE    78       3.350  10.410  28.790  1.00  0.00      8LYZ 760
+ATOM    614  CB  ILE    78        .460   9.950  27.350  1.00  0.00      8LYZ 761
+ATOM    615  CG1 ILE    78        .120   8.920  26.230  1.00  0.00      8LYZ 762
+ATOM    616  CG2 ILE    78       1.420  11.080  26.950  1.00  0.00      8LYZ 763
+ATOM    617  CD1 ILE    78      -1.040   7.970  26.610  1.00  0.00      8LYZ 764
+ATOM    618  N   PRO    79       3.270   8.380  27.770  1.00  0.00      8LYZ 765
+ATOM    619  CA  PRO    79       4.660   8.360  27.300  1.00  0.00      8LYZ 766
+ATOM    620  C   PRO    79       4.610   9.310  26.100  1.00  0.00      8LYZ 767
+ATOM    621  O   PRO    79       3.680   9.230  25.250  1.00  0.00      8LYZ 768
+ATOM    622  CB  PRO    79       4.920   6.920  26.990  1.00  0.00      8LYZ 769
+ATOM    623  CG  PRO    79       3.630   6.120  27.020  1.00  0.00      8LYZ 770
+ATOM    624  CD  PRO    79       2.600   7.100  27.570  1.00  0.00      8LYZ 771
+ATOM    625  N   CYS    80       5.590  10.180  26.060  1.00  0.00      8LYZ 772
+ATOM    626  CA  CYS    80       5.820  11.100  24.930  1.00  0.00      8LYZ 773
+ATOM    627  C   CYS    80       5.660  10.450  23.550  1.00  0.00      8LYZ 774
+ATOM    628  O   CYS    80       5.100  11.050  22.620  1.00  0.00      8LYZ 775
+ATOM    629  CB  CYS    80       7.160  11.700  25.250  1.00  0.00      8LYZ 776
+ATOM    630  SG  CYS    80       7.220  12.840  26.660  1.00  0.00      8LYZ 777
+ATOM    631  N   SER    81       6.160   9.230  23.480  1.00  0.00      8LYZ 778
+ATOM    632  CA  SER    81       6.200   8.450  22.230  1.00  0.00      8LYZ 779
+ATOM    633  C   SER    81       4.800   8.270  21.630  1.00  0.00      8LYZ 780
+ATOM    634  O   SER    81       4.630   8.260  20.390  1.00  0.00      8LYZ 781
+ATOM    635  CB  SER    81       6.810   7.090  22.470  1.00  0.00      8LYZ 782
+ATOM    636  OG  SER    81       6.120   6.370  23.490  1.00  0.00      8LYZ 783
+ATOM    637  N   ALA    82       3.850   8.130  22.540  1.00  0.00      8LYZ 784
+ATOM    638  CA  ALA    82       2.430   7.990  22.200  1.00  0.00      8LYZ 785
+ATOM    639  C   ALA    82       1.900   9.120  21.320  1.00  0.00      8LYZ 786
+ATOM    640  O   ALA    82        .920   8.940  20.560  1.00  0.00      8LYZ 787
+ATOM    641  CB  ALA    82       1.630   8.050  23.500  1.00  0.00      8LYZ 788
+ATOM    642  N   LEU    83       2.580  10.250  21.440  1.00  0.00      8LYZ 789
+ATOM    643  CA  LEU    83       2.120  11.520  20.840  1.00  0.00      8LYZ 790
+ATOM    644  C   LEU    83       2.600  11.620  19.390  1.00  0.00      8LYZ 791
+ATOM    645  O   LEU    83       2.210  12.550  18.650  1.00  0.00      8LYZ 792
+ATOM    646  CB  LEU    83       2.680  12.710  21.660  1.00  0.00      8LYZ 793
+ATOM    647  CG  LEU    83       2.190  12.870  23.080  1.00  0.00      8LYZ 794
+ATOM    648  CD1 LEU    83       2.800  14.120  23.670  1.00  0.00      8LYZ 795
+ATOM    649  CD2 LEU    83        .690  12.960  23.130  1.00  0.00      8LYZ 796
+ATOM    650  N   LEU    84       3.420  10.650  19.020  1.00  0.00      8LYZ 797
+ATOM    651  CA  LEU    84       3.990  10.550  17.670  1.00  0.00      8LYZ 798
+ATOM    652  C   LEU    84       3.330   9.580  16.700  1.00  0.00      8LYZ 799
+ATOM    653  O   LEU    84       3.740   9.470  15.520  1.00  0.00      8LYZ 800
+ATOM    654  CB  LEU    84       5.470  10.140  17.750  1.00  0.00      8LYZ 801
+ATOM    655  CG  LEU    84       6.390  10.970  18.610  1.00  0.00      8LYZ 802
+ATOM    656  CD1 LEU    84       7.820  10.490  18.440  1.00  0.00      8LYZ 803
+ATOM    657  CD2 LEU    84       6.290  12.430  18.250  1.00  0.00      8LYZ 804
+ATOM    658  N   SER    85       2.330   8.890  17.220  1.00  0.00      8LYZ 805
+ATOM    659  CA  SER    85       1.610   7.840  16.480  1.00  0.00      8LYZ 806
+ATOM    660  C   SER    85        .790   8.570  15.420  1.00  0.00      8LYZ 807
+ATOM    661  O   SER    85        .510   9.790  15.550  1.00  0.00      8LYZ 808
+ATOM    662  CB  SER    85        .740   7.040  17.420  1.00  0.00      8LYZ 809
+ATOM    663  OG  SER    85       -.630   7.400  17.310  1.00  0.00      8LYZ 810
+ATOM    664  N   SER    86        .420   7.820  14.400  1.00  0.00      8LYZ 811
+ATOM    665  CA  SER    86       -.420   8.300  13.300  1.00  0.00      8LYZ 812
+ATOM    666  C   SER    86      -1.870   8.670  13.620  1.00  0.00      8LYZ 813
+ATOM    667  O   SER    86      -2.550   9.360  12.820  1.00  0.00      8LYZ 814
+ATOM    668  CB  SER    86       -.490   7.270  12.200  1.00  0.00      8LYZ 815
+ATOM    669  OG  SER    86        .800   6.890  11.730  1.00  0.00      8LYZ 816
+ATOM    670  N   ASP    87      -2.300   8.200  14.780  1.00  0.00      8LYZ 817
+ATOM    671  CA  ASP    87      -3.580   8.590  15.370  1.00  0.00      8LYZ 818
+ATOM    672  C   ASP    87      -3.230   9.710  16.340  1.00  0.00      8LYZ 819
+ATOM    673  O   ASP    87      -2.340   9.570  17.200  1.00  0.00      8LYZ 820
+ATOM    674  CB  ASP    87      -4.230   7.370  16.070  1.00  0.00      8LYZ 821
+ATOM    675  CG  ASP    87      -5.580   7.700  16.640  1.00  0.00      8LYZ 822
+ATOM    676  OD1 ASP    87      -5.770   8.470  17.570  1.00  0.00      8LYZ 823
+ATOM    677  OD2 ASP    87      -6.520   7.220  16.080  1.00  0.00      8LYZ 824
+ATOM    678  N   ILE    88      -3.940  10.820  16.170  1.00  0.00      8LYZ 825
+ATOM    679  CA  ILE    88      -3.700  12.050  16.920  1.00  0.00      8LYZ 826
+ATOM    680  C   ILE    88      -4.490  12.200  18.220  1.00  0.00      8LYZ 827
+ATOM    681  O   ILE    88      -4.450  13.250  18.880  1.00  0.00      8LYZ 828
+ATOM    682  CB  ILE    88      -4.050  13.310  16.090  1.00  0.00      8LYZ 829
+ATOM    683  CG1 ILE    88      -5.580  13.450  15.830  1.00  0.00      8LYZ 830
+ATOM    684  CG2 ILE    88      -3.160  13.130  14.860  1.00  0.00      8LYZ 831
+ATOM    685  CD1 ILE    88      -5.980  14.810  15.210  1.00  0.00      8LYZ 832
+ATOM    686  N   THR    89      -5.190  11.120  18.550  1.00  0.00      8LYZ 833
+ATOM    687  CA  THR    89      -6.130  11.080  19.670  1.00  0.00      8LYZ 834
+ATOM    688  C   THR    89      -5.470  11.510  20.980  1.00  0.00      8LYZ 835
+ATOM    689  O   THR    89      -5.980  12.400  21.710  1.00  0.00      8LYZ 836
+ATOM    690  CB  THR    89      -6.680   9.650  19.760  1.00  0.00      8LYZ 837
+ATOM    691  OG1 THR    89      -7.370   9.470  18.530  1.00  0.00      8LYZ 838
+ATOM    692  CG2 THR    89      -7.610   9.460  20.930  1.00  0.00      8LYZ 839
+ATOM    693  N   ALA    90      -4.340  10.880  21.250  1.00  0.00      8LYZ 840
+ATOM    694  CA  ALA    90      -3.530  11.150  22.440  1.00  0.00      8LYZ 841
+ATOM    695  C   ALA    90      -3.060  12.610  22.540  1.00  0.00      8LYZ 842
+ATOM    696  O   ALA    90      -3.080  13.210  23.640  1.00  0.00      8LYZ 843
+ATOM    697  CB  ALA    90      -2.250  10.310  22.330  1.00  0.00      8LYZ 844
+ATOM    698  N   SER    91      -2.670  13.130  21.400  1.00  0.00      8LYZ 845
+ATOM    699  CA  SER    91      -2.170  14.500  21.270  1.00  0.00      8LYZ 846
+ATOM    700  C   SER    91      -3.220  15.590  21.470  1.00  0.00      8LYZ 847
+ATOM    701  O   SER    91      -2.970  16.630  22.110  1.00  0.00      8LYZ 848
+ATOM    702  CB  SER    91      -1.570  14.720  19.900  1.00  0.00      8LYZ 849
+ATOM    703  OG  SER    91       -.360  13.980  19.720  1.00  0.00      8LYZ 850
+ATOM    704  N   VAL    92      -4.390  15.330  20.900  1.00  0.00      8LYZ 851
+ATOM    705  CA  VAL    92      -5.580  16.160  21.090  1.00  0.00      8LYZ 852
+ATOM    706  C   VAL    92      -5.980  16.130  22.570  1.00  0.00      8LYZ 853
+ATOM    707  O   VAL    92      -6.060  17.190  23.240  1.00  0.00      8LYZ 854
+ATOM    708  CB  VAL    92      -6.720  15.650  20.210  1.00  0.00      8LYZ 855
+ATOM    709  CG1 VAL    92      -8.140  15.970  20.730  1.00  0.00      8LYZ 856
+ATOM    710  CG2 VAL    92      -6.520  16.050  18.760  1.00  0.00      8LYZ 857
+ATOM    711  N   ASN    93      -6.230  14.920  23.040  1.00  0.00      8LYZ 858
+ATOM    712  CA  ASN    93      -6.640  14.660  24.430  1.00  0.00      8LYZ 859
+ATOM    713  C   ASN    93      -5.790  15.480  25.410  1.00  0.00      8LYZ 860
+ATOM    714  O   ASN    93      -6.310  16.070  26.370  1.00  0.00      8LYZ 861
+ATOM    715  CB  ASN    93      -6.500  13.160  24.740  1.00  0.00      8LYZ 862
+ATOM    716  CG  ASN    93      -7.820  12.450  24.580  1.00  0.00      8LYZ 863
+ATOM    717  OD1 ASN    93      -8.010  11.270  24.830  1.00  0.00      8LYZ 864
+ATOM    718  ND2 ASN    93      -8.880  13.250  24.190  1.00  0.00      8LYZ 865
+ATOM    719  N   CYS    94      -4.490  15.480  25.130  1.00  0.00      8LYZ 866
+ATOM    720  CA  CYS    94      -3.490  16.110  25.990  1.00  0.00      8LYZ 867
+ATOM    721  C   CYS    94      -3.450  17.630  25.770  1.00  0.00      8LYZ 868
+ATOM    722  O   CYS    94      -3.290  18.410  26.720  1.00  0.00      8LYZ 869
+ATOM    723  CB  CYS    94      -2.090  15.640  25.650  1.00  0.00      8LYZ 870
+ATOM    724  SG  CYS    94       -.750  16.290  26.690  1.00  0.00      8LYZ 871
+ATOM    725  N   ALA    95      -3.630  18.000  24.510  1.00  0.00      8LYZ 872
+ATOM    726  CA  ALA    95      -3.680  19.390  24.080  1.00  0.00      8LYZ 873
+ATOM    727  C   ALA    95      -4.860  20.170  24.670  1.00  0.00      8LYZ 874
+ATOM    728  O   ALA    95      -4.790  21.400  24.860  1.00  0.00      8LYZ 875
+ATOM    729  CB  ALA    95      -3.870  19.410  22.560  1.00  0.00      8LYZ 876
+ATOM    730  N   LYS    96      -5.900  19.410  24.960  1.00  0.00      8LYZ 877
+ATOM    731  CA  LYS    96      -7.140  19.940  25.530  1.00  0.00      8LYZ 878
+ATOM    732  C   LYS    96      -6.790  20.430  26.940  1.00  0.00      8LYZ 879
+ATOM    733  O   LYS    96      -7.200  21.530  27.370  1.00  0.00      8LYZ 880
+ATOM    734  CB  LYS    96      -8.230  18.870  25.590  1.00  0.00      8LYZ 881
+ATOM    735  CG  LYS    96      -8.860  18.540  24.240  1.00  0.00      8LYZ 882
+ATOM    736  CD  LYS    96     -10.330  18.190  24.400  1.00  0.00      8LYZ 883
+ATOM    737  CE  LYS    96     -10.930  17.680  23.100  1.00  0.00      8LYZ 884
+ATOM    738  NZ  LYS    96     -11.380  16.280  23.240  1.00  0.00      8LYZ 885
+ATOM    739  N   LYS    97      -6.020  19.590  27.620  1.00  0.00      8LYZ 886
+ATOM    740  CA  LYS    97      -5.540  19.870  28.980  1.00  0.00      8LYZ 887
+ATOM    741  C   LYS    97      -4.660  21.110  29.080  1.00  0.00      8LYZ 888
+ATOM    742  O   LYS    97      -4.740  21.890  30.050  1.00  0.00      8LYZ 889
+ATOM    743  CB  LYS    97      -4.730  18.700  29.530  1.00  0.00      8LYZ 890
+ATOM    744  CG  LYS    97      -5.560  17.500  29.950  1.00  0.00      8LYZ 891
+ATOM    745  CD  LYS    97      -5.030  16.890  31.250  1.00  0.00      8LYZ 892
+ATOM    746  CE  LYS    97      -6.110  16.800  32.310  1.00  0.00      8LYZ 893
+ATOM    747  NZ  LYS    97      -5.520  16.570  33.650  1.00  0.00      8LYZ 894
+ATOM    748  N   ILE    98      -3.830  21.270  28.060  1.00  0.00      8LYZ 895
+ATOM    749  CA  ILE    98      -2.730  22.250  28.050  1.00  0.00      8LYZ 896
+ATOM    750  C   ILE    98      -3.470  23.580  27.920  1.00  0.00      8LYZ 897
+ATOM    751  O   ILE    98      -3.300  24.500  28.750  1.00  0.00      8LYZ 898
+ATOM    752  CB  ILE    98      -1.770  22.020  26.870  1.00  0.00      8LYZ 899
+ATOM    753  CG1 ILE    98       -.730  20.890  27.150  1.00  0.00      8LYZ 900
+ATOM    754  CG2 ILE    98      -1.190  23.420  26.660  1.00  0.00      8LYZ 901
+ATOM    755  CD1 ILE    98       -.400  20.030  25.910  1.00  0.00      8LYZ 902
+ATOM    756  N   VAL    99      -4.290  23.640  26.890  1.00  0.00      8LYZ 903
+ATOM    757  CA  VAL    99      -5.070  24.840  26.550  1.00  0.00      8LYZ 904
+ATOM    758  C   VAL    99      -6.090  25.390  27.550  1.00  0.00      8LYZ 905
+ATOM    759  O   VAL    99      -6.410  26.600  27.560  1.00  0.00      8LYZ 906
+ATOM    760  CB  VAL    99      -5.860  24.610  25.270  1.00  0.00      8LYZ 907
+ATOM    761  CG1 VAL    99      -7.190  23.840  25.440  1.00  0.00      8LYZ 908
+ATOM    762  CG2 VAL    99      -6.030  25.870  24.460  1.00  0.00      8LYZ 909
+ATOM    763  N   SER   100      -6.580  24.480  28.380  1.00  0.00      8LYZ 910
+ATOM    764  CA  SER   100      -7.450  24.810  29.510  1.00  0.00      8LYZ 911
+ATOM    765  C   SER   100      -6.910  25.290  30.860  1.00  0.00      8LYZ 912
+ATOM    766  O   SER   100      -7.650  25.870  31.680  1.00  0.00      8LYZ 913
+ATOM    767  CB  SER   100      -8.290  23.610  29.900  1.00  0.00      8LYZ 914
+ATOM    768  OG  SER   100      -9.100  23.150  28.820  1.00  0.00      8LYZ 915
+ATOM    769  N   ASP   101      -5.620  25.040  31.040  1.00  0.00      8LYZ 916
+ATOM    770  CA  ASP   101      -4.940  25.250  32.330  1.00  0.00      8LYZ 917
+ATOM    771  C   ASP   101      -5.010  26.720  32.720  1.00  0.00      8LYZ 918
+ATOM    772  O   ASP   101      -5.440  27.070  33.840  1.00  0.00      8LYZ 919
+ATOM    773  CB  ASP   101      -3.470  24.780  32.210  1.00  0.00      8LYZ 920
+ATOM    774  CG  ASP   101      -3.380  23.300  31.970  1.00  0.00      8LYZ 921
+ATOM    775  OD1 ASP   101      -4.330  22.530  31.970  1.00  0.00      8LYZ 922
+ATOM    776  OD2 ASP   101      -2.290  22.880  31.690  1.00  0.00      8LYZ 923
+ATOM    777  N   GLY   102      -4.590  27.550  31.780  1.00  0.00      8LYZ 924
+ATOM    778  CA  GLY   102      -4.630  29.020  31.920  1.00  0.00      8LYZ 925
+ATOM    779  C   GLY   102      -4.240  30.090  30.900  1.00  0.00      8LYZ 926
+ATOM    780  O   GLY   102      -4.800  31.200  30.890  1.00  0.00      8LYZ 927
+ATOM    781  N   ASN   103      -3.290  29.710  30.060  1.00  0.00      8LYZH  9
+ATOM    782  CA  ASN   103      -2.750  30.590  29.010  1.00  0.00      8LYZH 10
+ATOM    783  C   ASN   103      -3.230  30.450  27.570  1.00  0.00      8LYZH 11
+ATOM    784  O   ASN   103      -2.700  31.100  26.640  1.00  0.00      8LYZH 12
+ATOM    785  CB  ASN   103      -1.220  30.450  28.940  1.00  0.00      8LYZH 13
+ATOM    786  CG  ASN   103       -.590  30.560  30.300  1.00  0.00      8LYZH 14
+ATOM    787  OD1 ASN   103       -.030  29.580  30.700  1.00  0.00      8LYZH 15
+ATOM    788  ND2 ASN   103       -.680  31.530  31.040  1.00  0.00      8LYZH 16
+ATOM    789  N   GLY   104      -4.230  29.580  27.410  1.00  0.00      8LYZ 936
+ATOM    790  CA  GLY   104      -4.840  29.290  26.110  1.00  0.00      8LYZ 937
+ATOM    791  C   GLY   104      -3.670  28.780  25.250  1.00  0.00      8LYZ 938
+ATOM    792  O   GLY   104      -2.720  28.160  25.770  1.00  0.00      8LYZ 939
+ATOM    793  N   MET   105      -3.780  29.070  23.970  1.00  0.00      8LYZ 940
+ATOM    794  CA  MET   105      -2.810  28.610  22.960  1.00  0.00      8LYZ 941
+ATOM    795  C   MET   105      -1.520  29.420  22.940  1.00  0.00      8LYZ 942
+ATOM    796  O   MET   105       -.690  29.280  22.020  1.00  0.00      8LYZ 943
+ATOM    797  CB  MET   105      -3.450  28.680  21.540  1.00  0.00      8LYZ 944
+ATOM    798  CG  MET   105      -4.800  28.000  21.520  1.00  0.00      8LYZ 945
+ATOM    799  SD  MET   105      -5.270  27.540  19.860  1.00  0.00      8LYZ 946
+ATOM    800  CE  MET   105      -3.800  26.670  19.380  1.00  0.00      8LYZ 947
+ATOM    801  N   ASN   106      -1.380  30.230  23.970  1.00  0.00      8LYZ 948
+ATOM    802  CA  ASN   106       -.180  31.070  24.180  1.00  0.00      8LYZ 949
+ATOM    803  C   ASN   106        .900  30.080  24.620  1.00  0.00      8LYZ 950
+ATOM    804  O   ASN   106       2.110  30.370  24.530  1.00  0.00      8LYZ 951
+ATOM    805  CB  ASN   106       -.490  32.150  25.240  1.00  0.00      8LYZ 952
+ATOM    806  CG  ASN   106      -1.260  33.300  24.640  1.00  0.00      8LYZ 953
+ATOM    807  OD1 ASN   106      -2.270  33.770  25.100  1.00  0.00      8LYZ 954
+ATOM    808  ND2 ASN   106       -.700  33.870  23.500  1.00  0.00      8LYZ 955
+ATOM    809  N   ALA   107        .430  28.930  25.080  1.00  0.00      8LYZ 956
+ATOM    810  CA  ALA   107       1.290  27.870  25.610  1.00  0.00      8LYZ 957
+ATOM    811  C   ALA   107       2.160  27.360  24.470  1.00  0.00      8LYZ 958
+ATOM    812  O   ALA   107       3.180  26.660  24.690  1.00  0.00      8LYZ 959
+ATOM    813  CB  ALA   107        .430  26.680  26.070  1.00  0.00      8LYZ 960
+ATOM    814  N   TRP   108       1.750  27.740  23.270  1.00  0.00      8LYZ 961
+ATOM    815  CA  TRP   108       2.430  27.350  22.030  1.00  0.00      8LYZ 962
+ATOM    816  C   TRP   108       3.080  28.550  21.350  1.00  0.00      8LYZ 963
+ATOM    817  O   TRP   108       2.410  29.350  20.660  1.00  0.00      8LYZ 964
+ATOM    818  CB  TRP   108       1.410  26.690  21.100  1.00  0.00      8LYZ 965
+ATOM    819  CG  TRP   108       1.240  25.130  21.160  1.00  0.00      8LYZ 966
+ATOM    820  CD1 TRP   108       1.910  24.180  20.480  1.00  0.00      8LYZ 967
+ATOM    821  CD2 TRP   108        .390  24.440  22.020  1.00  0.00      8LYZ 968
+ATOM    822  NE1 TRP   108       1.400  22.870  20.860  1.00  0.00      8LYZ 969
+ATOM    823  CE2 TRP   108        .540  23.050  21.800  1.00  0.00      8LYZ 970
+ATOM    824  CE3 TRP   108       -.520  24.870  22.960  1.00  0.00      8LYZ 971
+ATOM    825  CZ2 TRP   108       -.150  22.030  22.470  1.00  0.00      8LYZ 972
+ATOM    826  CZ3 TRP   108      -1.220  23.840  23.630  1.00  0.00      8LYZ 973
+ATOM    827  CH2 TRP   108      -1.010  22.480  23.420  1.00  0.00      8LYZ 974
+ATOM    828  N   VAL   109       4.390  28.650  21.560  1.00  0.00      8LYZ 975
+ATOM    829  CA  VAL   109       5.210  29.740  21.030  1.00  0.00      8LYZ 976
+ATOM    830  C   VAL   109       4.780  30.180  19.630  1.00  0.00      8LYZ 977
+ATOM    831  O   VAL   109       4.480  31.370  19.390  1.00  0.00      8LYZ 978
+ATOM    832  CB  VAL   109       6.680  29.330  21.000  1.00  0.00      8LYZ 979
+ATOM    833  CG1 VAL   109       6.990  28.140  20.050  1.00  0.00      8LYZ 980
+ATOM    834  CG2 VAL   109       7.600  30.500  20.790  1.00  0.00      8LYZ 981
+ATOM    835  N   ALA   110       4.770  29.200  18.740  1.00  0.00      8LYZ 982
+ATOM    836  CA  ALA   110       4.420  29.400  17.330  1.00  0.00      8LYZ 983
+ATOM    837  C   ALA   110       3.050  29.930  16.890  1.00  0.00      8LYZ 984
+ATOM    838  O   ALA   110       2.930  30.630  15.860  1.00  0.00      8LYZ 985
+ATOM    839  CB  ALA   110       4.550  27.990  16.730  1.00  0.00      8LYZ 986
+ATOM    840  N   TRP   111       2.050  29.580  17.680  1.00  0.00      8LYZ 987
+ATOM    841  CA  TRP   111        .670  30.040  17.490  1.00  0.00      8LYZ 988
+ATOM    842  C   TRP   111        .690  31.530  17.830  1.00  0.00      8LYZ 989
+ATOM    843  O   TRP   111        .200  32.380  17.040  1.00  0.00      8LYZ 990
+ATOM    844  CB  TRP   111       -.250  29.220  18.390  1.00  0.00      8LYZ 991
+ATOM    845  CG  TRP   111      -1.680  29.880  18.340  1.00  0.00      8LYZ 992
+ATOM    846  CD1 TRP   111      -2.680  29.650  17.470  1.00  0.00      8LYZ 993
+ATOM    847  CD2 TRP   111      -2.180  30.810  19.250  1.00  0.00      8LYZ 994
+ATOM    848  NE1 TRP   111      -3.810  30.510  17.800  1.00  0.00      8LYZ 995
+ATOM    849  CE2 TRP   111      -3.510  31.140  18.870  1.00  0.00      8LYZ 996
+ATOM    850  CE3 TRP   111      -1.630  31.390  20.370  1.00  0.00      8LYZ 997
+ATOM    851  CZ2 TRP   111      -4.340  32.040  19.550  1.00  0.00      8LYZ 998
+ATOM    852  CZ3 TRP   111      -2.470  32.310  21.040  1.00  0.00      8LYZ 999
+ATOM    853  CH2 TRP   111      -3.780  32.590  20.670  1.00  0.00      8LYZ1000
+ATOM    854  N   ARG   112       1.270  31.820  18.990  1.00  0.00      8LYZ1001
+ATOM    855  CA  ARG   112       1.380  33.190  19.510  1.00  0.00      8LYZ1002
+ATOM    856  C   ARG   112       2.050  34.200  18.590  1.00  0.00      8LYZ1003
+ATOM    857  O   ARG   112       1.530  35.320  18.370  1.00  0.00      8LYZ1004
+ATOM    858  CB  ARG   112       2.190  33.210  20.820  1.00  0.00      8LYZ1005
+ATOM    859  CG  ARG   112       2.080  34.530  21.610  1.00  0.00      8LYZ1006
+ATOM    860  CD  ARG   112       3.170  34.610  22.660  1.00  0.00      8LYZ1007
+ATOM    861  NE  ARG   112       3.290  33.330  23.390  1.00  0.00      8LYZ1008
+ATOM    862  CZ  ARG   112       4.480  32.720  23.610  1.00  0.00      8LYZ1009
+ATOM    863  NH1 ARG   112       4.520  31.680  24.420  1.00  0.00      8LYZ1010
+ATOM    864  NH2 ARG   112       5.600  33.160  23.020  1.00  0.00      8LYZ1011
+ATOM    865  N   ASN   113       3.190  33.780  18.060  1.00  0.00      8LYZ1012
+ATOM    866  CA  ASN   113       3.980  34.580  17.110  1.00  0.00      8LYZ1013
+ATOM    867  C   ASN   113       3.680  34.600  15.620  1.00  0.00      8LYZ1014
+ATOM    868  O   ASN   113       3.990  35.590  14.910  1.00  0.00      8LYZ1015
+ATOM    869  CB  ASN   113       5.460  34.160  17.200  1.00  0.00      8LYZ1016
+ATOM    870  CG  ASN   113       6.060  34.530  18.520  1.00  0.00      8LYZ1017
+ATOM    871  OD1 ASN   113       5.630  35.390  19.280  1.00  0.00      8LYZ1018
+ATOM    872  ND2 ASN   113       7.160  33.760  18.920  1.00  0.00      8LYZ1019
+ATOM    873  N   ARG   114       3.070  33.520  15.170  1.00  0.00      8LYZ1020
+ATOM    874  CA  ARG   114       2.700  33.320  13.760  1.00  0.00      8LYZ1021
+ATOM    875  C   ARG   114       1.280  33.000  13.310  1.00  0.00      8LYZ1022
+ATOM    876  O   ARG   114       1.010  32.820  12.100  1.00  0.00      8LYZ1023
+ATOM    877  CB  ARG   114       3.490  32.150  13.130  1.00  0.00      8LYZ1024
+ATOM    878  CG  ARG   114       4.700  31.680  13.960  1.00  0.00      8LYZ1025
+ATOM    879  CD  ARG   114       5.590  30.800  13.120  1.00  0.00      8LYZ1026
+ATOM    880  NE  ARG   114       5.720  31.320  11.750  1.00  0.00      8LYZ1027
+ATOM    881  CZ  ARG   114       6.410  30.690  10.770  1.00  0.00      8LYZ1028
+ATOM    882  NH1 ARG   114       6.070  30.910   9.510  1.00  0.00      8LYZ1029
+ATOM    883  NH2 ARG   114       7.390  29.840  11.070  1.00  0.00      8LYZ1030
+ATOM    884  N   CYS   115        .400  32.960  14.300  1.00  0.00      8LYZ1031
+ATOM    885  CA  CYS   115       -.990  32.500  14.110  1.00  0.00      8LYZ1032
+ATOM    886  C   CYS   115      -1.950  33.520  14.730  1.00  0.00      8LYZ1033
+ATOM    887  O   CYS   115      -2.830  34.070  14.020  1.00  0.00      8LYZ1034
+ATOM    888  CB  CYS   115      -1.420  31.160  14.640  1.00  0.00      8LYZ1035
+ATOM    889  SG  CYS   115       -.690  29.700  13.850  1.00  0.00      8LYZ1036
+ATOM    890  N   LYS   116      -1.750  33.750  16.010  1.00  0.00      8LYZ1037
+ATOM    891  CA  LYS   116      -2.460  34.800  16.760  1.00  0.00      8LYZ1038
+ATOM    892  C   LYS   116      -2.640  36.110  16.000  1.00  0.00      8LYZ1039
+ATOM    893  O   LYS   116      -1.650  36.810  15.680  1.00  0.00      8LYZ1040
+ATOM    894  CB  LYS   116      -1.730  35.140  18.060  1.00  0.00      8LYZ1041
+ATOM    895  CG  LYS   116      -2.610  35.740  19.140  1.00  0.00      8LYZ1042
+ATOM    896  CD  LYS   116      -1.980  35.570  20.510  1.00  0.00      8LYZ1043
+ATOM    897  CE  LYS   116      -2.560  36.540  21.530  1.00  0.00      8LYZ1044
+ATOM    898  NZ  LYS   116      -1.760  36.550  22.770  1.00  0.00      8LYZ1045
+ATOM    899  N   GLY   117      -3.900  36.400  15.720  1.00  0.00      8LYZ1046
+ATOM    900  CA  GLY   117      -4.310  37.680  15.120  1.00  0.00      8LYZ1047
+ATOM    901  C   GLY   117      -4.180  37.870  13.610  1.00  0.00      8LYZ1048
+ATOM    902  O   GLY   117      -3.930  38.990  13.120  1.00  0.00      8LYZ1049
+ATOM    903  N   THR   118      -4.350  36.750  12.920  1.00  0.00      8LYZ1050
+ATOM    904  CA  THR   118      -4.090  36.660  11.480  1.00  0.00      8LYZ1051
+ATOM    905  C   THR   118      -5.460  36.010  11.280  1.00  0.00      8LYZ1052
+ATOM    906  O   THR   118      -6.160  35.670  12.270  1.00  0.00      8LYZ1053
+ATOM    907  CB  THR   118      -2.790  35.850  11.290  1.00  0.00      8LYZ1054
+ATOM    908  OG1 THR   118      -3.190  34.500  11.520  1.00  0.00      8LYZ1055
+ATOM    909  CG2 THR   118      -1.720  36.250  12.270  1.00  0.00      8LYZ1056
+ATOM    910  N   ASP   119      -5.810  35.840  10.020  1.00  0.00      8LYZ1057
+ATOM    911  CA  ASP   119      -7.130  35.360   9.600  1.00  0.00      8LYZ1058
+ATOM    912  C   ASP   119      -6.790  33.870   9.470  1.00  0.00      8LYZ1059
+ATOM    913  O   ASP   119      -6.310  33.410   8.420  1.00  0.00      8LYZ1060
+ATOM    914  CB  ASP   119      -7.560  36.080   8.310  1.00  0.00      8LYZ1061
+ATOM    915  CG  ASP   119      -8.420  35.200   7.440  1.00  0.00      8LYZ1062
+ATOM    916  OD1 ASP   119      -9.610  35.360   7.260  1.00  0.00      8LYZ1063
+ATOM    917  OD2 ASP   119      -7.840  34.310   6.870  1.00  0.00      8LYZ1064
+ATOM    918  N   VAL   120      -7.080  33.160  10.550  1.00  0.00      8LYZ1065
+ATOM    919  CA  VAL   120      -6.770  31.730  10.670  1.00  0.00      8LYZ1066
+ATOM    920  C   VAL   120      -7.720  30.780   9.940  1.00  0.00      8LYZ1067
+ATOM    921  O   VAL   120      -7.380  29.600   9.690  1.00  0.00      8LYZ1068
+ATOM    922  CB  VAL   120      -6.750  31.320  12.130  1.00  0.00      8LYZ1069
+ATOM    923  CG1 VAL   120      -5.600  31.930  12.970  1.00  0.00      8LYZ1070
+ATOM    924  CG2 VAL   120      -8.100  31.520  12.790  1.00  0.00      8LYZ1071
+ATOM    925  N   GLN   121      -8.880  31.320   9.610  1.00  0.00      8LYZ1072
+ATOM    926  CA  GLN   121      -9.890  30.620   8.810  1.00  0.00      8LYZ1073
+ATOM    927  C   GLN   121      -9.380  30.220   7.430  1.00  0.00      8LYZ1074
+ATOM    928  O   GLN   121      -9.940  29.320   6.770  1.00  0.00      8LYZ1075
+ATOM    929  CB  GLN   121     -11.080  31.530   8.670  1.00  0.00      8LYZ1076
+ATOM    930  CG  GLN   121     -12.010  31.450   9.800  1.00  0.00      8LYZ1077
+ATOM    931  CD  GLN   121     -13.230  32.370   9.710  1.00  0.00      8LYZ1078
+ATOM    932  OE1 GLN   121     -13.090  33.500   9.150  1.00  0.00      8LYZ1079
+ATOM    933  NE2 GLN   121     -14.320  31.990  10.260  1.00  0.00      8LYZ1080
+ATOM    934  N   ALA   122      -8.300  30.880   7.030  1.00  0.00      8LYZ1081
+ATOM    935  CA  ALA   122      -7.630  30.640   5.750  1.00  0.00      8LYZ1082
+ATOM    936  C   ALA   122      -6.990  29.250   5.650  1.00  0.00      8LYZ1083
+ATOM    937  O   ALA   122      -6.610  28.790   4.550  1.00  0.00      8LYZ1084
+ATOM    938  CB  ALA   122      -6.480  31.650   5.630  1.00  0.00      8LYZ1085
+ATOM    939  N   TRP   123      -6.870  28.620   6.810  1.00  0.00      8LYZ1086
+ATOM    940  CA  TRP   123      -6.300  27.280   6.950  1.00  0.00      8LYZ1087
+ATOM    941  C   TRP   123      -7.270  26.120   6.690  1.00  0.00      8LYZ1088
+ATOM    942  O   TRP   123      -6.850  25.000   6.330  1.00  0.00      8LYZ1089
+ATOM    943  CB  TRP   123      -5.710  27.140   8.350  1.00  0.00      8LYZ1090
+ATOM    944  CG  TRP   123      -4.380  27.960   8.440  1.00  0.00      8LYZ1091
+ATOM    945  CD1 TRP   123      -4.110  29.060   9.160  1.00  0.00      8LYZ1092
+ATOM    946  CD2 TRP   123      -3.180  27.650   7.790  1.00  0.00      8LYZ1093
+ATOM    947  NE1 TRP   123      -2.740  29.480   8.900  1.00  0.00      8LYZ1094
+ATOM    948  CE2 TRP   123      -2.200  28.620   8.130  1.00  0.00      8LYZ1095
+ATOM    949  CE3 TRP   123      -2.830  26.620   6.930  1.00  0.00      8LYZ1096
+ATOM    950  CZ2 TRP   123       -.880  28.630   7.680  1.00  0.00      8LYZ1097
+ATOM    951  CZ3 TRP   123      -1.500  26.660   6.470  1.00  0.00      8LYZ1098
+ATOM    952  CH2 TRP   123       -.560  27.590   6.860  1.00  0.00      8LYZ1099
+ATOM    953  N   ILE   124      -8.540  26.430   6.890  1.00  0.00      8LYZ1100
+ATOM    954  CA  ILE   124      -9.640  25.540   6.520  1.00  0.00      8LYZ1101
+ATOM    955  C   ILE   124     -10.500  25.930   5.320  1.00  0.00      8LYZ1102
+ATOM    956  O   ILE   124     -11.600  25.360   5.090  1.00  0.00      8LYZ1103
+ATOM    957  CB  ILE   124     -10.670  25.390   7.670  1.00  0.00      8LYZ1104
+ATOM    958  CG1 ILE   124     -11.240  26.750   8.160  1.00  0.00      8LYZ1105
+ATOM    959  CG2 ILE   124      -9.870  24.580   8.700  1.00  0.00      8LYZ1106
+ATOM    960  CD1 ILE   124     -12.080  26.650   9.450  1.00  0.00      8LYZ1107
+ATOM    961  N   ARG   125      -9.980  26.890   4.570  1.00  0.00      8LYZ1108
+ATOM    962  CA  ARG   125     -10.620  27.380   3.340  1.00  0.00      8LYZ1109
+ATOM    963  C   ARG   125     -10.340  26.140   2.490  1.00  0.00      8LYZ1110
+ATOM    964  O   ARG   125      -9.230  25.560   2.530  1.00  0.00      8LYZ1111
+ATOM    965  CB  ARG   125      -9.940  28.680   2.840  1.00  0.00      8LYZ1112
+ATOM    966  CG  ARG   125      -9.810  29.770   3.920  1.00  0.00      8LYZ1113
+ATOM    967  CD  ARG   125      -8.600  30.640   3.630  1.00  0.00      8LYZ1114
+ATOM    968  NE  ARG   125      -8.510  31.760   4.580  1.00  0.00      8LYZ1115
+ATOM    969  CZ  ARG   125      -7.380  32.480   4.780  1.00  0.00      8LYZ1116
+ATOM    970  NH1 ARG   125      -7.430  33.560   5.520  1.00  0.00      8LYZ1117
+ATOM    971  NH2 ARG   125      -6.220  32.090   4.230  1.00  0.00      8LYZ1118
+ATOM    972  N   GLY   126     -11.360  25.770   1.740  1.00  0.00      8LYZ1119
+ATOM    973  CA  GLY   126     -11.310  24.620    .820  1.00  0.00      8LYZ1120
+ATOM    974  C   GLY   126     -11.860  23.280   1.310  1.00  0.00      8LYZ1121
+ATOM    975  O   GLY   126     -12.210  22.390    .510  1.00  0.00      8LYZ1122
+ATOM    976  N   CYS   127     -11.920  23.180   2.640  1.00  0.00      8LYZ1123
+ATOM    977  CA  CYS   127     -12.330  21.950   3.320  1.00  0.00      8LYZ1124
+ATOM    978  C   CYS   127     -13.800  21.540   3.450  1.00  0.00      8LYZ1125
+ATOM    979  O   CYS   127     -14.680  22.400   3.690  1.00  0.00      8LYZ1126
+ATOM    980  CB  CYS   127     -11.490  21.790   4.560  1.00  0.00      8LYZ1127
+ATOM    981  SG  CYS   127      -9.730  22.220   4.390  1.00  0.00      8LYZ1128
+ATOM    982  N   ARG   128     -14.020  20.250   3.300  1.00  0.00      8LYZ1129
+ATOM    983  CA  ARG   128     -15.330  19.630   3.490  1.00  0.00      8LYZ1130
+ATOM    984  C   ARG   128     -15.120  19.450   4.990  1.00  0.00      8LYZ1131
+ATOM    985  O   ARG   128     -14.190  18.750   5.430  1.00  0.00      8LYZ1132
+ATOM    986  CB  ARG   128     -15.480  18.350   2.640  1.00  0.00      8LYZ1133
+ATOM    987  CG  ARG   128     -15.350  18.580   1.120  1.00  0.00      8LYZ1134
+ATOM    988  CD  ARG   128     -15.430  17.250    .390  1.00  0.00      8LYZ1135
+ATOM    989  NE  ARG   128     -16.220  17.370   -.850  1.00  0.00      8LYZ1136
+ATOM    990  CZ  ARG   128     -16.560  16.320  -1.620  1.00  0.00      8LYZ1137
+ATOM    991  NH1 ARG   128     -17.410  16.500  -2.620  1.00  0.00      8LYZ1138
+ATOM    992  NH2 ARG   128     -16.070  15.100  -1.370  1.00  0.00      8LYZ1139
+ATOM    993  N   LEU   129     -15.990  20.110   5.740  1.00  0.00      8LYZ1140
+ATOM    994  CA  LEU   129     -15.920  20.150   7.210  1.00  0.00      8LYZ1141
+ATOM    995  C   LEU   129     -17.410  20.210   7.540  1.00  0.00      8LYZ1142
+ATOM    996  O   LEU   129     -18.230  20.690   6.720  1.00  0.00      8LYZ1143
+ATOM    997  CB  LEU   129     -15.100  21.370   7.660  1.00  0.00      8LYZ1144
+ATOM    998  CG  LEU   129     -13.600  21.340   7.440  1.00  0.00      8LYZ1145
+ATOM    999  CD1 LEU   129     -12.970  22.550   8.090  1.00  0.00      8LYZ1146
+ATOM   1000  CD2 LEU   129     -13.000  20.080   8.010  1.00  0.00      8LYZ1147
+TER    1002      LEU   129                                              8LYZ1148
+CONECT   48   47  981                                                   8LYZ1149
+CONECT  238  237  889                                                   8LYZ1150
+CONECT  277  275  820                                                   8LYZ1151
+CONECT  513  512  630                                                   8LYZ1152
+CONECT  601  600  724                                                   8LYZ1153
+CONECT  630  513  629                                                   8LYZ1154
+CONECT  724  601  723                                                   8LYZ1155
+CONECT  820  277  819  822                                              8LYZ1156
+CONECT  889  238  888                                                   8LYZ1157
+CONECT  981   48  980                                                   8LYZ1158
+MASTER      124    0    0    4    5   11    0    6 1000    1   10   10  8LYZH 17
+END                                                                     8LYZ1160

@@ -1,0 +1,115 @@
+#!/bin/env perl
+# transform quilt's *.pat output into something more readable
+$SCRIPT = substr($0, 1+rindex($0, "/")); # find out program name 
+
+$npatchces_wanted = -1;
+
+$options='';
+$help=<<END;
+  $SCRIPT 
+    transforms atoms per patches input to residues per patch output
+END
+
+require 'getopts.pl';
+$; = ';' ;				# more readable  than '\034'
+
+# die $help unless &Getopts($options) || $opt_h;
+
+@amino_acids = ('A','C','D','E','F','G','H','I','K','L',
+	     'M', 'N','P','Q','R','S','T','V','W','Y');
+
+@greek=('alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta');
+grep($greek{ substr($_, 0, 1) }=$_, @greek); # translate first letter to greek
+$greek{'h'}='eta';			# (this fails for eta)
+
+# $HOME= $ENV{'HOME'};
+
+while(<>) { 
+  next if /^\#/;
+  last if /^surface/;
+}
+$/='#';					# record separator
+$* =1;					# multiline
+<>;
+
+$header_fmt='^ (\d+) (\d+) atoms \d+ patches (\d+) points area ([.0-9]+) '.
+    '\d+ bndries ABC( [.0-9]+){3}$';	# '
+# $atom_fmt='(.) (.)(-?\d+).@([ A-Z0-9*\']+)=(\d+)([ab-])';    
+$atom_fmt='(.) ([A-Z]?)(-?\d+).@([ A-Z0-9*\']+)=(\d+)([ab-])'; 
+### here starts the real cycling
+while(<>) { 
+  s/^%.*\n//g; 
+  undef %res_area;			# all residues of this patch (reset)
+  undef %res_atoms;			# atoms per residue of res. in patch
+# tr/\n//d;
+# 0 22 atoms 24 patches 674 points area 365.534 0 bndries ABC 14.770 7.064 5.811
+  /$header_fmt/o || &die("???$header_fmt???:$_");
+  ($pat_rank, $pat_nats, $pat_points, $pat_area)=($1, $2, $3, $4);
+#   last if $pat_area < 300.0; 
+  last if ($pat_rank == $npatchces_wanted) || eof;
+
+  s/$header_fmt//o;			# delete it
+  s/(\n ?)*//g;
+#  $header =~ s/patches/atoms/;
+  print "# $pat_rank $pat_nats $pat_points, area $pat_area";
+  
+  chop;					# get rid of trailing '#'
+  @_=split(';');			# all atoms
+  foreach (@_) {
+    if ( /$atom_fmt/o ) { # 
+      ($aa, $ch, $resnr, $atnam, $area, $ss) = ($1, $2, $3, $4, $5/100.0, $6);
+      if ( $aa !~ /[A-WYZ]/ ) {		# (nearly) proper amino-acid
+	$aa='X';
+	$ss='x';
+      }
+      &die unless $aa && $ss;
+      $res_area{"$aa;$ch;$resnr"} += $area;
+      $atnam =~ s/ //g; 
+      $res_atoms{"$aa;$ch;$resnr"} .= "\L$atnam,"; # atoms of this residue
+    } else { &die("???$atom_fmt???:$_"); }
+  } # foreach atom in patch
+  $nres= keys %res_area;
+  print " ( $nres residues)\n";
+
+  foreach (sort byresnr keys %res_area) { # loop over residues in patch
+    ($aa, $ch, $resnr) = split(';');
+#    $out .= sprintf("$aa$ch$resnr=%.0f;", $res_area{$_});
+    $atoms=$res_atoms{$_};		# all it's atoms, as string
+    chop($atoms);			# get rid of trailing comma
+    undef %atoms;			# make hash of it.
+    grep( $atoms{$_}++, split(',', $atoms));
+    @atoms=sort keys %atoms;
+    @atoms=&make_greek(@atoms);
+    $out .= sprintf("$aa$resnr: %s; ", join(', ', @atoms));
+    if (length($out) > 50) {		# do filling
+      print "  $out\n";
+      $out="";
+    }
+  }
+  if ($out) {   print "  $out\n" ;  $out="";}
+} # while <>
+
+sub die {
+  die "$.:@_\n"
+}
+
+sub byresnr { 
+  local($x, $ra, $rb, $ca, $cb);
+
+  ($x, $ca, $ra)=split(';',$a);
+  ($x, $cb, $rb)=split(';',$b);
+  ($ca cmp $cb) || ($ra <=> $rb);
+}
+
+sub make_greek {
+  local ($l);
+  foreach (@_) {			# make ca->alpha, etc.
+    if ( /^c([a-z])/ ) {
+      $l=$1;
+      s/^c$l/$greek{ $l }/;
+    } else {
+      $_="\U$_";
+    }
+  }
+  @_;
+}
