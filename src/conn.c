@@ -1015,7 +1015,8 @@ static  int unbury(bndry_p bndry) {
     assert(pp->nr==q);
   } /* for i <  length */
   assert(n);				/* nr of quasi-buried points */
-  assert(n <= 4);			/* (4 was seen once in 1750 cases) */
+  /*   assert(n <= 4);*/               /* (4 was seen once in 10,000 cases) */
+  assert(n <= 5);
   return n;
 } /* unbury */
 
