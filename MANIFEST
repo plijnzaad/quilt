@@ -5,6 +5,7 @@ quilt/FILES
 quilt/README
 quilt/RESIDUES
 quilt/MANIFEST
+quilt/Makefile
 quilt/setup.sh.example
 quilt/setup.csh.example
 quilt/makefile.include
