@@ -1,13 +1,31 @@
-#!/bin/env perl
+#!/usr/bin/env perl
 # generate rasmol commands for displaying patches from patch file
-# NR in file FILE, possibly interpreting letter X as STRING
+# N in file FILE, possibly interpreting letter X as STRING
 
-## this is a bit hairy, sorry.
+# It writes, to stdout, a rasmol expression corresponding to patch with
+# rank number N, and also defines a set, pN, for easier selection and
+# coloring, as well as the first atom of the patch, lN, for easy labeling.
+
+# an examle, in bash, for generating display scripts for large numbers of
+# files, consider something like this:
+
+# declare -a col; col[0]=red;  col[1]=orange;  col[2]=yellow
+# for i in  pat/01[1234]*.pat; do 
+#     for j in 0 1 2; do 
+#        Rpatsel $i $j
+#        echo "select p$j"
+#        echo "color ${col[$j]}"
+#     done > rsml/`basename $i .pat`.rsml
+#  done
+
+
+
+## this is all a bit hairy, sorry.
 
 require 'getopts.pl';
 $options='hm';				# h: help; m: multiple chains in input
 
-$Usage="Usage: Rpatsel [-$options] FILE NR [X=STRING]";
+$Usage="Usage: Rpatsel [-$options] FILE N [X=STRING]";
 
 sub die {
   print "echo $_[0]\n";
