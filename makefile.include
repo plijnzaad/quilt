@@ -1,0 +1,17 @@
+# -*- mode: Makefile; -*-
+# $Id$
+
+# $Id$
+
+# some common definitions
+
+SYS = $(shell uname)
+
+SHELL = /bin/sh
+CC = gcc
+#  maybe put CFLAGS here too ? 
+
+RM = rm
+INSTALL = install
+
+CC = gcc
