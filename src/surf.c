@@ -203,7 +203,7 @@ nr, surf->natoms, surf->npatches, surf->npoints, surf->area,
   k=0;
   buf=(char*)ALLOCA(24*surf->natoms);
   for (i=0; i<surf->natoms; i++)
-    k += sprintf(buf+k, "%ld ", surf->atoms[i] - atoms);
+    k += sprintf(buf+k, "%d ", surf->atoms[i] - atoms);
   fill(buf, "% ", " ", 72);
   fprintf(file, "%s", buf);
 

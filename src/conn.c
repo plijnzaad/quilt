@@ -972,8 +972,9 @@ static int connect_2_bndries(bndry_p bndry, bndry_p bn,
   return ncons;
 } /* connect_2_bndries */
 
-#define BLOCK 8				/* by which to extend ALLOCATION */
-#define BITS (BLOCK-1)			/* (BLOCK should be a power of 2) */
+/* #define BLOCK 8				/# by which to extend ALLOCATION #/
+ * #define BITS (BLOCK-1)			/# (BLOCK should be a power of 2) #/
+ */
 
 static  int unbury(bndry_p bndry) { 
   int i,j, q,b,n, indir, new, k, len;

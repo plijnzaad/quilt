@@ -42,7 +42,7 @@ static FILE * templates_file;
 
 /*** local options (ie local to main.c): ***/
 static int opt_pts_per_atom=0,
-           opt_pr_single=0,
+/*           opt_pr_single=0, */
 	   opt_triangulate=0, 
 	   opt_donothing=0,
 	   opt_recover=0, 

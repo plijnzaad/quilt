@@ -2,13 +2,13 @@
 ### $Id$
 ### Philip lijnzaad@ebi.ac.uk, 22-7-96
 
-MAKE = /usr/local/bin/make		# gnu make
-SHELL = /bin/sh
-CC = gcc
-RM = rm
+### This Makefile require GNU Make.
 
-### all flags given are gcc flags; have to twiddle things yourself if you're
-### not using  gcc
+SYS = $(shell uname)
+
+prefix = /usr/local
+bindir = $(prefix)/bin
+
 
 ### following should be set in environment, but can also do it here
 # HOME					# obvious
@@ -17,10 +17,22 @@ RM = rm
 # obj					# where object files reside
 # bin					# where exectables reside
 
+# variables pointing to various utilities:
+MAKE = /usr/local/bin/make		# gnu make
+SHELL = /bin/sh
+CC = gcc
+RM = rm
+INSTALL = install
+
+
+### compiler flags:
+### all flags given are gcc flags; have to twiddle things yourself if you're
+### not using  gcc
+
 DEFINES = -D$(SYS)			# announce system by a '#define'
 
 ### where to find .h files:
-INCDIRS = -I$(src)
+INCDIRS = 
 CFLAGS = -g -Wall $(INCDIRS) $(DEFINES)    # -Wall: gcc's maximal nr. of warnings
 
 ### highest optimization flags (only for most number-crunchy modules)
@@ -34,14 +46,17 @@ support_o =  $(support_c:.c=.o)
 quilt_h = quilt.h
 quilt_c = main.c acc.c templates.c io.c misc.c top.c conn.c stitch.c \
 		seam.c surf.c randomize.c 
+
 quilt_o = $(quilt_c:.c=.o)		# all quilt objects files
 
 ### The name for the template file of spherical point distributions:
 SPHERES_FILE = .quilt-spheres.$(SYS)
 
-targets = all help clean
+targets = all install help clean support_o quilt_o debug
 
-.PHONY: all help clean support_o quilt_o
+.PHONY: all install help clean support_o quilt_o debug
+
+all: quilt
 
 help:
 	@echo Usage: make $(targets)
@@ -49,8 +64,11 @@ help:
 makedebug:
 	echo $(support_o)
 
-all: quilt
+install: quilt
+	$(INSTALL) quilt $(bindir)
 
+debug:
+	echo $(SYS)
 
 $(support_o): $(support_h)
 support_o: $(support_o)
@@ -83,4 +101,4 @@ templates.o: templates.c
 
 
 clean:
-	$(RM) -f $(ALL_SPHERES_FILES)
+	$(RM) -f quilt *.o $(SPHERES_FILE)
