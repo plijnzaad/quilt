@@ -1,6 +1,9 @@
 # -*- mode: Makefile; -*-
 # $Id$
 
+# This file requires GNU make
+
+
 include $(BUILD_HOME)/makefile.include
 
 .PHONY:  all quilt utils install clean

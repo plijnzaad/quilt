@@ -5,6 +5,8 @@ quilt/FILES
 quilt/README
 quilt/RESIDUES
 quilt/MANIFEST
+quilt/setup.sh.example
+quilt/setup.csh.example
 quilt/makefile.include
 # quilt/examples:
 quilt/examples/job

@@ -2,6 +2,5 @@
 
 # File to be sourced to ease compilation (not required for installation). The
 # default will do when it's being read in its own directory. Copy and adjust. 
-
 BUILD_HOME=`pwd`
 export BUILD_HOME
