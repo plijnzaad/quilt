@@ -938,8 +938,8 @@ of the index; in that case make type bigger\n", cutoff_val[Sphere->type]);
     }
   }
 
-  AFREEA(cand_edges);
-  AFREEA(candp_array);
+  //  AFREEA(cand_edges);     @@@@ bug : segfault here
+  //  AFREEA(candp_array);    @@@@ bug : segfault here too
 
   Sphere->nedges=nedges; 
   Sphere->Edges=Edges; 
