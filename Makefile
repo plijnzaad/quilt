@@ -24,10 +24,11 @@ install:
 
 clean:
 	(cd src; $(MAKE) clean)
-	(cd utils; $(MAKE) clean) || true;
-	(cd test; $(MAKE) clean)
+	(cd utils; $(MAKE) clean)
+	(if [ -d test ] ; then cd test;  $(MAKE) clean; fi)
 
-debug:
+debugmake:
 	pwd
-	echo $(SYS) $(MAKELEVEL)
+	echo SYS=$(SYS) $(MAKELEVEL)
 	(cd src; $(MAKE) debug)
+
