@@ -262,13 +262,19 @@ static int add_bndry_pt(bndry_p bndry, point_p pp,
   bndry->path[ bndry->length ]=nr;
 
   s=0;
-  if (  (*flagp & (BNDRY | PATCH) ) == (BNDRY | PATCH) )
-      *flagp |= TWOWAY;			/* seen point before, current invoc. */
+  if (  (*flagp & (BNDRY | PATCH) ) == (BNDRY | PATCH) ) { 
+    /* seen point before, current invocation */
+      *flagp |= TWOWAY;			
+  }
   else { 
-    s = ((*flagp & (BNDRY | PATCH) )== BNDRY);	/* only BNDRY, not PATCH !  */
-    *flagp |= (s*SHARED) /* seen before, prev. invoc. */
-      | BNDRY | PATCH ;
-    bndry->flags |= SHARED;
+    s = ((*flagp & (BNDRY | PATCH) )== BNDRY);
+    /* s is normally 0, but 1 if the point is SHARED. This is because
+       in the current invocation, all boundary points are marked both
+       PATCH and BNDRY; if multiple boundaries are marked, however, the
+       PATCH bit is unset.
+     */
+    *flagp |= ( BNDRY | PATCH | (s*SHARED) ) ;
+    bndry->flags |= (s*SHARED);         /* phew! */
     bndry->ncons++;			/* npoints here !!!!! */
     patch->points[ patch->npoints++ ]=nr;
   }
@@ -749,7 +755,9 @@ static int do_find_patches(shell_p shell, int recover, int *nbndriesp,
       bn->next=patcht.bndries;			/* prepend */
       patcht.bndries=bn;
       if ( mark_interior(shell, wanted, &patcht, &directions[0]) )
-	/* multiple bndry */;
+	/* multiple bndry, i.e., a patch with a 'hole' in it (i.e., 
+         * one that runs as a band around the whole atom; fairly common)
+         */;
       else 
 	break;				/* else: patch has multiple boundry */
       shflags |= MBNDRIES;
