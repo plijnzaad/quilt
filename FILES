@@ -1,19 +1,5 @@
 ### following files are included; 
 
-### in src/:
-Makefile
-### utilities source code:
-getargs.[hc]				# command line parsing
-utils.[hc]				# misc. utilities
-alloc.[hc]				# allocation routines
-list.[hc]				# linked list routines
-pdb.[hc]				# pdb file reading + utilities
-extra-math.[hc]				# some extra math stuff
-vecmat.h				# vector macros
-jacobi.[hc]				# jacobi eigenvalues routines
-hash.[hc]				# hash table support
-compat.[hc]				# system compatibility stuff
-
 ### quilt source code:
 quilt.h					# data defs, constants, prototypes
 main.{c,args}				# dispatches to main procedures
@@ -27,6 +13,21 @@ stitch.c				# triangalation stuff
 seam.c					# triangalation stuff
 surf.c					# finding the actual patches
 randomize.c				# randomization
+
+### in utils/:
+Makefile
+getargs.[hc]				# command line parsing
+utils.[hc]				# misc. utilities
+alloc.[hc]				# allocation routines
+list.[hc]				# linked list routines
+pdb.[hc]				# pdb file reading + utilities
+pdbutils.[hc]				# pdb file reading + utilities
+extra-math.[hc]				# some extra math stuff
+vecmat.h				# vector macros
+jacobi.[hc]				# jacobi eigenvalues routines
+hash.[hc]				# hash table support
+compat.[hc]				# system compatibility stuff
+files.[hc]                              # some general utilities
 
 ### perl4 scripts (may or may not work under perl5), in subdir scripts/:
 histo					# histogramming

@@ -1,24 +1,27 @@
 #!/bin/sh -x
 #$Id$
 
-src=~/src
+# execute this file such that all the ancillary files end up, as symlinks, in
+# the quilt src/ directory. It's should be enough to change the variable utils
 
-ln -s $src/alloc.c  ./
-ln -s $src/alloc.h ./
-ln -s $src/compat.c ./
-ln -s $src/compat.h ./
-ln -s $src/extra-math.c ./
-ln -s $src/extra-math.h ./
-ln -s $src/getargs.c ./
-ln -s $src/getargs.h ./
-ln -s $src/hash.c ./
-ln -s $src/hash.h ./
-ln -s $src/jacobi.c ./
-ln -s $src/jacobi.h ./
-ln -s $src/list.c ./
-ln -s $src/list.h ./
-ln -s $src/pdb.c ./
-ln -s $src/pdb.h ./
-ln -s $src/utils.c ./
-ln -s $src/utils.h ./
-ln -s $src/vecmat.h ./
+utils=../../utils
+
+ln -s $utils/alloc.c  ./
+ln -s $utils/alloc.h ./
+ln -s $utils/compat.c ./
+ln -s $utils/compat.h ./
+ln -s $utils/extra-math.c ./
+ln -s $utils/extra-math.h ./
+ln -s $utils/getargs.c ./
+ln -s $utils/getargs.h ./
+ln -s $utils/hash.c ./
+ln -s $utils/hash.h ./
+ln -s $utils/jacobi.c ./
+ln -s $utils/jacobi.h ./
+ln -s $utils/list.c ./
+ln -s $utils/list.h ./
+ln -s $utils/pdb.c ./
+ln -s $utils/pdb.h ./
+ln -s $utils/utils.c ./
+ln -s $utils/utils.h ./
+ln -s $utils/vecmat.h ./

@@ -4,7 +4,8 @@
 
 ### This Makefile require GNU Make.
 
-include $(BUILD_HOME)/makefile.include
+# include $(BUILD_HOME)/makefile.include
+include ../makefile.include
 
 ### following should be set in environment, but can also do it here
 # HOME					# obvious
@@ -21,6 +22,7 @@ DEFINES = -D$(SYS)			# announce system by a '#define'
 
 ### location of auxiliarly .h files and libraries:
 utilsdir = ../utils			# may have to be created as symlink
+# utilsdir = .
 utilincdir = $(utilsdir)		
 utillibdir = $(utilsdir)
 utillibs = -lutils
