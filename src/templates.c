@@ -334,11 +334,13 @@ with '-c' (takes longer), or increasing MAX_NGBS_PER_PNT (currently %d),",
   set_whoamis(Sphere);			/* topology info on the edges */
 
   if (Sphere->type >= SPH_ZIEL &&	/* it's an irregular distribution */
-      Sphere->npoints > 8)		/* otherwise non-sensical answers */
-    if((i=make_Delaunay(Sphere)))
+      Sphere->npoints > 8) {		/* otherwise non-sensical answers */
+    if((i=make_Delaunay(Sphere))) {
       warn("%d edges re-assigned to get Delaunay triangulation\n", i);
-    else
+    } else { 
       warn("first try already a Delaunay triangulation\n");
+    }
+  }
 
   find_faces(Sphere);
   assert(Sphere->nfaces == 2*npoints-4);
