@@ -6,7 +6,7 @@
 
 include $(BUILD_HOME)/makefile.include
 
-.PHONY:  all quilt utils install clean
+.PHONY:  all quilt utils install clean debugmake
 
 all: quilt utils
 
@@ -30,5 +30,6 @@ clean:
 debugmake:
 	pwd
 	echo SYS=$(SYS) $(MAKELEVEL)
-	(cd src; $(MAKE) debug)
+	(cd src; $(MAKE) debugmake)
+	(cd utils; $(MAKE) debugmake)
 

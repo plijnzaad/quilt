@@ -4,8 +4,7 @@
 
 ### This Makefile require GNU Make.
 
-# include $(BUILD_HOME)/makefile.include
-include ../makefile.include
+include $(BUILD_HOME)/makefile.include
 
 ### following should be set in environment, but can also do it here
 # HOME					# obvious
@@ -50,9 +49,9 @@ quilt_o = $(quilt_c:.c=.o)		# all quilt objects files
 ### The name for the template file of spherical point distributions:
 SPHERES_FILE = .quilt-spheres.$(SYS)
 
-targets = all install help clean utils quilt_o makedebug
+targets = all install help clean utils quilt_o debugmake
 
-.PHONY: all install help clean utils quilt_o makedebug
+.PHONY: all install help clean utils quilt_o debugmake
 
 all: quilt
 
@@ -73,7 +72,7 @@ quilt: $(quilt_o) utils
 	$(CC) -o $@ $(quilt_o) $(libdirs) $(libs) -lm
 
 # rule for helping debug this Makefile
-makedebug:
+debugmake:
 	echo $(SYS)
 
 
