@@ -1,6 +1,7 @@
 # $Id$
 # probably wrong, this file. Make sure there's no binaries or directories
 # listed here!
+quilt/BUILDDATE
 quilt/ATOMS
 quilt/FILES
 quilt/README
