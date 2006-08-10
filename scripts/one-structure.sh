@@ -30,7 +30,8 @@ polar_expansion=1.4
 npoints=252
 
 # run it on structure
-quilt  -n $npoints -ep $polar_expansion -R -a $areafile $pdbfile \
+quilt=/home/philip/Linux/bin/quilt
+$quilt  -n $npoints -ep $polar_expansion -R -a $areafile  -p $pdbfile \
     > $patfile 2> $logfile
 
 # parse it into something more readable
@@ -42,6 +43,9 @@ do
   Rpatsel $patfile $i  
 done > $pdbcode.rasmol
 
+
+echo "DEBUG EXITING HERE"
+exit 1
 
 # produce histograms and randomized histograms to assess significance:
 awk '/^# [0-9]/{print $10}' $patfile | histo -l 0 -s 10 > $histofile
