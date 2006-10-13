@@ -18,6 +18,8 @@
 #     done > rsml/`basename $i .pat`.rsml
 #  done
 
+use File::Basename;
+
 
 
 ## this is all a bit hairy, sorry.
@@ -70,8 +72,14 @@ while(<FILE>) {
 }
 
 s/^# \d+,//;
-s/patches/atoms/;
-$comment="selected $_";
+s/patches/faces/;
+
+my  ($name,$path,$suffix) = fileparse($file,"\.pat");
+
+my ($rank, $atoms, $faces, $points, $area) = /# (\d+) (\d+) atoms (\d+) faces (\d+) points area ([0-9.]+)/;
+$comment=sprintf "struc %6s, patch %2d, area %6.1f, %3d atoms\n"
+  , $name, $rank, $area, $atoms;
+            
 
 print "select none\n" unless $opt_a;	# empty the selection, unless a
 
