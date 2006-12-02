@@ -255,7 +255,7 @@ int ran_atoms(box_p box, int percentage) {
   warn("%d N, %d O, %d C, %d S, total %d *surface* atoms\n", 
        nN, nO, nC, nS, nN + nO + nC + nS);
 
-  if (percentage > 100)
+  if (percentage > 100)                 /* this is an undocumented feature... */
     compensate(box, &Nfrac, &Ofrac);
   else if (percentage >= 0)
     adjust_hfobicity((double)percentage/100.0, box, &Nfrac, &Ofrac);
