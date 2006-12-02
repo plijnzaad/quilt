@@ -36,20 +36,11 @@
 
 #define ATOM_SURFACC_THRESHOLD 10.0	/* redistrib atom if more
 					   accessible than this (Angstroms) */
-#define ATOM_SURFACC_THRESHOLD2 5.0	/* for use in randomize2 */
-
-#define LOW_A  42.0			/* yes, LOW_A is higher than HIGH_A */
-#define HIGH_A 38.0
-#define LOW_B  0.7
-#define HIGH_B 0.8
-
-#define MID_A 37.167
-#define MID_B 0.753
 
 /* following is not implemented very nicely, i admit */
 #define PROBE 1.4
 
-#define Nradius (1.7 + PROBE)
+#define Nradius (1.7 + PROBE)           /*  should read this from template! */
 #define Oradius (1.4 + PROBE)
 #define Cradius (1.9 + PROBE)
 #define Sradius (1.8 + PROBE)
