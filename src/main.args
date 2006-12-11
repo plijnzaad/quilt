@@ -168,17 +168,17 @@ arg_t argtab[] = {
   { "-D", DOUBLE, &opt_pt_density, 
     "use <float> as approximate points density [pts/(A**2)]", check_gt0le5 },
   { "-e", DOUBLE, &opt_extension, 
-                   "extend all radii by this amount before triangulating. \n\
+                   "amount to extend all radii with,  before triangulating. \n\
                     Acts as a probe radius", 
       check_ge0le10 },
   { "-r", DOUBLE, &opt_reduction, 
-      "reduce all radii by after triangulating", check_r_le_e },
+      "amount to reduce all radii by after triangulating", check_r_le_e },
   { "-ep", DOUBLE, &opt_polar_extension, 
-                   "extend radii of polar atoms with accessibility higher\n\
-                    than THRESHOLD", check_ge0le10 },
+                   "amount to extend radii of polar atoms with, iff their accessibility is higher\n\
+                    than THRESHOLD (see -th option). Typical value is 1.4", check_ge0le10 },
   { "-th", DOUBLE, &opt_threshold,
                    "threshold (percent of sphere area) below which polar\n\
-                    atoms will not have their radii extended",
+                    atoms will not have their radii extended (see -ep option)",
 	check_ge0le10 },
   { "-rp", DOUBLE, &opt_polar_reduction, 
       "reduce radii of polar atoms after triangulating",
