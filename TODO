@@ -1,0 +1,14 @@
+to be done:
+
+- fix problem with randomizing certain structures; saw problems/segfaults
+  with following structures:
+
+  155c 1acx 1est 1fx1 1hfi 1rhd 1tfd 3cpa 1tfe
+
+
+- distrib.s has this at top:
+    Need to fix templates.c AFREEA bug at some  point first.
+    Also fix the examples (they're empty now).
+
+- release
+- add web server
