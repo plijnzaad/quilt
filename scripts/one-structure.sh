@@ -1,7 +1,7 @@
 #! /bin/sh -x
-## Written by Philip lijnzaad@ebi.ac.uk
-## This script produces all the stuff necessary for analyzing one particular protein
-## structure. The pdb filename must be given as a parameter.
+## Written by Philip lijnzaad@ebi.ac.uk This script produces all the stuff
+## necessary for analyzing one particular protein structure. The pdb filename
+## must be given as a parameter.
 
 ### Note: quilt and the scripts are assumed to be on the $PATH. If this is
 ### not the case, uncomment this:
@@ -22,7 +22,7 @@ patfile=$pdbcode.pat
 logfile=$pdbcode.log
 histofile=$pdbcode.histo
 ranhistofile=$pdbcode.ranhisto
-tmpdir=./tmp                            # where all the randomized pat files go
+tmpdir=./ran                            # where all the randomized pat files go
 mkdir $tmpdir 2>/dev/null               # create if needed
 textfile=$pdbcode.txt
 
@@ -30,7 +30,7 @@ polar_expansion=1.4
 npoints=252
 
 # run it on structure
-quilt=/home/philip/Linux/bin/quilt
+quilt=quilt # must be in path, e.g. ~/Linux/bin/quilt
 $quilt  -n $npoints -ep $polar_expansion -R -a $areafile  -p $pdbfile \
     > $patfile 2> $logfile
 
@@ -44,17 +44,23 @@ do
 done > $pdbcode.rasmol
 
 
-echo "DEBUG EXITING HERE"
-exit 1
+# echo "DEBUG EXITING HERE"
+# exit 1
 
 # produce histograms and randomized histograms to assess significance:
 awk '/^# [0-9]/{print $10}' $patfile | histo -l 0 -s 10 > $histofile
 
-for i in 0 1 2 3 4 5 6 7 8 9 
-do 
-  quilt -ran -n 252 -ep 1.4 -R -p $areafile > $tmpdir/$pdbcode.ran$i 
+# randomized  50 times
+for i in 0 1 2 3 4 5 ; do 
+  for j in 0 1 2 3 4 5 6 7 8 9 ; do 
+    ij="$i$j"
+    quilt -ran -n 252 -ep 1.4 -R -p $areafile > $tmpdir/$pdbcode.ran$ij
+  done
 done 2>> $logfile
 
-cat $tmpdir/$pdbcode.ran[0-9] | awk '/^# [0-9]/{print $10}' | histo -l 0 -s 10 \
+# see if none failed:
+find $tmpdir -size 0 -exec echo 'randomization failed' \;  -exec  rm -v {} \; 
+
+cat $tmpdir/$pdbcode.ran* | awk '/^# [0-9]/{print $10}' | histo -l 0 -s 10 \
   | awk '{print $1, $2/10.0}' > $ranhistofile
 
