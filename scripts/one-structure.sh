@@ -23,7 +23,8 @@ logfile=$pdbcode.log
 histofile=$pdbcode.histo
 ranhistofile=$pdbcode.ranhisto
 tmpdir=./ran                            # where all the randomized pat files go
-mkdir $tmpdir 2>/dev/null               # create if needed
+rm -fr $tmpdir                          # has to be clean first
+mkdir $tmpdir 
 textfile=$pdbcode.txt
 
 polar_expansion=1.4
@@ -48,19 +49,22 @@ done > $pdbcode.rasmol
 # exit 1
 
 # produce histograms and randomized histograms to assess significance:
-awk '/^# [0-9]/{print $10}' $patfile | histo -l 0 -s 10 > $histofile
+awk '/^# [0-9]/{print $10}' $patfile | histo  -l 0 -s 10 > $histofile
 
-# randomized  50 times
-for i in 0 1 2 3 4 5 ; do 
-  for j in 0 1 2 3 4 5 6 7 8 9 ; do 
-    ij="$i$j"
-    quilt -ran -n 252 -ep 1.4 -R -p $areafile > $tmpdir/$pdbcode.ran$ij
-  done
+
+# now randomized  the the thing ntimes:
+ntimes=50
+
+for i in $(seq 1 $ntimes); do 
+  quilt -ran -n 252 -ep 1.4 -R -p $areafile > $tmpdir/$pdbcode.ran$i
 done 2>> $logfile
 
 # see if none failed:
 find $tmpdir -size 0 -exec echo 'randomization failed' \;  -exec  rm -v {} \; 
 
+#adjust ntimes so histo's end up at correct height:
+ntimes=$(ls ran/*.ran*|wc -l)
+
 cat $tmpdir/$pdbcode.ran* | awk '/^# [0-9]/{print $10}' | histo -l 0 -s 10 \
-  | awk '{print $1, $2/10.0}' > $ranhistofile
+  | awk '{print $1, $2/'$ntimes'}' > $ranhistofile
 
