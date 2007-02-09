@@ -65,7 +65,7 @@ install: quilt
 
 # may have to be created as a symlink
 utils:
-	(cd $(utilsdir); $(MAKE) )
+	(cd $(utilsdir); $(MAKE) utils)
 
 $(quilt_o): $(quilt_h)			# forget about utils_h dependcy
 quilt_o: $(quilt_h) $(quilt_o)
