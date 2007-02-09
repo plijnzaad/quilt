@@ -16,8 +16,8 @@ quilt:
 utils:
 	(cd utils; $(MAKE) utils) || true;	#may have been installed elsewhere
 
-# test:
-# 	(cd test; $(MAKE))
+test:
+	(env PDBPATH=examples ./src/quilt -n 252 -ep 1.4 -R  -p 8lyz.pdb > 8lyz-test.pat 2> 8lyz-test.log; if diff -q 8lyz-test.pat examples/8lyz.pat ; then echo "test OK"; exit 0; else echo "test not OK: 8lyz-test.pat and examples/8lyz.pat differ"; exit 9; fi)
 
 install:
 	(cd src; $(MAKE) install)
