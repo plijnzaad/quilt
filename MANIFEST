@@ -35,7 +35,7 @@ examples/8lyz.rasmol
 examples/8lyz.txt
 # scripts:
 scripts/one-structure.sh
-scripts/histo
+scripts/histo  # copied from ~/perl/histo by build-distrib.sh; not part of quilt
 scripts/Rpatsel
 scripts/patresidues
 # src:
