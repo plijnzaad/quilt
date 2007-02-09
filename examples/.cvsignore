@@ -1,5 +1,8 @@
 *.ran*
 *.histo
+8lyz.area
+8lyz.log
 8lyz.pat
 8lyz.rasmol
 8lyz.txt
+t/
