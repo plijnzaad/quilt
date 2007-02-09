@@ -48,8 +48,8 @@ done > $pdbcode.rasmol
 awk '/^# [0-9]/{print $10}' $patfile | histo  -l 0 -s 10 > $histofile
 
 
-# now randomized  the the thing ntimes:
-ntimes=50
+# now randomized  the the thing ntimes (20 is perhaps too low; try 50)
+ntimes=20
 
 echo "now randomizing $ntimes times ..."
 for i in $(seq 1 $ntimes); do 

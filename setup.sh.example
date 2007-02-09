@@ -5,4 +5,7 @@
 BUILD_HOME=`pwd`
 export BUILD_HOME
 
-export PDBPATH=.
+# where to search for pdb files (colon-separated list of directories)
+export PDBPATH=.:..:/data/local/pdb
+# (PDB files should look like 3fxn.pdb, i.e. code followed by '.pdb'. If you
+# don't like it, tweak PDBSUFFIX in utils/pdb.h and recompile)

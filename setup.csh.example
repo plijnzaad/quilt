@@ -2,7 +2,10 @@
 
 # File to be sourced to ease compilation (not required for installation). The
 # default will do when it's being read in its own directory. Copy and adjust. 
-
 setenv BUILD_HOME `pwd`
 
-setenv PDBPATH .
+
+# where to search for pdb files (colon-separated list of directories)
+setenv PDBPATH .:..:/data/local/pdb
+# (PDB files should look like 3fxn.pdb, i.e. code followed by '.pdb'. If you
+# don't like it, tweak PDBSUFFIX in utils/pdb.h and recompile)
