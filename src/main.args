@@ -129,6 +129,7 @@ arg_t argtab[] = {
   /* name   type  address  comment               check_function */
 
   { "(options with '*' are not yet ready or obsolete)", COMMENT, 0,0,0 },
+  { "\nGeneral", COMMENT, 0,0,0 },
 
   { "-h", HELP, NULL, "this message", NULL },
   { "-help", HELP, NULL, "this message", NULL },
@@ -146,17 +147,19 @@ arg_t argtab[] = {
       NULL },
 
   { " Randomization options:", COMMENT, 0,0,0 },
-  { "-g", INT, &opt_general, 
-                    "use N as seed for randomization, rather than
+
+  { "-g", INT, &opt_general, "use N as seed for randomization, rather than \n\
                     time-derived seed", NULL },
-  { "-ran", BOOL, &opt_randomize, "randomize surface atoms", NULL }, 
+  { "-ran", BOOL, &opt_randomize, "randomize surface atoms. This \n\
+                    needs surface accessibility in last pdb field (see -a \n\
+                    option)", NULL }, 
   { "-ranval", INT, &opt_ranval, 
-                    "randomize and change surface atoms such that the
-                    total percentage hydrophobic surface becomes N. This
-                    needs surface accessibility in last pdb field (see -a
+                    "randomize and change surface atoms such that the \n\
+                    total percentage hydrophobic surface becomes N. This \n\
+                    needs surface accessibility in last pdb field (see -a \n\
                     option)", NULL},
 
-  { "Input:", COMMENT, 0,0,0 },
+  { "\nInput:", COMMENT, 0,0,0 },
   { "-f", R_FILE, &opt_infile, "use as input file", NULL },
   { "-p", STRING, &opt_protein, "use file (or pdb-code) as pdb input", NULL },
   { "-b", STRING, &opt_bin, "use spec for binary protein coordinates", NULL },
@@ -174,8 +177,9 @@ arg_t argtab[] = {
   { "-r", DOUBLE, &opt_reduction, 
       "amount to reduce all radii by after triangulating", check_r_le_e },
   { "-ep", DOUBLE, &opt_polar_extension, 
-                   "amount to extend radii of polar atoms with, iff their accessibility is higher\n\
-                    than THRESHOLD (see -th option). Typical value is 1.4", check_ge0le10 },
+                   "amount to extend radii of polar atoms with, iff their \n\
+                    accessibility is higher than THRESHOLD (see -th option). \n\
+                    Typical value is 1.4", check_ge0le10 },
   { "-th", DOUBLE, &opt_threshold,
                    "threshold (percent of sphere area) below which polar\n\
                     atoms will not have their radii extended (see -ep option)",
@@ -184,14 +188,17 @@ arg_t argtab[] = {
       "reduce radii of polar atoms after triangulating",
       check_rp_le_ep },
 
-  { "Output", COMMENT, 0,0,0},
+  { "\nOutput", COMMENT, 0,0,0},
   { "-o", W_FILE, &opt_outfile, "graphical output to file", NULL },
   { "-of", CHAR,  &opt_outformat, "format of graphical output (i,m, *p)",
       check_imp, }, 
   { "-dots", W_FILE, &opt_dotsfile, "dots output to file", NULL },
   { "-patdot", INT, &opt_patdots, 
 	"dots output of first N patches to files patN.dots", NULL },
-  { "-a", W_FILE, &opt_areasfile, "write area per atom to file", NULL },
+  { "-a", W_FILE, &opt_areasfile, 
+                  "write area per atom to a PDB-like file (square Angstroms \n\
+                   are in the 5th field). Such a file is needed for \n\
+                   the randomizing options -ran and -ranval", NULL },
   { "-F", W_FILE, &opt_facesfile, "faces output to file", NULL},
   { "* -Ot", STRING, &opt_fulloutputtype, 
       "output type (a,b,p,e,f,s,v,V)", NULL,},

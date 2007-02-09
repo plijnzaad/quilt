@@ -310,8 +310,12 @@ int main(int argc, char**argv) {
 
   box=get_atoms(opt_infile, opt_protein, opt_bin, PDB_DEFAULT_FLAGS );
 
-  if (opt_randomize || opt_ranval >= 0)
-    ran_atoms(box, opt_ranval);		/* redistribute N,O over surface */
+  if (opt_randomize || opt_ranval >= 0) {
+      warn("\
+NOTE: the randomizing options require atomic suface accessibilities in the 5th\n\
+PDB field, but this is not checked. See the -a file.area option");
+      ran_atoms(box, opt_ranval);      /* redistribute N,O over surface */
+  }
 
   if(opt_infile)
     fclose(opt_infile);
