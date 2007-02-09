@@ -44,10 +44,6 @@ do
   Rpatsel $patfile $i  
 done > $pdbcode.rasmol
 
-
-# echo "DEBUG EXITING HERE"
-# exit 1
-
 # produce histograms and randomized histograms to assess significance:
 awk '/^# [0-9]/{print $10}' $patfile | histo  -l 0 -s 10 > $histofile
 
@@ -55,8 +51,10 @@ awk '/^# [0-9]/{print $10}' $patfile | histo  -l 0 -s 10 > $histofile
 # now randomized  the the thing ntimes:
 ntimes=50
 
+echo "now randomizing $ntimes times ..."
 for i in $(seq 1 $ntimes); do 
-  quilt -ran -n 252 -ep 1.4 -R -p $areafile > $tmpdir/$pdbcode.ran$i
+  $quilt -ran  -n $npoints -ep $polar_expansion -R -p $areafile \
+     > $tmpdir/$pdbcode.ran$i.pat 
 done 2>> $logfile
 
 # see if none failed:
@@ -67,4 +65,23 @@ ntimes=$(ls ran/*.ran*|wc -l)
 
 cat $tmpdir/$pdbcode.ran* | awk '/^# [0-9]/{print $10}' | histo -l 0 -s 10 \
   | awk '{print $1, $2/'$ntimes'}' > $ranhistofile
+
+set +x
+
+echo "Done. Patches are in $pdbcode.pat (more readeable version: $pdbcode.txt); 
+Rasmol script is in $pdbcode.rasmol. Logs are in $pdbcode.log.
+
+To get an impression of the significance of the patches, run e.g. 
+
+    xmgrace  -nxy $pdbcode.histo  -nxy $pdbcode.ranhisto
+ "
+
+
+
+
+
+
+
+
+
 
