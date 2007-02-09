@@ -14,7 +14,7 @@ quilt:
 	(cd src; $(MAKE))
 
 utils:
-	(cd utils; $(MAKE)) || true;	#may have been installed elsewhere
+	(cd utils; $(MAKE) utils) || true;	#may have been installed elsewhere
 
 # test:
 # 	(cd test; $(MAKE))
