@@ -1,0 +1,42 @@
+# $Id$
+
+Installing: 
+
+
+
+Should be straightforward on any Unix; everything is standard C.  It's
+developed and tested mostly on Linux. I have no inclination to spend much
+time making it work on other platforms, but I don't think it should be
+difficult; it has been tested on other Unices and/or compilers: Digital Unix
+(OSF1), SGI, Solaris, AIX.  Be prepared for a fair number of warnings,
+especially when compiling on Digital Unix: they sometimes have their RAND_MAX
+wrong. Switch off gcc's '-Wall' option if found iritating.
+
+
+
+The build requires GNU make. Look at the files setup.{sh,csh}.example, copy
+and adjust, then source it so that BUILD_HOME points to the right place. In
+most cases, the settings in setup.{sh,csh}.example are already fine, so you
+can simply
+
+  cd quilt-<<version>>           # you're probably already here, reading this.
+  source setup.sh.example        # or the csh version if that's your shell
+
+Then look at make.include (specifically at the 'prefix' and 'bindir'
+variables) and the Makefiles, and with a bit of luck,
+
+  make
+  make test
+  make install
+
+will just work. The files ATOMS and RESIDUES are needed by the pdb reading
+routines; install or symlink them as ~/.atoms and ~/.residues. You can edit
+these files to adjust atom radii etc. The format of these two files is should
+be obvious; see also their comments.
+
+The API is documented in the .h files, -ish, and the README
+should be helpful too. Any questions/suggestions, feel free to ask me.
+
+
+Philip.Lijnzaad@gmail.com.
+
