@@ -1,0 +1,185 @@
+Quilt version 0.9p
+
+Written by Philip Lijnzaad (while at EBI; now at UMC Utrecht
+<p.lijzaad@med.uu.nl> or <philip.lijnzaad@gmail.com>)
+
+Program to delineate hydrophobic patches on protein surfaces. For the
+description of the algorithm, please quote/refer to
+
+  Lijnzaad, P., Berendsen, H.J.C. and Argos, P. (1996) "A method for
+  detecting hydrophobic patches on the protein surfaces." Proteins: Structure,
+  Function, Genetics, in press.
+
+For a statistical overview of patches on monomeric proteins, see
+
+  Lijnzaad, P., Berendsen, H.J.C. and Argos, P. (1996) "Hydrophobic patches
+  on the surfaces of protein structures." Proteins: Structure,
+  Function, Genetics, in press.
+
+
+Installing:
+----------
+
+See the INSTALL file. 
+
+PDB files are searched for in the path given enviroment variable PDBPATH,
+which can be a colon separated list.
+
+Documentation:
+-------------
+
+Currently this README file is the main documentation; along with the
+publication it should be enough to get started. Also, be sure to read the
+output of `quilt -h'
+
+A list of files contained in this distribution, along with a brief
+description, is given in file FILES; this may help a bit as well.
+
+Please note that the package contains a number of un(der)documented features.
+Especically the full triangulation routines are not usable in the current
+version. 
+
+The directory examples contains the example in- and output of running the
+program on lysozym; the shell script in scripts/job is how it was
+created. The scripts (and most other stuff) often have a -h option, and/or
+are commented fairly extensively.
+
+Parameters:
+-----------
+
+See quilt -h and the article. Also see .residues and .atoms for atom
+radii. One thing to play with is the polar expansion radius. A reasonable
+setting is in the 1.0 - 1.4 range. The larger this value, the smaller but
+more prominent the patches will be; smaller values give more disperse
+patches, that are larger and may contain the occasional polar atom.
+
+Input:
+------
+A pdb file, which is searched for in the environment variable PDBPATH. In it,
+it searches for 3fxn.brk or 3fxn.brk (alter pdb.h if necessary). The program
+can also read a file in the format N\nN * {X Y Z RADIUS\n}, and can also read
+DSSP files (see also pdb.h and pdb.c; alter DSSPPATH etc. if necessary).
+
+Output: 
+------- 
+
+progress/warnings/errors to STDERR, patches to STDOUT.  The stderr output can
+largely be ignored; most warnings are informational or inconsequential.  The
+patches, written to STDOUT, are sorted by descending patch size. If
+recovering is switched on (-R option), there is first a report on the
+correspondence between the rankings  looking like: 
+
+  # new patch ranks, after recovering
+  #0: 68 (850.487) WAS #0: 32 (289.169)
+  #1: 80 (815.522) WAS #1: 39 (264.779)
+  #2: 56 (770.897) WAS #4: 25 (238.075)
+
+is given; you can ignore this. After this, a list of patches is given. Each
+patch looks like:
+
+# 2 14 atoms 16 patches 365 points area 198.620 0 bndries ABC 11.638 5.688 1.847
+% 599 616 618 831 835 840 844 845 854 855 858 1065 1069 1070 
+ G 79 @ CA =3198-;K 81 @ CG =586-;K 81 @ CE =4088-;G 107 @ C =586-;C 108 @ C =111-;
+ V 109 @ CA =334-;V 109 @ CG1=3915-;V 109 @ CG2=3269-;V 111 @ CA =389-;V 111 @ C =151-;
+ V 111 @ CG1=825-;I 138 @ CA =218-;I 138 @ CG1=2067-;I 138 @ CG2=935-;
+
+All this means the following: patch nr 2 (i.e. 3rd in rank; they start at 0)
+consists of 16 atomic faces (the faces used to be called patches, I know this
+is confusing!)  on 14 different atoms, totalling 365 sampling points and
+having a total area of 198.620 square Angstroms of solvent accessible
+surface. There are 0 boundaries (as this is not implemented) and the
+semi-axes A,B and C of an 3D ellipsoid fitted to the patch are given in
+Angstroms. Then (the lines starting with '% ') follow the atom numbers (the
+order in the file; counting starts at 0), followed by the textual atom IDs
+which are separated by semi-colons. The first atom of this patch is CA of
+Gly79 of chain ' ', having an individual solvent accesible surface area of
+31.98 square angstroms (numbers are multiplied by 100), and no ('-')
+secondary structure information is available (the program can integrate data
+from the DSSP secondary structure assignments, but that's not done for the
+test run).
+
+A more formal description would be:
+
+'#' RANK NATOMS NFACES NPOINTS 'area' AREA '0 bndries' 'ABC' A B C 
+'%' ATOMNO
+A_ACID CHAIN RESIDUENO INSERTION_CODE '@' ATOMNAME '=' AREA*100 SEC.STR. ';'
+
+
+Example:
+--------
+A typical way of running things (Bourne shell; see also scripts/job) is:
+
+  quilt  -n 252 -ep 1.4 -R -p 8lyz.pdb -a 8lyz.area > 8lyz.pat 2> 8lyz.log
+
+252 sampling points per atom are used, a polar expansion radius of 1.4
+Angstrom is used, and the preliminary patches are recovered after expansion.
+The -a option writes a PDB file `8lyz.area' which has the atomic solvent
+accessabilty in the fifth field. This is needed for the following.
+
+Randomization:
+--------------
+
+To get an idea of the significance of the patches, you need to randomize the
+surface, and compare the distribution of patch sizes with the actual one.
+First, the actual distribution of patch sizes is histogrammed by extracting
+the patch sizes and running them through the perl script `histo' which can be
+found in the scripts/ directory:
+
+  awk '/^# [0-9]/{print $10}' 8lyz.pat | histo -l 0 -s 10 > 8lyz.histo
+
+(bins starting at 0, and bin size 10 Angstroms; see histo -h for more
+documentation)
+
+Next, you randomize the structure several times. For this you need a pdb file
+with atomic solvent accessabilities such as produced with the -a option
+(failing to do this will give a wrong hydrophobic surface fraction, resulting
+in a bias that makes large real patches look small compared to the randomized
+version).  On this file, you run the program N times (say between 20 and 100),
+with the -ran option. Output is caught in different files, and an `average
+distribution' is made simply by doing a histogram of sizes on all the
+randomized files at once:
+
+  for i in `seq 1 50`
+  do 
+    quilt -ran -n 252 -ep 1.4 -R -p ./8lyz.area > 8lyz.ran$i 2> /dev/null
+  done
+  
+  cat 8lyz.ran[0-9] | awk '/^# [0-9]/{print $10}' | histo -l 0 -s 10 \
+    | awk '{print $1, $2/50}' > 8lyz.ranhisto
+
+The results are best viewed as two graphs in the same plot, using a graphical
+plot program, e.g. using xmgrace -nxy 8lyz.histo -nxy 8lyz.ranhisto. While
+not statistically rigourous, it does show which patches appear to be
+unusually large for the given structure.
+
+This whole process, including the randomization, is automated and documented
+in scripts/one-structure.sh. 
+
+
+Results:
+--------
+The perl script `patresidues' is provided to convert the output patches to
+something slightly more readable. Run as
+
+  patresidues < 8lyz.pat > 8lyz.txt
+
+The script Rpatsel produces a little rasmol script for easier viewing; run 
+as 
+
+  for i in 0 1 2 3 4 
+  do 
+    Rpatsel 8lyz.pat $i  
+  done > 8lyz.rml
+
+Loading the script 8lyz.rml into Rasmol will define p0 to be patch number 0,
+p1 is patch no 1, etc. You can then 'select p2' and color or display it the
+way you want. If there are cofactors present, you should rename them as they
+have been assigned funny oneletter-codes by the ~/.residue template file;
+Rpatsel has a provision for doing this (see Rpatsel -h)
+
+That's about it. I'd be very pleased to hear about any experience, good or
+bad, with the programs and scripts that make up the package. Questions,
+comments, bug reports please to philip.lijnzaad@gmail.com.
+
+
+								Philip
