@@ -13,8 +13,8 @@ CC = gcc
 
 # prefix of the install:
 
-# prefix = /usr/local
-prefix = $(HOME)/$(SYS)
+prefix = /usr/local
+# prefix = $(HOME)/$(SYS)
 
 # where binaries go:
 bindir = $(prefix)/bin
