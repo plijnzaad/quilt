@@ -2,12 +2,3 @@
 
 	* 0.9p: clean up of the build-distrib.sh system and some general
 	        polishing, no big changes.
-
-Fri May  5 01:35:29 2000    <lijnzaad@ebi.ac.uk>
-
-	* renamed v09a to v09i, because 09a is out there already.
-
-	* polished documentation; put everything under CVS control; added
-	 stuff for more easily building tar files. tagged and versioned as
-	 v09a.
-
