@@ -14,3 +14,24 @@ export PDBPATH=.:..:/data/local/pdb
 # don't like it, tweak PDBSUFFIX in utils/pdb.h and recompile)
 
 
+# 
+### convenience function to keep additions to PATH clean
+path_prepend() {
+    local var=$1
+    local val=${!var}
+    local new=$2
+    if [ x$val = x ] ; then
+        export "$var"="$new"
+    else
+        local val2=":$val:"
+        if [ x${val2/:$new:} = x${val2} ] ; then
+            export "$var"="$new:$val"
+        fi
+    fi
+}
+
+# where to find quilt binary (should match $(bindir) in  makefile.include):
+quilt_path=/usr/local/bin
+
+
+path_prepend PATH $quilt_path

@@ -29,13 +29,20 @@ variables) and the Makefiles, and with a bit of luck,
   make test
   make install
 
-will just work. The files ATOMS and RESIDUES are needed by the pdb reading
-routines; install or symlink them as ~/.atoms and ~/.residues. You can edit
-these files to adjust atom radii etc. The format of these two files is should
-be obvious; see also their comments.
+will just work .  If you change prefix and bindir from their default values
+(/usr/local{/bin}), be sure to adjust the PATH in setup.sh[.example]
+accordingly, otherwise the binary cannot be found. 
 
-The API is documented in the .h files, -ish, and the README
-should be helpful too. Any questions/suggestions, feel free to ask me.
+The files ATOMS and RESIDUES are needed by the pdb reading routines; install
+or symlink them as ~/.atoms and ~/.residues. You can edit these files to
+adjust atom radii etc. The format of these two files is should be obvious;
+see also their comments.
+
+After compiling/installing, all a user needs to do is to source the
+setup{.sh,csh} file in order to find the binary and PDB files.  The 'API' is
+documented in the .h files, -ish, and the files README and
+scripts/one-structure.sh should be helpful too. Any questions/suggestions,
+feel free to ask me.
 
 
 Philip.Lijnzaad@gmail.com.

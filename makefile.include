@@ -11,12 +11,11 @@ SHELL = /bin/sh
 CC = gcc
 #  maybe put CFLAGS here too ? 
 
-# prefix of the install:
-
+# prefix of the install (if you change this, also change setup.sh): 
 prefix = /usr/local
 # prefix = $(HOME)/$(SYS)
 
-# where binaries go:
+# where binaries go (if you change this, also change setup.sh)
 bindir = $(prefix)/bin
 
 
