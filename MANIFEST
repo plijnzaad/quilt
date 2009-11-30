@@ -14,7 +14,7 @@ setup.sh.example
 setup.csh.example
 makefile.include
 # examples:
-examples/job
+examples/examples-job.sh
 examples/8lyz.pdb
 # following must have been built before packing:
 # examples/8lyz.area
@@ -31,6 +31,46 @@ examples/8lyz.ran7.pat
 examples/8lyz.ran8.pat
 examples/8lyz.ran9.pat
 examples/8lyz.ran10.pat
+examples/8lyz.ran11.pat
+examples/8lyz.ran12.pat
+examples/8lyz.ran13.pat
+examples/8lyz.ran14.pat
+examples/8lyz.ran15.pat
+examples/8lyz.ran16.pat
+examples/8lyz.ran17.pat
+examples/8lyz.ran18.pat
+examples/8lyz.ran19.pat
+examples/8lyz.ran20.pat
+examples/8lyz.ran21.pat
+examples/8lyz.ran22.pat
+examples/8lyz.ran23.pat
+examples/8lyz.ran24.pat
+examples/8lyz.ran25.pat
+examples/8lyz.ran26.pat
+examples/8lyz.ran27.pat
+examples/8lyz.ran28.pat
+examples/8lyz.ran29.pat
+examples/8lyz.ran30.pat
+examples/8lyz.ran31.pat
+examples/8lyz.ran32.pat
+examples/8lyz.ran33.pat
+examples/8lyz.ran34.pat
+examples/8lyz.ran35.pat
+examples/8lyz.ran36.pat
+examples/8lyz.ran37.pat
+examples/8lyz.ran38.pat
+examples/8lyz.ran39.pat
+examples/8lyz.ran40.pat
+examples/8lyz.ran41.pat
+examples/8lyz.ran42.pat
+examples/8lyz.ran43.pat
+examples/8lyz.ran44.pat
+examples/8lyz.ran45.pat
+examples/8lyz.ran46.pat
+examples/8lyz.ran47.pat
+examples/8lyz.ran48.pat
+examples/8lyz.ran49.pat
+examples/8lyz.ran50.pat
 examples/8lyz.ranhisto
 examples/8lyz.rasmol
 examples/8lyz.txt
