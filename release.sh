@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash
 # $Id$
 
 # Construct tar file for distribution. Should be invoked from within the
@@ -28,10 +28,12 @@ if cvs -q up 2>&1 | egrep '^[?M]|nothing known'; then
   echo '
 ***************************************************************
 Current CVS working copy not completely up-to-date or committed. 
-Not building tar file; please solve/commit first!
+Not building tar file; please solve/commit first! (or specify env force_release=TRUE)
 ***************************************************************
 ' >&2
-  exit 2
+  if [ x$force_release != xTRUE ]; then
+    exit 2
+  fi
 else 
   echo 'CVS ok' >&2
 fi
@@ -42,6 +44,7 @@ source_dir=quilt
 release_dir=quilt-$version
 tarfile=$release_dir.tgz
 
+## get rid of CVS cruft:
 rm -fr $release_dir
 cvs -d $privcvs export -d $release_dir -D today quilt || exit 8
 
@@ -55,7 +58,7 @@ done
 
 # get the examples in the right place:
 cd $release_dir/examples
-./job || exit 1
+./examples-job.sh || exit 1
 mv t/8lyz* t/ran/8lyz.ran* ./
 cd ..
 rm -fr examples/t
@@ -85,3 +88,4 @@ cd ..
 tar  --exclude-from=$source_dir/EXCLUDE -zhcvf $tarfile  $release_dir || exit 4
 echo "done creating $tarfile"
 
+# rm -fr $release_dir

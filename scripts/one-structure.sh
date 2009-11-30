@@ -1,10 +1,11 @@
 #! /bin/sh -x
-## Written by Philip lijnzaad@ebi.ac.uk This script produces all the stuff
+## Written by Philip.lijnzaad@gmail.com This script produces all the stuff
 ## necessary for analyzing one particular protein structure. The pdb filename
 ## must be given as a parameter.
 
 ### Note: quilt and the scripts are assumed to be on the $PATH. If this is
-### not the case, uncomment this:
+### not the case, uncomment the following:
+
 # quilt_home=$HOME/quilt                  # change to needs
 # # quilt_path=$quilt_home/scripts:$quilt_home # if binary not installed in $PATH
 # quilt_path=$quilt_home/scripts          # just for scripts
@@ -12,7 +13,7 @@
 
 pdbcode=$1                              # assumes something.pdb
 pdbfile=$pdbcode.pdb
-## It is searched for in PDBPATH.Provide sensible default
+## It is searched for in $PDBPATH.  Provide sensible default
 if [ ${PDBPATH-notdefined} = notdefined ]; then
     export PDBPATH=.:..:$HOME
 fi
@@ -47,9 +48,8 @@ done > $pdbcode.rasmol
 # produce histograms and randomized histograms to assess significance:
 awk '/^# [0-9]/{print $10}' $patfile | histo  -l 0 -s 10 > $histofile
 
-
 # now randomized  the the thing ntimes (20 is perhaps too low; try 50)
-ntimes=20
+ntimes=50
 
 echo "now randomizing $ntimes times ..."
 for i in $(seq 1 $ntimes); do 
@@ -57,7 +57,7 @@ for i in $(seq 1 $ntimes); do
      > $tmpdir/$pdbcode.ran$i.pat 
 done 2>> $logfile
 
-# see if none failed:
+# see if none failed (this still happens occasionally ...)
 find $tmpdir -size 0 -exec echo 'randomization failed' \;  -exec  rm -v {} \; 
 
 #adjust ntimes so histo's end up at correct height:
