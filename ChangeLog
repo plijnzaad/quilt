@@ -1,7 +1,8 @@
 2009-11-30  Philip Lijnzaad  <p.lijnzaad@umcutrecht.nl>
 
 	* 1.c: ulong problem. Changed e-mail adresses. Now using 50
-	randomizations. 
+	randomizations. Added defs for ulong and FILENAME_MAX for
+	compilation under MacOSX (unclear if works)
 
 2007-02-27  admin  <p.lijnzaad@med.uu.nl>
 
