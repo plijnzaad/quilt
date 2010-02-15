@@ -409,6 +409,9 @@ extern sphere_p Template_spheres[ N_TMPLT_SPHERES ];
 extern int Template_npoints[ N_TMPLT_SPHERES ];
 
 #define TEMPLATE_NPOINTS_CONTENTS  { 12, 32, 42, 92, 122, 162, 252  }
+/* this is mixture of Sloan's A005901 and another one for the pdod (which I
+   can't find */
+
 #define TEMPLATE_NPOINTS_HALFWAY     { 22, 37, 64, 102, 142, 204 }
 
 extern int Template_based_on[ N_TMPLT_SPHERES ];
