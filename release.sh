@@ -6,7 +6,7 @@
 # The version number is contained within the file VERSION.
 
 # where to find stuff:
-privcvs=":ext:gen-fs.genomicscenter.nl:/home/gen/philip/cvsroot"
+privcvs=":ext:login.genomicscenter.nl:/home/gen/philip/cvsroot"
 # where is the histo script:
 histo=/home/philip/perl/histo
 
