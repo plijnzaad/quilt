@@ -1,5 +1,7 @@
 2014-01-20  philip  <philip@philip-laptop>
 
+	* scripts/patresidues: made to work with perl 5.9 regexps
+
 	* added initializer on utils/utils.c:__file__ and __line
 
 2011-11-15  philip  <philip@philip-laptop>
