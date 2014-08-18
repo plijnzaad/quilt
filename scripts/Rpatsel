@@ -24,7 +24,7 @@ use File::Basename;
 
 ## this is all a bit hairy, sorry.
 
-require 'getopts.pl';
+use Getopt::Std;
 $options='hm';				# h: help; m: multiple chains in input
 
 $Usage="Usage: Rpatsel [-$options] FILE N [X=STRING]";
@@ -34,9 +34,7 @@ sub die {
   exit 1;
 }
 
-&Getopts($options);
-
-&die($Usage) unless &Getopts($options);
+&die($Usage) unless getopts($options);
 &die($Usage) if $opt_h;
 
 &die($Usage) unless @ARGV >= 2;
