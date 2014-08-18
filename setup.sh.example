@@ -1,8 +1,9 @@
 # $Id$
 
-# File to be sourced to ease compilation (not required for installation). The
-# default will do when it's being read in its own directory. Copy and adjust. 
-BUILD_HOME=`pwd`
+# File to be sourced (not executed!) to ease compilation (not required
+# for installation). The default will do when it's being read in its own
+# directory. Copy and adjust.  
+BUILD_HOME=`pwd` 
 export BUILD_HOME
 
 # quilt will be installed in directory $bindir (/usr/local/bin by default, see 

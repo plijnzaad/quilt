@@ -1,7 +1,8 @@
 # $Id$
 
-# File to be sourced to ease compilation (not required for installation). The
-# default will do when it's being read in its own directory. Copy and adjust. 
+# File to be sourced (not executed!) to ease compilation (not required
+# for installation). The default will do when it's being read in its own
+# directory. Copy and adjust.
 setenv BUILD_HOME `pwd`
 
 # quilt will be installed in directory $bindir (/usr/local/bin by default, see 
