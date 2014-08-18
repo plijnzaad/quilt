@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -x
 # $Id$
 
 # Construct tar file for distribution. Should be invoked from within the
