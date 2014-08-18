@@ -8,10 +8,10 @@ $help=<<END;
     transforms atoms per patches input to residues per patch output
 END
 
-require 'getopts.pl';
+use Getopt::Std;
 $; = ';' ;				# more readable  than '\034'
 
-die $help unless &Getopts($options) || $opt_h;
+die $help unless getopts($options) || $opt_h;
 
 @amino_acids = ('A','C','D','E','F','G','H','I','K','L',
 	     'M', 'N','P','Q','R','S','T','V','W','Y');
