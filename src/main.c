@@ -291,7 +291,7 @@ static int transfer_acc(box_p box) {
 #define catch_fpe(X)			/* mask it */
 #endif
 
-#define BLURP "\n\nquilt version " VERSION "\n\nCopyright Philip Lijnzaad\n\n\n"
+#define BLURP "\n\nquilt version " VERSION "\n\nCopyright Philip Lijnzaad 2014\n\n\n"
 
 int main(int argc, char**argv) {
   int patchmode, n;
