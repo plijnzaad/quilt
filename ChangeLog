@@ -1,6 +1,7 @@
 2014-11-13  Philip Lijnzaad  <philip@mayr.op.umcutrecht.nl>
 
-	* slight improvements to the release script. Version bump to version 1.1h
+	* Improvements to the release script, including make'ing it. 
+	Version bump to version 1.1h
 
 2014-08-18  philip  <philip@laptop-philip>
 
