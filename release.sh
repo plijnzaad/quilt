@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash
 # $Id$
 
 # Construct tar file for distribution. Should be invoked from within the
@@ -11,10 +11,13 @@ privcvs=${privcvs=:ext:privcvsrepository:/home/gen/philip/cvsroot}
 histo=$HOME/perl/histo
 
 echo "Need to fix templates.c AFREEA bug at some point first" >&2 
-basedir=`pwd`
+
+basedir=`pwd -P`
+cd $basedir
+
 
 if [ $(basename $basedir) != 'quilt' ]; then
-    echo "invoke from within quilt directory!"
+    echo "invoke from within the checked-out quilt directory!"
     exit 3
 fi
 
@@ -39,10 +42,14 @@ else
 fi
 
 cd ..
+here=$(pwd -P)
+cd $here
 
 source_dir=quilt
 release_dir=quilt-$version
 tarfile=$release_dir.tgz
+
+echo "Will built tar file $here/$tarfile"
 
 ## get rid of CVS cruft:
 rm -fr $release_dir
@@ -86,6 +93,7 @@ done
 cd ..
 
 tar  --exclude-from=$source_dir/EXCLUDE -zhcvf $tarfile  $release_dir || exit 4
-echo "done creating $tarfile"
+echo "done creating $here/$tarfile"
+echo "Consider cleaning up by doing   rm -fr $release_dir  "
 
 # rm -fr $release_dir

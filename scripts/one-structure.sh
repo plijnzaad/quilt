@@ -1,4 +1,4 @@
-#! /bin/sh -x
+#! /bin/sh
 ## Written by Philip.lijnzaad@gmail.com This script produces all the stuff
 ## necessary for analyzing one particular protein structure. The pdb filename
 ## must be given as a parameter.
