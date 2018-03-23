@@ -1,6 +1,8 @@
 # -*- mode: Makefile; -*-
 # $Id$
 
+### NOTE: we need stuff from binutils (like alloc.[hc], list.[hc], files.[hc] etc. 
+
 # This file is to be included by a GNU Makefile
 
 # some common definitions
