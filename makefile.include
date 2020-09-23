@@ -1,7 +1,4 @@
 # -*- mode: Makefile; -*-
-# $Id$
-
-### NOTE: we need stuff from binutils (like alloc.[hc], list.[hc], files.[hc] etc. 
 
 # This file is to be included by a GNU Makefile
 
@@ -13,13 +10,7 @@ SHELL = /bin/sh
 CC = gcc
 #  maybe put CFLAGS here too ? 
 
-# prefix of the install (if you change this, also change setup.sh): 
-prefix = /usr/local
-# prefix = $(HOME)/$(SYS)
-
-# where binaries go (if you change this, also change setup.sh)
-bindir = $(prefix)/bin
-
+# setup.sh should define an environment variable $prefix and $bindir
 
 RM = rm
 INSTALL = install

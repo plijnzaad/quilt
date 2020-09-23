@@ -1,8 +1,4 @@
-# $Id$
-
 Installing: 
-
-
 
 Should be straightforward on any Unix; everything is standard C.  It's
 developed and tested mostly on Linux. I have no inclination to spend much
@@ -13,12 +9,12 @@ especially when compiling on Digital Unix: they sometimes have their RAND_MAX
 wrong. Switch off gcc's '-Wall' option if found iritating.
 
 
-The build requires GNU make. Look at the files setup.{sh,csh}.example, copy
+The build requires GNU make. Look at the files setup.sh.example, copy
 and adjust, then source it so that BUILD_HOME points to the right place. In
-most cases, the settings in setup.{sh,csh}.example are already fine, so you
+most cases, the settings in setup.example are already fine, so you
 can simply
 
-  cd quilt-<<version>>           # you're probably already here, reading this.
+  cd $git/quilt
   source setup.sh.example        # or the csh version if that's your shell
 
 Then look at make.include (specifically at the 'prefix' and 'bindir'

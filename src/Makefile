@@ -17,9 +17,7 @@ include $(BUILD_HOME)/makefile.include
 ### all flags given are gcc flags; have to twiddle things yourself if you're
 ### not using  gcc
 
-VERSION = $(shell cat ../VERSION)
-
-DEFINES = -D$(SYS) -DVERSION=\"$(VERSION)\"	# announce system by a '#define'
+DEFINES = -D$(SYS) -DVERSION=\"'$(VERSION)'\"	# announce system by a '#define'
 
 ### location of auxiliarly .h files and libraries:
 utilsdir = ../utils			# may have to be created as symlink
