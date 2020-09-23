@@ -8,37 +8,39 @@ difficult; it has been tested on other Unices and/or compilers: Digital Unix
 especially when compiling on Digital Unix: they sometimes have their RAND_MAX
 wrong. Switch off gcc's '-Wall' option if found iritating.
 
-
 The build requires GNU make. Look at the files setup.sh.example, copy
 and adjust, then source it so that BUILD_HOME points to the right place. In
 most cases, the settings in setup.example are already fine, so you
 can simply
 
   cd $git/quilt
-  source setup.sh.example        # or the csh version if that's your shell
+  source setup.sh.example
 
-Then look at make.include (specifically at the 'prefix' and 'bindir'
-variables) and the Makefiles, and with a bit of luck,
+This will set environment variables prefix and bindir (adjust if needed)
+and it will also add $bindir to your $PATH.
+
+With a bit of luck,
 
   make
   make test
   make install
 
-will just work .  If you change prefix and bindir from their default values
-(/usr/local{/bin}), be sure to adjust the PATH in setup.sh[.example]
-accordingly, otherwise the binary cannot be found. 
+will just work . 
 
-The files ATOMS and RESIDUES are needed by the pdb reading routines; install
-or symlink them as ~/.atoms and ~/.residues. You can edit these files to
-adjust atom radii etc. The format of these two files is should be obvious;
-see also their comments.
+The files ATOMS and RESIDUES are needed by the PDB reading routines; the
+setup script copies them to your ~/.atoms and ~/.residues.  You can edit
+these files to adjust atom radii etc. The format of these two files is
+should be obvious; see also their comments.
 
-After compiling/installing, all a user needs to do is to source the
-setup{.sh,csh} file in order to find the binary and PDB files.  The 'API' is
-documented in the .h files, -ish, and the files README and
-scripts/one-structure.sh should be helpful too. Any questions/suggestions,
-feel free to ask me.
+After compiling/installing, all a user needs to do is add the $prefix to
+their $PATH and things should be fine. If you have a directory where
+your pdb files are stored, you can set PDBPATH as a colon separated path
+to find them, but this is not necessary.
 
+The 'API' is sort-of documented in the .h files and the files README.
+The script 'scripts/one-structure.sh' does the full analysis of one
+structure and may help clarify things. Any questions/suggestions, feel
+free to ask me.
 
-philip.Lijnzaad@gmail.com
+plijnzaad@gmail.com
 

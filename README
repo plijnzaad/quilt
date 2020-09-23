@@ -38,12 +38,12 @@ I recently noticed that there now is completely different tool called quilt.
 It is software for managing software patches (incremental source code
 differences). It has nothing to do with protein structure analysis.
 
-
-
 Installing:
 ----------
 
-See the INSTALL file. 
+See the INSTALL file.  I recently put this thing on github, so
+I simplified things a bit. Please fork the project and send me pulll
+requests!
 
 PDB files are searched for in the path given enviroment variable PDBPATH,
 which can be a colon separated list.
@@ -162,7 +162,7 @@ with the -ran option. Output is caught in different files, and an `average
 distribution' is made simply by doing a histogram of sizes on all the
 randomized files at once:
 
-  for i in `seq 1 50`
+  for i in `seq 1 100`
   do 
     quilt -ran -n 252 -ep 1.4 -R -p ./8lyz.area > 8lyz.ran$i 2> /dev/null
   done
@@ -200,9 +200,10 @@ way you want. If there are cofactors present, you should rename them as they
 have been assigned funny oneletter-codes by the ~/.residue template file;
 Rpatsel has a provision for doing this (see Rpatsel -h)
 
-That's about it. I'd be very pleased to hear about any experience, good or
-bad, with the programs and scripts that make up the package. Questions,
-comments, bug reports please to philip.lijnzaad@gmail.com.
+That's about it. I'd be very pleased to hear about any experience, good
+or bad, with the programs and scripts that make up the  package. Questions,
+comments, bug reports please to plijnzaad@gmail.com. Alternatively, just
+fork the project and send me pull requests!
 
 
 								Philip

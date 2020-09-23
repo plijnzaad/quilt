@@ -1,12 +1,12 @@
 #!/usr/bin/env perl
-# generate rasmol commands for displaying patches from patch file
-# N in file FILE, possibly interpreting letter X as STRING
+# generate rasmol commands for displaying patches detected by quilt
 
 # It writes, to stdout, a rasmol expression corresponding to patch with
 # rank number N, and also defines a set, pN, for easier selection and
 # coloring, as well as the first atom of the patch, lN, for easy labeling.
+# (that a lowercase L)
 
-# an examle, in bash, for generating display scripts for large numbers of
+# An examle, in bash, for generating display scripts for large numbers of
 # files, consider something like this:
 
 # declare -a col; col[0]=red;  col[1]=orange;  col[2]=yellow
@@ -20,14 +20,12 @@
 
 use File::Basename;
 
-
-
 ## this is all a bit hairy, sorry.
 
 use Getopt::Std;
 $options='hm';				# h: help; m: multiple chains in input
 
-$Usage="Usage: Rpatsel [-$options] FILE N [X=STRING]";
+$Usage="Usage: Rpatsel [-$options] FILE.pat N [X=STRING]";
 
 sub die {
   print "echo $_[0]\n";
@@ -130,14 +128,3 @@ print "select $firstatom\ndefine l$nr selected\n";
 $msg= sprintf("echo %s", $found ? $comment : "patch # $nr not found\n");
     print $msg;
 warn $msg;
-
-# sub translate {				# not used
-#   local ($_, @atoms, $nr, $at)=@_;
-# 
-#   @atoms=split(',');
-#   foreach ( @atoms ) { 
-#     ($nr,$at)=(/\*(\d+).(.*)$/);
-#     $_= "*$table{$nr}.$at,";
-#   }
-#   $_=join('', @atoms);
-# }
