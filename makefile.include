@@ -10,6 +10,8 @@ SHELL = /bin/sh
 CC = gcc
 #  maybe put CFLAGS here too ? 
 
+CP = cp
+
 # setup.sh should define an environment variable $prefix and $bindir
 
 RM = rm
