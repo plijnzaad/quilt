@@ -1,0 +1,198 @@
+#!/usr/bin/perl
+# $Id$
+#
+# Written by Philip.Lijnzaad@gmail.com
+# original copied from plijnzaad@bitbucket.org/plijnzaad/perl.git on 23-Sep-2020
+
+use Getopt::Std;
+
+### simple quoting function:
+sub quote{ local($s) = @_; $s =~ s/^:/  /mg; $s; }
+$program = substr($0, 1+rindex($0, "/")); # find out program name 
+
+$Usage= &quote(<<END);
+:Usage: $program [-fc1] [-lh VALUE] [-n NBINS | -s VALUE | -b LIST ] [FILE]
+:Options:
+:
+:  -o N		 use N as the field/offset to do histo on (0 is first field)
+:  -t EXPR	 separate fields by EXPR (default: ' ', awk-like)
+:  -e EXPR	 do histo on value of perl expression EXPR (eg. '$F[0]/$F[1]')
+:  -n N 	 use N as number of bins. (default: 20)
+:  -s S 	 use S as size of bins (default: (max - min)/nbins)
+:  -m 'L:R,...'  merge data from L to R into bin of L, delete bins in between
+:  -M   	 give X output as fraction of the X maximum
+:  -f   	 give Y output as fraction of the total
+:  -r		 reverse cumulative: give Y as 1.0 - fraction of total
+:  -F   	 give Y output as fraction of the Y maximum
+:  -T  FMT   	 use FTM as the print format (needs two % 's, clearly).
+:  -c   	 give cumulative output
+:  -l L 	 use L as lower limit of data set (default: min of set - 10%)
+:  -u U 	 use U as upper limit of data set (default: max of set + 10%)
+:  -0		 don't output zero values
+:  -1		 give one more bin, such that the last bin is empty
+:  -a X,Y        append the pair X,Y to the output
+:  -x F		 multiply x by F (eg 100 to go from frac to percentage)
+:  -y F		 multiply y by F (eg 100 to go from frac to percentage)
+:  Comments ('#'; not with -e mode) and empty lines are skipped
+END
+# ' <- quote to fool emacs
+
+die $Usage unless getopts('hf1n:s:l:u:cm:0MFt:o:e:ra:x:y:T:');
+die $Usage if $opt_h;
+die "Options -s and -n rule each other out\n" if $opt_s > 0 && $opt_n > 0;
+
+$opt_o=0 unless $opt_o;			# offset to use
+$opt_t=' ' unless $opt_t;		# field split expression
+$opt_1= $opt_1 ? 1 : 0;
+$opt_x = $opt_x ? $opt_x : 1.0  ;
+$opt_y = $opt_y ? $opt_y : 1.0 ; 
+
+if ( $opt_r ) { $opt_f ++, $opt_c ++ }	# reverse cumulative
+
+$n=0;
+while(<>) {				# get all input
+  chomp;
+  s/\s*#.*$// unless $opt_e;		# skip comments
+  next if /^$/;				# skip empty line
+  @F=split($opt_t, $_);
+  if ($opt_e) { 
+    $val = eval($opt_e);
+    die "Wrong eval ($opt_e):$@" unless defined($val);
+  } else { $val=$F[$opt_o] } 
+  $all[$n++]=$val;
+}
+
+if ($opt_T) {
+    $fmt=$opt_T;
+    chomp($fmt);
+    $fmt =~ s/\\n//g;
+    $fmt .= "\n";
+} else {
+    if ($opt_f || $opt_F || $opt_r) {
+        $fmt="%10.6g %10.6g\n";
+    } else { 
+        $fmt="%10.6g %4d\n";
+    }
+}
+($min, $max) = &min_max(@all);		# optimize: don't do if both
+					# limits already known ...
+
+
+# if (defined $opt_l) { $min = $opt_l; } else { $min *= ( $min < 0 ? 1.10	: 0.90);}
+# if (defined $opt_u) { $max = $opt_u; } else { $max *= ( $max < 0 ? 0.90	: 1.10);}
+
+$extra = 0.10;				# the extra fraction wanted on either side
+if (defined $opt_l) { $min = $opt_l; } else { 
+  $min *= ( 1. + ( ($min < 0) ? 1 : -1)*$extra );
+}
+
+if (defined $opt_u) { $max = $opt_u; } else { 
+  $max *= ( 1. + ( ($max < 0) ? -1 : 1)*$extra );
+}
+
+$diff =  $max - $min;
+die "max ($max) <= min ($min)\n" if $diff <= 0.0;
+
+if ($opt_s > 0) { 
+  $binsize=$opt_s;
+  $nbins=$diff/$binsize;
+} else  {
+  $nbins=$opt_n ? $opt_n : 20;
+  $binsize= $diff / $nbins;
+}
+
+# $#binnames=$nbins;
+for ($i=0; $i<$nbins + $opt_1; $i++) {
+  $binnames[$i]=$min + $diff*$i/$nbins;
+}
+
+$hi=$i-1;
+$hn = $binnames[ $hi ];
+
+### do binning:
+# $#occ=$nbins;				# allocate list, for speed
+foreach (@all) {			# do the binning
+  $bin=int( ($_ - $min)/$binsize);
+  $bin-- if $bin == $nbins;
+  next if $bin < 0;
+#  next if $bin > $max;
+  $occ[ $bin ] ++;
+}
+
+### fractional ? 
+if ($opt_f) {
+    for (@occ) { 
+        $_ /= $n;
+    } 
+}
+
+if ($opt_F) {
+  ($x, $y) = &min_max(@occ);
+  for (@occ) { 
+      $_ /= $y;
+  } 
+}
+
+### merge bins?
+if ($opt_m) {				# '100:200,200:1000': merge bins
+  @merge=split(',', $opt_m);
+  for(@merge) { 
+    ($left,$right)=split(':');
+    $newbin= int( ($left - $min)/$binsize);
+    for ($i=$left + $binsize; $i < $right; $i += $binsize) {
+      $delbin=int( ($i - $min)/$binsize);
+      $occ[ $newbin ] += $occ[ $delbin ];
+      $occ[$delbin] = 0;		# just in case 
+      $binnames[ $delbin ]="";
+    }
+  }
+  if (  $binnames [ $hi ] eq '') {	# hack for xmgr: display a 0,
+    $occ [ $hi ] = +0;			# otherwise last histo-bar not drawn
+    $binnames [ $hi ] = $hn;
+  }
+}
+
+### cumulative ? 
+if ($opt_c) {				# do it cumulatively
+  $tot =0.0;
+  if ($opt_r) {				# reverse cumulative
+    for ( $i= $nbins - 1; $i >= 0; $i--)  {
+      if ( $binnames[ $i ] ne "") { 
+	$tot += $occ[ $i ];
+	$occ[ $i ] = $tot ;
+      }
+      }
+  } else {				# normal
+    for ( $i=0; $i < $nbins + $opt_1; $i++)  {
+      if ( $binnames[ $i ] ne "") { 
+	$tot += $occ[ $i ];
+	$occ[ $i ] = $tot ;
+      }
+    }
+  }
+}
+
+### x as fraction of max ? 
+if ($opt_M) {
+    for (@binnames) {
+        $_ /=$max;
+    }
+}
+
+### print out
+for ( $i=0; $i < $nbins + $opt_1; $i++)  { # print it out
+  printf $fmt,  $opt_x * $binnames[$i], $opt_y * $occ[$i] 
+      if $binnames[$i] ne '' && ( $occ[$i] > 0 || ! $opt_0 );
+}
+@final=split(',', $opt_a);
+$"=' ' ;
+print "   @final\n" if $opt_a;
+
+sub min_max {
+  local($min, $max)=(1e35, -1e35);
+  foreach (@_) {
+    $max = $_ if ($_ > $max);
+    $min = $_ if ($_ < $min);
+  }
+  ($min, $max); 
+}
