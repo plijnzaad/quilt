@@ -1,8 +1,6 @@
-# $Id$
-
 # requires GNU make
 
-# Philip lijnzaad@ebi.ac.uk
+# plijnzaad@gmail.com
 
 include $(BUILD_HOME)/makefile.include
 
@@ -41,24 +39,6 @@ utils_o =  $(utils_c:.c=.o)
 
 .PHONY: all utils clean debugmake help 
 
-execs = conv usleep Pgamma phyper
-
-all:  $(execs) 
-
-install: $(execs)
-	cp $(execs) $(bindir)
-
-conv: conv.c
-	$(CC) -g -Wall -O4 $< -o $@
-Pgamma: Pgamma.c
-	$(CC) $< -o $@ utils.o alloc.o -lm
-usleep: usleep.c
-	$(CC) -g -Wall -O4 $< -o $@
-
-phyper: phyper.c
-	$(CC) -g -Wall -O4 $< -lRmath -lm -o phyper
-# (this requires Debian package r-mathlib)
-
 # all/most utils depend on each other, so put all of utils_h  in  there:
 $(utils_o): %.o : %.c $(utils_h)
 	$(CC) $(CFLAGS) $*.c
@@ -67,9 +47,8 @@ $(utils_o): %.o : %.c $(utils_h)
 help: 
 	@echo "make all | utils | clean | help | debugmake"
 
-
 clean:
-	$(RM) *.o *.a conv usleep Pgamma
+	$(RM) *.o *.a
 
 utils: $(utils_o)
 

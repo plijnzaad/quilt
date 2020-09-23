@@ -21,11 +21,13 @@ test:
 
 install:
 	(cd src; $(MAKE) install)
+	$(CP) -p scripts/* $(bindir)
 
 clean:
-	(cd src; $(MAKE) clean)
-	(cd utils; $(MAKE) clean)
-	(if [ -d test ] ; then cd test;  $(MAKE) clean; fi)
+	(cd src; $(MAKE) -k clean)
+	(cd utils; $(MAKE) -k clean)
+	(if [ -d test ] ; then cd test;  $(MAKE) -k clean; fi)
+	rm $(bindir)/{patresidues,histo,one-structure.sh,Rpatsel}
 
 debugmake:
 	pwd

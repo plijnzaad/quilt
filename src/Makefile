@@ -33,7 +33,11 @@ libs = $(utillibs)			#libraries to be linked against
 CFLAGS = -g -Wall $(incdirs) $(DEFINES)    # -Wall: gcc's maximal nr. of warnings
 
 ### highest optimization flags (only for most number-crunchy modules)
-optim = $(incdirs) -g -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG -Wall
+## optim = $(incdirs) -g -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG -Wall
+
+optimflags  = -c -g -Wall $(defines) $(incdirs) -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG 
+normalflags = -c -g -Wall $(defines) $(incdirs) 
+CFLAGS =  $(normalflags)
 
 utils_h = pdb.h utils.h list.h alloc.h hash.h vecmat.h
 # utils_c = getargs.c utils.c alloc.c list.c pdb.c extra-math.c jacobi.c \
@@ -75,14 +79,13 @@ quilt: $(quilt_o) utils
 debugmake:
 	echo $(SYS)
 
-
 ### 
 ### following entries deviate from make's rules, and are included separately
 ### 
 main.o: main.args			#additional dependency
 
 acc.o: acc.c
-	$(CC) $(optim) -c $< -o $@	#different command
+	$(CC) $(optimflags) -c $< -o $@	#different command
 ### accessability routines. Must be compiled with highest optimization
 
 io.o: io.c
