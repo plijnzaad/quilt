@@ -6,7 +6,7 @@ export BUILD_HOME
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 version=$(git describe --match '*' --tags --dirty --always)
-export theversion="branch: $branch version: $version" # compiled into the binary
+export theversion="version: branch $branch; commit $version" # compiled into the binary
 
 ## install the libraries of atom types and residue types:
 cp -p $BUILD_HOME/ATOMS $HOME/.atoms

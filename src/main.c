@@ -287,15 +287,21 @@ static int transfer_acc(box_p box) {
   return 0;
 } /* transfer_acc */
 
-#ifndef catch_fpe
+// #ifndef catch_fpe
 #define catch_fpe(X)			/* mask it */
-#endif
+// #endif
+#define DOdmw(X)                        // disable dynamic memory watch
+
+#define version VERSION
 
 int main(int argc, char**argv) {
   int patchmode, n;
   box_p box;
 
-  fprintf(stderr, "Copyright Philip Lijnzaad 2020\n\nversion: %s\n\n", VERSION);
+  warn("Quilt hydrophobic patch detection\n%s\n%s\n%s\n",
+       version,
+       "Please cite Lijnzaad et al. 1996",
+       "Copyright Philip Lijnzaad 2020\n");
 
   DOdmw(1);				/* debugging purposes */
   catch_fpe(FPE_DEFAULT);		/* floating point exception handling */
