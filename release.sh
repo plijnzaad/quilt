@@ -10,8 +10,6 @@ privcvs=${privcvs=:ext:privcvsrepository:/home/gen/philip/cvsroot}
 # where is the histo script:
 histo=$HOME/perl/histo
 
-echo "Need to fix templates.c AFREEA bug at some point first" >&2 
-
 basedir=`pwd -P`
 cd $basedir
 
