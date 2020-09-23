@@ -1,7 +1,12 @@
-#! /bin/sh
-## Written by Philip.lijnzaad@gmail.com This script produces all the stuff
+#! /bin/sh -x
+## Written by plijnzaad@gmail.com This script produces all the stuff
 ## necessary for analyzing one particular protein structure. The pdb filename
 ## must be given as a parameter.
+
+if [ $# -ne 1 ]; then
+    echo "Usage: one-structure.sh PDBCODE"
+    exit 21
+fi
 
 ### Note: quilt and the scripts are assumed to be on the $PATH. If this is
 ### not the case, uncomment the following:
@@ -11,7 +16,7 @@
 # quilt_path=$quilt_home/scripts          # just for scripts
 # PATH=$quilt_path:$PATH
 
-pdbcode=$1                              # assumes something.pdb
+pdbcode=$1
 pdbfile=$pdbcode.pdb
 ## It is searched for in $PDBPATH.  Provide sensible default
 if [ ${PDBPATH-notdefined} = notdefined ]; then
@@ -39,7 +44,7 @@ $quilt  -n $npoints -ep $polar_expansion -R -a $areafile  -p $pdbfile \
 # parse it into something more readable
 patresidues < $patfile > $textfile
 
-# produce rasmol script for the 5 largest patches
+# produce rasmol script for the 5 largest patches, called p0, p1 .. p4:
 for i in 0 1 2 3 4 
 do 
   Rpatsel $patfile $i  
@@ -48,8 +53,8 @@ done > $pdbcode.rasmol
 # produce histograms and randomized histograms to assess significance:
 awk '/^# [0-9]/{print $10}' $patfile | histo  -l 0 -s 10 > $histofile
 
-# now randomized  the the thing ntimes (20 is perhaps too low; try 50)
-ntimes=50
+# now randomize the surface n times
+ntimes=100
 
 echo "now randomizing $ntimes times ..."
 for i in $(seq 1 $ntimes); do 
@@ -75,13 +80,3 @@ To get an impression of the significance of the patches, run e.g.
 
     xmgrace  -nxy $pdbcode.histo  -nxy $pdbcode.ranhisto
  "
-
-
-
-
-
-
-
-
-
-
