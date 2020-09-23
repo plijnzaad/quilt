@@ -214,8 +214,8 @@ static FILE *err_file = (FILE*) NULL;   /* not to be seen outside */
 
 FILE* get_err_file(void) {
   if (err_file==NULL) {
-    fprintf(stderr, "*** err_file not set explicitly using set_err_file(); "
-            "using stderr instead\n");
+    // fprintf(stderr, "*** err_file not set explicitly using set_err_file(); "
+    //        "using stderr instead\n");
     set_err_file(NULL);
   }
   return err_file;
