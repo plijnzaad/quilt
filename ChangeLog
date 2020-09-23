@@ -1,3 +1,8 @@
+2020-09-24  Philip Lijnzaad  <plijnzaad@gmail.com>
+
+	* v 1.2: revamped the release process: no more releases, just git.
+	Still segfaults on Mac OSX though.
+
 2014-11-13  Philip Lijnzaad  <philip@mayr.op.umcutrecht.nl>
 
 	* Improvements to the release script, including make'ing it. 
