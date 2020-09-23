@@ -1,0 +1,12 @@
+BUILDDATE
+8lyz-test.log
+8lyz-test.pat
+INSTALL
+README
+VERSION
+.atoms
+.quilt-sphere*
+.residues
+setup.sh
+utils/libutils.a
+src/quilt
