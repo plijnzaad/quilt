@@ -17,7 +17,7 @@ include $(BUILD_HOME)/makefile.include
 ### all flags given are gcc flags; have to twiddle things yourself if you're
 ### not using  gcc
 
-DEFINES = -D$(SYS) -DVERSION=\"'$(VERSION)'\"	# announce system by a '#define'
+DEFINES = -D$(SYS) -DVERSION='"$(theversion)"'
 
 ### location of auxiliarly .h files and libraries:
 utilsdir = ../utils			# may have to be created as symlink
@@ -30,13 +30,11 @@ incdirs = -I$(utilincdir)
 libdirs = -L$(utillibdir)
 libs = $(utillibs)			#libraries to be linked against
 
-CFLAGS = -g -Wall $(incdirs) $(DEFINES)    # -Wall: gcc's maximal nr. of warnings
-
 ### highest optimization flags (only for most number-crunchy modules)
 ## optim = $(incdirs) -g -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG -Wall
 
-optimflags  = -c -g -Wall $(defines) $(incdirs) -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG 
-normalflags = -c -g -Wall $(defines) $(incdirs) 
+optimflags  = -c -g -Wall $(DEFINES) $(incdirs) -O2 -ffast-math -finline-functions -funroll-all-loops -DNOSAFE -DNDEBUG -UDEBUG 
+normalflags = -c -g -Wall $(DEFINES) $(incdirs) 
 CFLAGS =  $(normalflags)
 
 utils_h = pdb.h utils.h list.h alloc.h hash.h vecmat.h

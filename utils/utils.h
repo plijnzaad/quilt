@@ -56,7 +56,7 @@ typedef unsigned char uchar;
 #  define AFREEA free
 #endif 
 
-/* #define AFREEA                          /# @@@debugging */
+#define AFREEA                          /* @@@debugging */
 
 
 #ifndef while_not

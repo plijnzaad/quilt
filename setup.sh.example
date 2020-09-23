@@ -1,18 +1,20 @@
-# $Id$
-
 # File to be sourced (not executed!) to ease compilation (not required
 # for installation). The default will do when it's being read in its own
-# directory. Copy and adjust.  
+# directory. If not, copy and adjust.
 BUILD_HOME=`pwd` 
 export BUILD_HOME
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 version=$(git describe --match '*' --tags --dirty --always)
-VERSION="branch:$branch, version:$version"
-echo $VERSION >  $BUILD_HOME/VERSION
+export theversion="branch: $branch version: $version" # compiled into the binary
+
+## install the libraries of atom types and residue types:
+cp -p $BUILD_HOME/ATOMS $HOME/.atoms
+cp $BUILD_HOME/RESIDUES $HOME/.residues
 
 export prefix=$HOME/tmp/asdf
 export bindir=$prefix/bin
+mkdir -p $bindir
 
 # where to search for pdb files (colon-separated list of directories)
 export PDBPATH=.:..:/data/local/pdb

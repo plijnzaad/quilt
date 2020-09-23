@@ -291,13 +291,11 @@ static int transfer_acc(box_p box) {
 #define catch_fpe(X)			/* mask it */
 #endif
 
-#define BLURP "\n\nquilt version " VERSION "\n\nCopyright Philip Lijnzaad 2014\n\n\n"
-
 int main(int argc, char**argv) {
   int patchmode, n;
   box_p box;
 
-  fprintf(stderr, BLURP);
+  fprintf(stderr, "Copyright Philip Lijnzaad 2020\n\nversion: %s\n\n", VERSION);
 
   DOdmw(1);				/* debugging purposes */
   catch_fpe(FPE_DEFAULT);		/* floating point exception handling */
