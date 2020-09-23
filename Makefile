@@ -1,5 +1,4 @@
 # -*- mode: Makefile; -*-
-# $Id$
 
 # This file requires GNU make
 

@@ -1,6 +1,5 @@
 ### Makefile for quilt
-### $Id$
-### Philip lijnzaad@ebi.ac.uk, 22-7-96
+### plijnzaad@gmail.com
 
 ### This Makefile require GNU Make.
 

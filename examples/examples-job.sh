@@ -1,5 +1,4 @@
 #!/bin/sh
-# $Id$
 
 # script to produce the output in the example directory
 
