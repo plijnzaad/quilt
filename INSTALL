@@ -8,6 +8,11 @@ difficult; it has been tested on other Unices and/or compilers: Digital Unix
 especially when compiling on Digital Unix: they sometimes have their RAND_MAX
 wrong. Switch off gcc's '-Wall' option if found iritating.
 
+Around 2015 it also worked on Mac OSX, but it now segfaults (OSX 10.14.6
+aka Mojave, gcc 4.8.5 20150623). I don't have access to a debugger to
+investigate and fix this, sorry. I'd be very grateful if people can send
+patches.
+
 The build requires GNU make. Look at the files setup.sh.example, copy
 and adjust, then source it so that BUILD_HOME points to the right place. In
 most cases, the settings in setup.example are already fine, so you
