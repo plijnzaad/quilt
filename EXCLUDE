@@ -1,4 +1,0 @@
-###list with patterns of files not to be included in tar file###
-EXCLUDE
-.cvsignore
-build-distrib.sh

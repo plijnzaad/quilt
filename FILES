@@ -35,7 +35,8 @@ patresidues				# simple filter for making output
 					# slightly more readable
 Rpatsel					# extracts one patch, and writes a
 					# rasmol script to view it
-job					# sh script to recreate examples
+one-structure.sh			# sh script to run one structure including
+                                        # the randomization.
 
 ### External data files:
 .residues				# library of residue topologies
@@ -51,7 +52,7 @@ job					# sh script to recreate examples
 README					# general documentation; see also
 FILES					# THIS FILE; all files 
 
-### examples in subdir examples/ (created with script/job):
+### examples in subdir examples/ (created with script/one-structure.sh):
 8lyz.pdb				# example pdb file
 8lyz.area				# same, but area in fifth float field
 8lyz.pat				# raw output of quilt -R
@@ -59,5 +60,5 @@ FILES					# THIS FILE; all files
 8lyz.txt				# output from patresidues
 8lyz.ran[0-9]				# randomized patches output
 8lyz.rml				# rasmol script for patches 0-4
-8lyz.histo				# histogram of patch sizes
-8lyz.ranhisto				# histogram of randomized structures
+8lyz.histo				# histogram of patch sizes for this protein
+8lyz.ranhisto				# histogram of randomized structures of same
