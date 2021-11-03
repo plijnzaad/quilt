@@ -12,7 +12,7 @@
  *  INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR       *
  *  FITNESS FOR ANY PARTICULAR PURPOSE.				      *
  *								      *
- * Philip Lijnzaad, lijnzaad@embl-heidelberg.de			      *
+ * Philip Lijnzaad, plijnzaad@gmail.com
  *								      *
  * ------------------------------------------------------------------ */
 
