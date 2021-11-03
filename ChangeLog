@@ -1,3 +1,9 @@
+2021-11-03  Philip Lijnzaad  <plijnzaad@gmail.com>
+
+	* v1.3: Got rid of the template spheres caching as it causes problems on Mac.
+	(thanks, https://github.com/jacakrj1 !!) Number of points is now
+	default 252 (which is the highest, no need to pass it.
+
 2020-09-24  Philip Lijnzaad  <plijnzaad@gmail.com>
 
 	* v1.2: revamped the release process: no more releases, just git.
