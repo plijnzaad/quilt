@@ -12,7 +12,7 @@
  *  INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR       *
  *  FITNESS FOR ANY PARTICULAR PURPOSE.				      *
  *								      *
- * Philip Lijnzaad, lijnzaad@embl-heidelberg.de			      *
+ * Philip Lijnzaad, plijnzaad@gmail.com
  *								      *
  * ------------------------------------------------------------------ */
 
@@ -20,15 +20,6 @@
 #define _QUILT_H_ 1
 
 #include "compat.h"
-
-/* change to needs: */
-
-/* where template spheres are to be read from, or written to: */
-/* TEMPLATES_DIR and TEMPLATES_FILE can be defined from the compilation */
-/* commandline; if they're not defined, use following */
-#define DFLT_TEMPLATES_DIR ""		/* (current directory, else home) */
-/* if not defined from command line, use following: */
-#define DFLT_TEMPLATES_FILE ".quilt-spheres.bin" /* filename */
 
 #include "utils.h"			/* for uchar etc. typedefs */
 #include "list.h"			/* for list typedefs */
@@ -424,7 +415,7 @@ extern int Template_order[ N_TMPLT_SPHERES ];
 /*** prototypes: ***/
 /* in io.c: */
 box_p get_atoms(FILE * pointsfile, char* protein, char*binspec, uint pdbflags);
-void get_template_spheres(FILE *file);
+void get_template_spheres(void);
 
 void print_atom(FILE*, atom_p, char*atomcolor, char*conn_color);
 void write_atom(char*filename, atom_p, char*atomcolor, char*conn_color);

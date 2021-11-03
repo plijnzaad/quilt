@@ -12,7 +12,7 @@
  *  INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR       *
  *  FITNESS FOR ANY PARTICULAR PURPOSE.				      *
  *								      *
- * Philip Lijnzaad, lijnzaad@embl-heidelberg.de			      *
+ * Philip Lijnzaad, plijnzaad@gmail.com			      *
  *								      *
  * ------------------------------------------------------------------ */
 
@@ -329,7 +329,7 @@ PDB field, but this is not checked. See the -a file.area option");
   if(opt_donothing)			/* for timing purposes */
      return 0;
 
-  get_template_spheres(templates_file);	/* get (or generate) the templates */
+  get_template_spheres();	/* get the templates */
 
 
   pre_process_atoms(box, 
