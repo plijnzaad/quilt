@@ -331,7 +331,6 @@ PDB field, but this is not checked. See the -a file.area option");
 
   get_template_spheres();	/* get the templates */
 
-
   pre_process_atoms(box, 
 		    opt_extension, 
 		    0.0 /*=threshold*/, 

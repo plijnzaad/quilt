@@ -142,19 +142,6 @@ static sphere_p read_tsphere(FILE*file) {
   return Sphere;
 } /*  read_tsphere */
 
-static void read_template_spheres(FILE*file) {
-  /* read all binary template spheres from file */
-  int i;
-
-/*  Template_spheres=(sphere_p*)CALLOC(N_TMPLT_SPHERES, sizeof(sphere_p));
- *  now static */ 
-
-  for (i=0; i<N_TMPLT_SPHERES; i++) 
-    Template_spheres[i]=read_tsphere(file);
-
-  return;
-} /*  read_template_spheres */
-
 void print_sphere(FILE*file, atom_p atom, char * color) {
   /* prints all edges of atom to file */
   int i, j, npoints, nedges;

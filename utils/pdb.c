@@ -1156,6 +1156,7 @@ structure_p findpdb(const char * inname, uint flags) {
 } /* findpdb */
 
 static int write_bintemplate(const structure_t *str, FILE* file) {
+  warn("this may not work on OSX ... ");
   /* write struc in binary fashion; coordinates are written, but not used  */
   int n=0;
   
@@ -1168,6 +1169,7 @@ static int write_bintemplate(const structure_t *str, FILE* file) {
 } /* write_bintemplate */
 
 static structure_p read_bintemplate(FILE* file) {
+  warn("this may not work on OSX ... ");
   /* read struc;  */
   int i, chaindiff, resdiff, atomdiff;
   char * vp;
@@ -1213,6 +1215,7 @@ static structure_p read_bintemplate(FILE* file) {
 #define SIZE (sizeof( float[ BINDATA_ELTS ]))
 
 static int write_bincoords(const structure_t *str, FILE* file) {
+  warn("this may not work on OSX ... ");
   /* write str->natoms * sizeof(float[BINDATA_ELTS]) from file */
   int i,natoms;
   float * coords;
@@ -1230,6 +1233,7 @@ static int write_bincoords(const structure_t *str, FILE* file) {
 } /* write_bincoords */
 
 static int read_bincoords(FILE* file, structure_p str) {
+  warn("this may not work on OSX ... ");
   /* read str->natoms * sizeof(float[BINDATA_ELTS]) from file */
   int i, natoms, n;
   float * coords;
@@ -1265,10 +1269,10 @@ static int read_bincoords(FILE* file, structure_p str) {
 #undef SIZE
 
 int print_pdb_bin(const structure_t  *str, const char*spec) { 
+  warn("this may not work on OSX ... ");
   /* given a SPEC like TEMPLATE%COORDS, writes STR to <template>.<TPL_EXT>
    * and <frame>.<COORD_EXT> in binary fashion 
    */
-
   char *copy, *cp, filename[30];
   FILE * file;
 
@@ -1317,7 +1321,7 @@ structure_p findpdb_bin(const char *spec) {
    *
    * comment : 
    */
-
+  warn("this may not work on OSX ... ");
   char*copy, *cp, *name, filename[30];
   structure_p str;
   FILE *file;

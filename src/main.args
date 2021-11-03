@@ -159,11 +159,11 @@ arg_t argtab[] = {
   { "\nInput:", COMMENT, 0,0,0 },
   { "-f", R_FILE, &opt_infile, "use as input file", NULL },
   { "-p", STRING, &opt_protein, "use file (or pdb-code) as pdb input", NULL },
-  { "-b", STRING, &opt_bin, "use spec for binary protein coordinates", NULL },
+  { "-b", STRING, &opt_bin, "use spec for binary protein coordinates (this may not work on Mac OSX!)", NULL },
 
   { "Parameters (point densities, radii):", COMMENT, 0,0,0 },
   { "-n", INT, &opt_pts_per_atom, 
-      "use <n> points per atom (default 252)", check_pts_per_atom },
+      "use <n> points per atom", check_pts_per_atom },
   { "-D", DOUBLE, &opt_pt_density, 
     "use <float> as approximate points density [pts/(A**2)]", check_gt0le5 },
   { "-e", DOUBLE, &opt_extension, 
