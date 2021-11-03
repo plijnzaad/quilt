@@ -34,11 +34,10 @@ mkdir $tmpdir
 textfile=$pdbcode.txt
 
 polar_expansion=1.4
-npoints=252
 
 # run it on structure
 quilt=quilt # must be in path, e.g. ~/Linux/bin/quilt
-$quilt  -n $npoints -ep $polar_expansion -R -a $areafile  -p $pdbfile \
+$quilt -ep $polar_expansion -R -a $areafile  -p $pdbfile \
     > $patfile 2> $logfile
 
 # parse it into something more readable
@@ -76,7 +75,8 @@ set +x
 echo "Done. Patches are in $pdbcode.pat (more readeable version: $pdbcode.txt); 
 Rasmol script is in $pdbcode.rasmol. Logs are in $pdbcode.log.
 
-To get an impression of the significance of the patches, run e.g. 
-
-    xmgrace  -nxy $pdbcode.histo  -nxy $pdbcode.ranhisto
+The patch size distribution of $pdbcode is in $pdbcode.histo
+The patch size distribution of $ntimes surface-randomized versions of $pdbcode 
+is in $pdbcode.ranhisto. This may help decide which patches are 'really large'.
+ 
  "

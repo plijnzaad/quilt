@@ -37,11 +37,8 @@ radius_param_t radius_param = {
   0.0					/* opt_polar_reduction */ 
 };
 
-/* FILE * connections_file; obsolete */
-static FILE * templates_file;
-
 /*** local options (ie local to main.c): ***/
-static int opt_pts_per_atom=0,
+static int opt_pts_per_atom=252,  /* highest possible */
 /*           opt_pr_single=0, */
 	   opt_triangulate=0, 
 	   opt_donothing=0,
@@ -163,11 +160,10 @@ arg_t argtab[] = {
   { "-f", R_FILE, &opt_infile, "use as input file", NULL },
   { "-p", STRING, &opt_protein, "use file (or pdb-code) as pdb input", NULL },
   { "-b", STRING, &opt_bin, "use spec for binary protein coordinates", NULL },
-  { "-templates", R_FILE, &templates_file, "use FILE for templates", NULL },
 
   { "Parameters (point densities, radii):", COMMENT, 0,0,0 },
   { "-n", INT, &opt_pts_per_atom, 
-      "use <n> points per atom", check_pts_per_atom },
+      "use <n> points per atom (default 252)", check_pts_per_atom },
   { "-D", DOUBLE, &opt_pt_density, 
     "use <float> as approximate points density [pts/(A**2)]", check_gt0le5 },
   { "-e", DOUBLE, &opt_extension, 
