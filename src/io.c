@@ -469,44 +469,9 @@ static atom_p read_points_file(FILE*file, int *npointsp) {
   return Atoms;
 } /* read_points_file */
 
-void get_template_spheres(FILE* infile) { 
-  /* will load templates into Templates[*], either by reading from infile, */
-  /* finding a properly named file, or generating them from scratch */
-  char *filename;
-  FILE *file;
-
-#ifndef TEMPLATES_DIR
-#  define TEMPLATES_DIR DFLT_TEMPLATES_DIR
-#else
-  /* was defined from cc command line to incorporate system dependencies */
-#endif
-#ifndef TEMPLATES_FILE
-#  define TEMPLATES_FILE DFLT_TEMPLATES_FILE
-#else
-  /* was defined from cc command line to incorporate system dependencies */
-#endif
-
-  if (infile)
-    file=infile;
-  else
-    filename=findfile(TEMPLATES_DIR, TEMPLATES_FILE, "r" , &file);
-
-  if(file) {				/* file given or found */
-    if(filename)			/* was found itself, so tell */
-      warn("reading file %s ...\n", filename );
-    read_template_spheres(file);	/* read in to Template_spheres[] */
-    fclose(file);
-    return;
-  }
-
-  warn("template spheres not found; generating them ...\n"); 
+void get_template_spheres(void) { 
+  warn("generating template spheres\n");
   generate_template_spheres();	/* are put in Template_spheres[] */
-  warn("done; now writing template spheres to %s ... ", TEMPLATES_FILE); 
-  file=fopen(TEMPLATES_FILE, "w");
-  if(!file)
-    perror(TEMPLATES_FILE), die("\n");
-  dump_template_spheres(file);
-  fclose(file);
   warn("done\n");
   return;
 } /* get_template_spheres */
